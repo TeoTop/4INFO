@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 \documentclass[a4paper,12pt]{article}
 
 \usepackage{ucs}
@@ -51,120 +49,50 @@
 }
 \lstset{style=listing}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \author{
   Théo \textsc{CHAPON}, Hassan \textsc{EL OMARI ALAOUI} \\ \\
   INSA de Rennes \\
-  4INFO, groupe 1.2
+  4INFO, groupe 1.1
 }
 
-\title{Compte Rendu TP1 CPOO}
+\title{Compte Rendu TP2 CPOO}
 
 \begin{document}
-\maketitle
-
-\lstinputlisting[caption=Définition de la class carte en C++]{carte.h}
-\lstinputlisting[caption= Class carte en C++]{carte.cpp}
-
-\end{document}
-=======
-
-\documentclass[a4paper,12pt]{article}
-
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
-%\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
-
-\usepackage[french]{babel}
-
-\pagestyle{plain}
-
-\usepackage{graphicx}
-\usepackage{subfigure}
-\DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png,.gif}
-
-\usepackage{color}
-\definecolor{grey}{rgb}{0.9,0.9,0.9}
-\definecolor{teal}{rgb}{0.0,0.5,0.5}
-\definecolor{violet}{rgb}{0.5,0,0.5}
-
-\usepackage{listings}
-\usepackage{listingsutf8}
-\lstloadlanguages{[Visual]C++}
-\lstdefinestyle{listing}{
-  language=Java,
-  captionpos=t,
-  inputencoding=utf8/latin1,
-  extendedchars=true,
-  resetmargins=true,
-  xleftmargin=-60pt,
-  xrightmargin=-70pt,
-%  frame=single,
-  numbers=left,
-  numberstyle=\tiny,
-  numbersep=5pt,
-  breaklines=true,
-  breakatwhitespace=true,
-  showspaces=false,
-  showstringspaces=false,
-  showtabs=false,
-  tabsize=2,
-  basicstyle=\footnotesize\ttfamily,
-  backgroundcolor=\color{grey},
-  keywordstyle=\color{blue}\bfseries,
-  commentstyle=\color{teal},
-  identifierstyle=\color{black},
-  stringstyle=\color{red},
-  numberstyle=\color{violet},
-}
-\lstset{style=listing}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\author{
-  Théo \textsc{CHAPON}, Hassan \textsc{EL OMARI ALAOUI} \\ \\
-  INSA de Rennes \\
-  4INFO, groupe 1.2
-}
-
-\title{Compte Rendu TP1 CPOO}
-
-\begin{document}
-\maketitle{TP1 : Conception de la classe carte}
+\maketitle{TP1 : Conception de la classe chaine et surcharge}
 
 section{Etat du TP}
 
-Le projet est terminé, fonctionel et testé. Aucuns problèmes et aucunes difficultés n'est à déplorer.
+Le projet est terminé, fonctionel et testé. Une incompréhension a été rencontrée lors de l'utilisation de l'attribut 'friend'.
+Mais celle-ci a été résolue après discution.
 
 
 section{Objectif}
 
-Ce TP avait pour but d'avoir une première approche avec Microsoft Visual 2013 et le langage C++. Il nous a été demandé de 
-compléter un programme permettant de simuler un jeu de bataille. La classe principale nous a été donnée. Nous devions donc 
-créer la classe carte.
+Ce TP avait pour but d'effectuer de la surcharge d'opérateur. En plus de cela, nous avons pu travailler les pointeurs et la
+référence sur objet. Nous avons aussi pu tester les attributs 'friend' et 'inline'. Pour ce faire nous devions créer une 
+classe chaine permettant de gérer une chaine de caractères ainsi que certaines opérations comme la concaténation.
 
 
 section{Réalisation}
 
-La classe carte se compose donc de deux parties : la première est le header, classe.h, qui permet de définir les composantes
-et fonctions de la classe. La seconde, classe.cpp, permet de coder les fonctions de la classe carte.
+Nous devions réaliser une classe permettant de gérer les chaines de caratères. Pour ce faire nous avons décidé d'utiliser 
+un tableau de caratères comme attribut. Nous avons géré la longueur des chaines grâce au caractère de fin de chaine '\0'.
+Pour faciliter la gestion de la longueur, nous avons créé une méthode permettant de retourner la longueur d'une chaine.
 
-Pour réaliser le jeu de carte, nous avons utilisé le principe d'une liste simplement chainée. Les cartes se composent donc d'un
-propriétaire d'une couleur et d'une valeur. De plus, pour construire la liste chainée, nous avons créé un atribut 'succ' qui
-est un pointeur sur carte permettant de faire référence à la carte suivante dans le paquet. Nous avons aussi mis en place 4
-attributs statics qui permettent de faire référence à la première carte et la dernière de chaque paquet (2 pour une bataille).
-La carte de début et de fin d'un paquet permettent de définir les limites d'une liste.
+Pour commencer, nous avons créé trois constructeurs permettant de créer une chaine par défault (contructeur vide), de
+créer une chaine de caractères à partir d'un tableau de caractères (pointeur sur char), de créer une chaine à partir d'une 
+autre chaine (argument de type chaine passé par référence) et enfin un destructeur. 
 
-Nous avons aussi créé et complété les fonctions présentent dans le déroulement du code principale. A cela, nous avons rajouté
-des fonctions supplémentaires comme 'void _change(bool = true)', 'bool _equal(Carte)' et 'Carte* suc()'. Elles permettent
-respectivment de changer le propriétaire de la carte, de savoir si la carte est la même que celle passée en paramètre et
-de rendre la carte qui suit celle sélectionnée dans le paquet.
+De plus, nous devions produire des méthodes permettant de gérer les chaines de caractères. Nous avions deux types de méthodes
+à traiter; les méthodes de surcharge pour utiliser les opérateurs pour effectuer des comparaisons (<, >, == etc.),
+pour faire une concaténation (+, +=) ou encore sélectionner un caractère indéxé de la chaine ([]). Nous avions aussi les 
+méthodes normales comme les getters et les setters, les deux méthodes 'sous-chaine' dont la fonction était de récupérer une
+partie de la chaine à partir de deux indexes ou de deux caractères.
+
+A cela nous avons aussi ajouté la surcharge au niveau de l'affichage d'une chaine (outstream : surcharge de l'opérateur <<).
 
 
-\lstinputlisting[caption=Définition de la class carte en C++]{carte.h}
-\lstinputlisting[caption= Class carte en C++]{carte.cpp}
+\lstinputlisting[caption=Définition de la class carte en C++]{chaine.h}
+\lstinputlisting[caption= Class carte en C++]{chaine.cpp}
 
 \end{document}
->>>>>>> db0cac5cb2a36e01148d55b65991016b39f684ee
