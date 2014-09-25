@@ -17,5 +17,27 @@ namespace PeopleWar
             {
             }
         }
+
+        public UniteImp UniteImp
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public UniteImp UniteImp1
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

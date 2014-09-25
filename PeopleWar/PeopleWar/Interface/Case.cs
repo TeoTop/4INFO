@@ -7,5 +7,6 @@ namespace PeopleWar
 {
     public interface Case
     {
+        void recupererUnite();
     }
 }

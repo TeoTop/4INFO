@@ -17,5 +17,16 @@ namespace PeopleWar
             {
             }
         }
+
+        public int numero
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

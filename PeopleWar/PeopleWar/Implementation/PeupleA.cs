@@ -17,5 +17,16 @@ namespace PeopleWar
             {
             }
         }
+
+        public int type
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

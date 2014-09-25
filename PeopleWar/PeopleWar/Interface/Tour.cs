@@ -7,5 +7,10 @@ namespace PeopleWar
 {
     public interface Tour
     {
+        void calculerPoint();
+
+        void finTour();
+
+        void recupererCombat();
     }
 }

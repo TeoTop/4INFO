@@ -7,5 +7,8 @@ namespace PeopleWar
 {
     public interface Combat
     {
+        void recupererUnite();
+
+        void vainqueur();
     }
 }

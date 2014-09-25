@@ -7,5 +7,8 @@ namespace PeopleWar
 {
     public interface Peuple
     {
+        void recupererUnite();
+
+        void caracteristique();
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public class PartieImp : Partie
+    public class Caracteristique
     {
-        public CarteA CarteA
+        public PeupleA PeupleA
         {
             get
             {
@@ -18,7 +18,7 @@ namespace PeopleWar
             }
         }
 
-        public JoueurImp JoueurImp
+        public int Case
         {
             get
             {
@@ -29,7 +29,7 @@ namespace PeopleWar
             }
         }
 
-        public TourImp TourImp
+        public int Combat
         {
             get
             {
@@ -40,29 +40,7 @@ namespace PeopleWar
             }
         }
 
-        public int nom
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int id
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public JoueurImp JoueurImp1
+        public int Descriptif
         {
             get
             {

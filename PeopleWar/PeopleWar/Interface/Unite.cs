@@ -7,5 +7,10 @@ namespace PeopleWar
 {
     public interface Unite
     {
+        void attaquer();
+
+        void seDeplacer();
+
+        void appliquerCaracterisitique();
     }
 }
