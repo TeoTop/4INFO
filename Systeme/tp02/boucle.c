@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+
+int main (int argc, char * argv[])
+{
+//creation d'un processus
+  int pid=fork();
+	
+  if(pid==-1)
+    {
+      perror("Creation du processus fils echoue");
+      exit(0);
+    }
+
+  //fils
+  if(pid==0)
+    {
+			while(1) printf("b\n");
+    }
+  else //pere
+    {
+      while(1) printf("a\n");
+	
+    }	
+}

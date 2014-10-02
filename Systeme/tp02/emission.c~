@@ -1,0 +1,55 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <signal.h>
+#include <sys/types.h>
+
+int recu = 0;
+struct sigaction action;
+sigset_t mask_nv;
+sigset_t mask_anc;
+
+void handler(int sig){
+	
+	if(sig == SIGUSR1)
+		printf("Signal reçu numéro : %d\n", ++recu);
+	else
+		kill(getpid(), SIGUSR1);
+}
+
+
+int main (int argc, char * argv[])
+{
+  // bloque SIGUSR1
+  sigemptyset(&mask_nv);	//initialise un ensemble vide de signaux (mask_nv).
+  sigaddset(&mask_nv, SIGUSR1); // A decommenter  // ajoute le signal SIGUSR1 à l'ensemble mask_nv
+  sigaddset(&mask_nv, SIGUSR2);
+  //Définition du handler
+  action.sa_handler=handler;
+  sigaction(SIGUSR1,&action,NULL); // lie l'action au signal
+  sigaction(SIGUSR2,&action,NULL); // lie l'action au signal
+
+//creation d'un processus
+  int pid=fork();
+	
+  if(pid==-1)
+    {
+      perror("Creation du processus fils echoue");
+      exit(0);
+    }
+
+  //fils
+  if(pid==0)
+    {
+
+    }
+  else //pere
+    {
+			int i;
+			for(i = 0 ; i <= 5000 ; ++i){
+				//printf("Message envoyé numero %d\n",i);
+		    kill(pid, SIGUSR2);
+				pause();
+			}
+    }	
+}

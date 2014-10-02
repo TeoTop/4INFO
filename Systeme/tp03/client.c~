@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+
+int fd;
+void reading() {
+	char buffer[100];
+	if ((fd = open("/tmp/montube", O_RDONLY)) == -1) {
+		perror("open error");
+		exit(1);
+	}
+
+	read(fd, buffer, sizeof(buffer)); 
+	printf("%s\n", buffer);
+	close(fd);
+}
+
+int main (int argc, char * argv[])
+{
+	if (argc != 2) {
+		perror("pid of server\n");
+		exit(1);
+	}
+	int pid = atoi(argv[1]);
+	int pipe;
+	int i;
+	if (mkfifo("/tmp/montube", 0755) == -1) {
+		perror("mkfifo error");
+		exit(1);
+	}
+	for(i = 0; i < 1000; i++) {
+		kill(pid, SIGUSR1);
+		reading();
+		kill(pid, SIGUSR2);
+		reading();
+	}
+
+	unlink("/tmp/montube");
+	return 0;
+}
