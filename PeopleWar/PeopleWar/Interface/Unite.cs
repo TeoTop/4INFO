@@ -7,10 +7,10 @@ namespace PeopleWar
 {
     public interface Unite
     {
-        void attaquer();
+        bool attaquer(Case Case);
 
-        void seDeplacer();
+        Case seDeplacer(int x, int y);
 
-        void appliquerCaracterisitique();
+        void appliquerCaracterisitique(List<Caracteristique> caracteristique);
     }
 }

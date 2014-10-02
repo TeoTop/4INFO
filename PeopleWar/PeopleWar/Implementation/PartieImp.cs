@@ -7,16 +7,6 @@ namespace PeopleWar
 {
     public class PartieImp : Partie
     {
-        public CarteA CarteA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
         public JoueurImp JoueurImp
         {
@@ -29,7 +19,7 @@ namespace PeopleWar
             }
         }
 
-        public TourImp TourImp
+        public List<TourImp> TourImp
         {
             get
             {
@@ -71,6 +61,32 @@ namespace PeopleWar
             set
             {
             }
+        }
+
+        public MonteurPartie MonteurPartie
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        Partie Partie.creerPartie()
+        {
+            throw new NotImplementedException();
+        }
+
+        Carte Partie.recupererCarte()
+        {
+            throw new NotImplementedException();
+        }
+
+        Joueur Partie.recupererJoueur()
+        {
+            throw new NotImplementedException();
         }
     }
 }

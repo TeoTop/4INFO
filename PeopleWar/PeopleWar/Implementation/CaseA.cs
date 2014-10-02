@@ -5,7 +5,17 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public abstract class CaseA : Case
+    internal abstract class CaseA : Case
     {
+        public List<UniteImp> UniteImp
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

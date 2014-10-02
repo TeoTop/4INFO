@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public class TourImp : Tour
+    public static class FabriqueCase
     {
-        public List<CombatImp> CombatImp
+        public CaseA CaseA
         {
             get
             {
@@ -18,15 +18,14 @@ namespace PeopleWar
             }
         }
 
-        public int numero
+        public static Case obtenirCase(int cle)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new System.NotImplementedException();
+        }
+
+        public static Case creerCase()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

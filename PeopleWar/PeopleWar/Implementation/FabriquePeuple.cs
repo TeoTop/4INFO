@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public class TourImp : Tour
+    public static class FabriquePeuple
     {
-        public List<CombatImp> CombatImp
+        public static PeupleA PeupleA
         {
             get
             {
@@ -17,16 +17,15 @@ namespace PeopleWar
             {
             }
         }
-
-        public int numero
+    
+        public static Peuple creerPeuple()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new System.NotImplementedException();
+        }
+
+        public static Peuple obtenirPeuple()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

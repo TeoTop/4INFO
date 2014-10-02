@@ -7,16 +7,6 @@ namespace PeopleWar
 {
     public class CombatImp : Combat
     {
-        public CaseA CaseA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
         public UniteImp UniteImp
         {
@@ -30,6 +20,17 @@ namespace PeopleWar
         }
 
         public UniteImp UniteImp1
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal CaseA CaseA
         {
             get
             {

@@ -7,16 +7,6 @@ namespace PeopleWar
 {
     public class Caracteristique
     {
-        public PeupleA PeupleA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
         public int Case
         {

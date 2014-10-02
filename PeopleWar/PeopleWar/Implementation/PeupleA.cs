@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public abstract class PeupleA : Peuple
+    internal abstract class PeupleA : Peuple
     {
-        public UniteImp UniteImp
+        public List<UniteImp> UniteImp
         {
             get
             {
@@ -19,6 +19,17 @@ namespace PeopleWar
         }
 
         public int type
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public List<Caracteristique> Caracteristique
         {
             get
             {
