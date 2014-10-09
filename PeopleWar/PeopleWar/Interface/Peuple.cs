@@ -7,10 +7,5 @@ namespace PeopleWar
 {
     public interface Peuple
     {
-        List<Unite> recupererUnite();
-
-        List<Caracteristique> caracteristique();
-
-        Unite creerUnite();
     }
 }

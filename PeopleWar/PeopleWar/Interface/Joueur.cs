@@ -7,6 +7,5 @@ namespace PeopleWar
 {
     public interface Joueur
     {
-        Peuple recupererPeuple();
     }
 }

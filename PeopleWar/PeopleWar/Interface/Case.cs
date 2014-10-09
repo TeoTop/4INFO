@@ -7,10 +7,5 @@ namespace PeopleWar
 {
     public interface Case
     {
-        Unite recupererUnite();
-
-        int getX();
-
-        int getY();
     }
 }

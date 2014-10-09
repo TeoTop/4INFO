@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    internal abstract class CarteA : Carte
+    public abstract class CarteA : Carte
     {
-        public List<CaseA> CaseA
+        public CaseA CaseA
         {
             get
             {

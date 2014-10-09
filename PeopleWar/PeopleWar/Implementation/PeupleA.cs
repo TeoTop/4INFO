@@ -5,31 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    internal abstract class PeupleA : Peuple
+    public abstract class PeupleA : Peuple
     {
-        public List<UniteImp> UniteImp
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int type
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public List<Caracteristique> Caracteristique
+        public UniteImp UniteImp
         {
             get
             {

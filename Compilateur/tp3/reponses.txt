@@ -1,0 +1,59 @@
+<Super>  --> <Expr> eof
+<Expr>   --> <Termb> <Expr2>
+<Expr2>  --> "ou" <Termb> <Expr2> | E
+<Termb>  --> <Facteurb> <Termb2>
+<Termb2> --> "et" <Facteurb> <Termb2> | E
+
+
+premier(Expr)     = {"(", "si", <Ident>}
+premier(Expr2)    = {"ou"}
+premier(Termb)    = {"(", "si", <Ident>}
+premier(Termb2)   = {"et"}
+premier(Facteurb) = {"(", "si", <Ident>}
+premier(Relation) = {<Ident>}
+premier(Op)       = {"=", "<>", "<", ">", ">=", "<="}
+
+suivant(Expr)     = {eof, ")", "alors", "sinon", "fsi"}
+suivant(Expr2)    = {eof, ")", "alors", "sinon", "fsi"}
+suivant(Termb)    = {"ou", "alors", "sinon", "fsi", eof}
+suivant(Termb2)   = {"ou", "alors", "sinon", "fsi", eof}
+suivant(Facteurb) = {"et", "ou", "alors", "sinon", "fsi", eof}
+suivant(Relation) = {"et", "ou", "alors", "sinon", "fsi", eof}
+suivant(Op)       = {<Ident>}
+
+null(Expr)        = false
+null(Expr2)       = true
+null(Termb)       = false
+null(Termb2)      = true
+null(Facteurb)    = false
+null(Relation)    = false
+null(Op)          = false
+
+
+Exemple 1.1 :
+	t > y et (x = y)
+
+Arbre concret :
+
+                                                        Expr
+                                       ________________/    \_______________
+                                   Termb                                   Expr2
+                        __________/     \___________                            \_____
+                 Facteurb                          Termb2                            E
+                     |                      ______/  |   \____
+                 Relation                "et"     Facteurb   Termb2
+                /   |    \                      _/   |    \_       \___
+            Ident   Op   Ident                "("   Expr   ")"        E
+              |     |      |                       /    \
+              t    ">"     y                   Termb    Expr2
+                                              /     \        \
+                                       Facteurb     Termb2    E
+                                          |            |
+                                       Relation        E
+                                      /   |    \
+                                  Ident   Op   Ident
+                                    |     |      |
+                                    x    "="     y
+
+
+

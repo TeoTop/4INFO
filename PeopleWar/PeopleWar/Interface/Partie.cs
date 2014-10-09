@@ -7,14 +7,5 @@ namespace PeopleWar
 {
     public interface Partie
     {
-        Partie creerPartie();
-
-        Carte recupererCarte();
-
-        List<Joueur> recupererJoueur();
-
-        bool sauvegarder();
-
-        Partie charger();
     }
 }

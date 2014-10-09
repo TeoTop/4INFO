@@ -7,6 +7,5 @@ namespace PeopleWar
 {
     public interface Carte
     {
-        Case recupererCase();
     }
 }

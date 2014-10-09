@@ -1,0 +1,44 @@
+open Grammar
+
+let implic res fa = not res || fa
+
+let is_vn : vn -> v -> bool = 
+ fun vn v -> 
+  match v with
+  | Vt _ -> false
+  | Vn vn' -> vn_equal vn vn'
+
+
+let acc_vn g f = 
+  fun vn ->
+  if vn_equal vn (axiom g) then true
+  else List.exists f (filter_production g (fun (nv,l) -> if List.exists (is_vn vn) l then Some nv else None))
+
+let acc g = kleene_fun g implic (acc_vn g) false
+
+let rec gen_prod f = function
+  | [] -> true
+  | Vt vt::r -> gen_prod f r
+  | Vn vn::r -> f vn && gen_prod f r
+  
+
+let gen_vn g f =  
+ fun vn -> 
+   List.exists f (gen_prod f)  (* à finir*)
+   
+
+let gen g = kleene_fun g implic (gen_vn g) false
+
+let null = fun _ -> failwith "null : TODO"
+
+let first = fun _ _ -> failwith "first : TODO"
+
+let follow = fun _ _ _ -> failwith "follow : TODO"
+
+let is_ll1 = fun _ _ _ _ -> failwith "is_ll1 : TODO"
+
+let deriv  = fun _ _ _ _ _ _ -> failwith "deriv : TODO"
+
+
+ 
+

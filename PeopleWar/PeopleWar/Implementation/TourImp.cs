@@ -7,18 +7,7 @@ namespace PeopleWar
 {
     public class TourImp : Tour
     {
-        public List<CombatImp> CombatImp
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int numero
+        public CombatImp CombatImp
         {
             get
             {
