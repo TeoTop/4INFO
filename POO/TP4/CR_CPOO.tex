@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[french]{babel}
+
+\pagestyle{plain}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png,.gif}
+
+\usepackage{color}
+\definecolor{grey}{rgb}{0.9,0.9,0.9}
+\definecolor{teal}{rgb}{0.0,0.5,0.5}
+\definecolor{violet}{rgb}{0.5,0,0.5}
+
+\usepackage{listings}
+\usepackage{listingsutf8}
+\lstloadlanguages{[Visual]C++}
+\lstdefinestyle{listing}{
+  language=Java,
+  captionpos=t,
+  inputencoding=utf8/latin1,
+  extendedchars=true,
+  resetmargins=true,
+  xleftmargin=-60pt,
+  xrightmargin=-70pt,
+%  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  breaklines=true,
+  breakatwhitespace=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  basicstyle=\footnotesize\ttfamily,
+  backgroundcolor=\color{grey},
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{teal},
+  identifierstyle=\color{black},
+  stringstyle=\color{red},
+  numberstyle=\color{violet},
+}
+\lstset{style=listing}
+
+\author{
+  Théo \textsc{CHAPON}, Hassan \textsc{EL OMARI ALAOUI} \\ \\
+  INSA de Rennes \\
+  4INFO, groupe 1.1
+}
+
+\title{Compte Rendu TP4 CPOO}
+
+\begin{document}
+\maketitle{TP4 : Création et utilisation d'un template}
+
+\section{Etat du TP}
+
+Le projet est terminé, fonctionel et testé.
+
+
+\section{Objectif}
+
+Ce TP avait pour but d'apprendre à utiliser et créer une classe template. Dans notre cas, il s'agit d'une classe template "Ensemble" qui utilise la classe template "List".
+
+
+\section{Réalisation}
+
+Nous devions réaliser un template permettant de représenter un ensemble d'objets non trié et sans doublon. Pour gérer les ensembles, nous devions surchager les opérateurs arithmétiques de base : 
+\begin{itemize}
+\item[-] '+' pour l'union de deux ensembles
+\item[-] '*' pour l'intersection de deux ensembles
+\item[-] '-' pour la soutraction de deux ensembles
+\item[-] '/' pour la différence de deux ensembles
+\item[-] '<<' pour gérer l'affichage des ensembles
+\item[-] '>>' pour gérer la création par fichier d'un ensemble
+\end{itemize}
+    
+Nous devions aussi produire un constructeur par recopie. La totalité des fonctions du template "Ensemble" ont utilisé des méthodes provenant de la classe "List". 
+
+\vspace{1cm}
+
+Une seul petite contrainte a été rencontrée dans ce TP, c'est l'utilisation d'une énumération de la classe "List" protéger par protected. Cela nécessite de faire de l'héritage mais ça complique le code de la classe "Ensemble".
+
+
+\lstinputlisting[caption=Définition de la class template Ensemble]{ensemble.h}
+
+\end{document}
