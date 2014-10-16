@@ -69,15 +69,30 @@ int main(int argc, char* argv[]) {
     exit(0);
   }
 
+  if (m->max == 0)
+  {
+    m->max = semget(IPC_PRIVATE, 1, 0666 | IPC_CREAT);
+    if(m->max < 0) perror("Error: semget");
+    initialisation(m->max, MAX);
+  }
+  if (m->min == 0)
+  {
+    m->min = semget(IPC_PRIVATE, 1, 0666 | IPC_CREAT);
+    if(m->min < 0) perror("Error: semget");
+    initialisation(m->min, 0);
+  }
+
   while(1) {
     p(m->min, &op);
 
     int i = 0;
-    while(m->etat[i++ % MAX] != PLEIN);
+    while(m->etat[i] != PLEIN) {
+      i++;
+      i %= MAX;
+    }
 
-    --i;
     m->etat[i] = OCC;
-    printf("%d\n", m->tab[i]);
+    printf("consommateur : %d (%d)\n", m->tab[i], i);
     m->etat[i] = LIBRE;
 
     v(m->max, &op);

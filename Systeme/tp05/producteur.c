@@ -79,12 +79,14 @@ int main(int argc, char* argv[]) {
     p(m->max, &op);
 
     int i = 0;
-    while(m->etat[i++ % MAX] != LIBRE);
-    i--;
+    while(m->etat[i] != LIBRE) {
+      i++;
+      i %= MAX;
+    }
 
     m->etat[i] = OCC;
     m->tab[i] = array[j++ % 10];
-    printf("producteur %d\n", m->tab[i]);
+    printf("producteur : %d (%d)\n", m->tab[i], i);
     m->etat[i] = PLEIN;
   
     v(m->min, &op);

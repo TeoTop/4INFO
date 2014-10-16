@@ -72,23 +72,42 @@ let first : grammar -> (vn -> bool ) -> (vn  -> VTSet.t) =
 
 (*===================================================*)
 
-let follow_vn =
- fun g null first follow vn -> 
-   let rec filter1 = function
-     | (x,(Vn a)::reste) -> if vn_equal vn a then Some reste else filter1 (x,reste)
-     | (x,(Vt a)::reste) -> filter1(x,reste)
-     | _ -> None
-   in
-   let rec filter2 = function
-     | (x,(Vn a)::reste) -> if (null_prod null reste) then if (vn_equal vn a) then Some x else filter2 (x,reste) else None
-     | (x,(Vt a)::reste) -> filter2(x,reste)
-     | _ -> None
-   in
-  let l1 = filter_production g filter1 in
+let follow_vn g (null:Grammar.vn -> bool) (first:Grammar.vn -> VTSet.t) (follow:Grammar.vn -> VTSet.t) (vn:Grammar.vn) =
+  let rec filter1 : Grammar.production -> Grammar.v list list option = fun p ->
+    let rec concat s1 s2 =
+      match (s1,s2) with
+        | (Some l1,Some l2) -> Some (l1::l2)
+        | (Some l,_) -> Some [l]
+        | (_,Some l) -> Some l
+        | _ -> None
+    in
+    match p with
+      | x,Vt(v)::l -> filter1 (x,l)
+      | x,Vn(v)::l ->
+        if (vn_equal vn v) then
+          let s1 = Some l in
+          let s2 = filter1 (x,l) in
+          concat s1 s2
+        else filter1 (x,l)
+      | _ -> None
+  in
+  let rec filter2 p =
+    let rec f a = function
+      | [] -> a && true
+      | Vt(vt)::l -> false
+      | Vn(vn)::l -> f (null vn) l
+    in
+    match p with
+      | x,Vt(v)::l -> filter2 (x,l)
+      | x,Vn(v)::l -> if (vn_equal vn v) then if (f true l) then Some x else None else filter2 (x,l)
+      | _ -> None
+  in
+  let l1 = List.flatten (filter_production g filter1) in
   let l2 = filter_production g filter2 in
-  let s1 = List.fold_left (fun acc p -> VTSet.union acc (first_prod null first p)) VTSet.empty l1 in
-  let s2 = List.fold_left (fun acc p -> VTSet.union acc (follow p)) VTSet.empty l2 in
-  VTSet.union s1 s2;;
+  let s1 = List.fold_left (fun a e -> VTSet.union a (first_prod null first e)) VTSet.empty l1 in
+  let s2 = List.fold_left (fun a e -> VTSet.union a (follow e)) VTSet.empty l2 in
+  let ret = VTSet.union s1 s2 in
+  if (vn_equal (axiom g) vn) then VTSet.union ret (VTSet.singleton (end_of_stream g)) else ret;;
 
 let follow = 
  fun g null f -> kleene_fun g order_set (follow_vn g null f) bot_set
@@ -129,7 +148,7 @@ let check_ll1_c3 : (vn -> bool) -> vn -> (v list)  list -> bool =
 
 let is_ll1 : grammar -> (vn -> bool) -> (vn -> VTSet.t) -> (vn -> VTSet.t) -> bool =
  fun g null first follow -> 
- let vns = nterminals  g in
+   let vns = nterminals  g in
  VNSet.fold (fun vn b -> 
   b 
   && 
@@ -140,7 +159,17 @@ let is_ll1 : grammar -> (vn -> bool) -> (vn -> VTSet.t) -> (vn -> VTSet.t) -> bo
    c1 && c2 && c3
  ) vns true
 
-let deriv g nu fi fo X t =  kleene_fun g order_set (follow_vn g null f) bot_set
+(*==============================*)
+
+let deriv g null first follow x t =
+  if(VTSet.mem t (first x)) then
+    let ll = production g x in
+    let l = List.find (fun e -> VTSet.mem t (first_prod null first e)) ll in
+    Some l
+  else if ((null x) && (VTSet.mem t (follow x))) then
+    Some []
+  else
+    None
 
 
  

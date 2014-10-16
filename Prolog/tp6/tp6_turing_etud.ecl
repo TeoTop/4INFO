@@ -30,7 +30,7 @@ transitions(program(_, _, Deltas), Deltas).
 % mpost filename
 % epstopdf filename.1
 dump_to_mpost(Filename, Dump) :-
-        open(Filename, write, Stream),
+        open(Filename, append, Stream),
 	        write_header(Stream),
         write_dump(0, Dump, Stream),
         write_end(Stream),
@@ -96,22 +96,27 @@ deplacer([A|Left],R1,[A|L],R):- deplacer(Left,R1,L,R).
 */
 run_turing_machine(Program, [Symb|Input], Output, FinalState):-initial_state(Program, InitialState),next(Program,InitialState,Symb,Symb1,Dir,State1),update_tape(tape([' '],[Symb|Input]), Symb1, Dir, tape(Left,Right)),run_turing_machine_rec(Program,Left,Right,State1,Output,FinalState),!.
 
-run_turing_machine_rec(Program, Left, Right, State0, Output, State0):-final_states(Program, FinalStates),member(State0,FinalStates),concat(Left,Right,Output).
+run_turing_machine_rec(Program, Left, Right, State0, Output, State0):-final_states(Program, FinalStates),member(State0,FinalStates),append(Left,Right,Output).
 
 run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState):- next(Program,State0,Symb,Symb1,Dir,State1), update_tape(tape(Left,[Symb|Input]),Symb1,Dir,tape(Left1,Right1)),run_turing_machine_rec(Program,Left1,Right1,State1,Output,FinalState).
-
-concat([],[],[]).
-concat([],Y,Y).
-concat([A|X],Y,[A|Z]):-concat(X,Y,Z).
 
 /*
   Question 1.4 : produire une liste représentant les différentes étapes de l'exécution de la machine de turing
 */
-run_turing_machine(Program, [Symb|Input], Output, FinalState, Dump):-initial_state(Program, InitialState),next(Program,InitialState,Symb,Symb1,Dir,State1),update_tape(tape([' '],[Symb|Input]), Symb1, Dir, tape(Left,Right)),run_turing_machine_rec(Program,Left,Right,State1,Output,FinalState, Dump),!.
+run_turing_machine(Program, [Symb|Input], Output, FinalState, Dump):-initial_state(Program, InitialState),next(Program,InitialState,Symb,Symb1,Dir,State1),update_tape(tape([' '],[Symb|Input]), Symb1, Dir, tape(Left,Right)),
+ dump_to_mpost("turing",[(State0,tape([' '],[Symb|Input]))]),
+run_turing_machine_rec(Program,Left,Right,State1,Output,FinalState, Dump),!.
 
-run_turing_machine_rec(Program, Left, Right, State0, Output, State0, Dump):- final_states(Program, FinalStates),member(State0,FinalStates),concat(Left,Right,Output),dump_to_mpost("turing",[State0,tape(Left,Right)]).
+run_turing_machine_rec(Program, Left, Right, State0, Output, State0, Dump):- final_states(Program, FinalStates),member(State0,FinalStates),
+ dump_to_mpost("turing",[(State0,tape(Left,Right))]),
+append(Left,Right,Output).
 
-run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState, Dump):- next(Program,State0,Symb,Symb1,Dir,State1), update_tape(tape(Left,[Symb|Input]),Symb1,Dir,tape(Left1,Right1)),run_turing_machine_rec(Program,Left1,Right1,State1,Output,FinalState),dump_to_mpost("turing",[State0,tape(Left,[Symb|Input])]).
+
+run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState, Dump):-
+ next(Program,State0,Symb,Symb1,Dir,State1), 
+ update_tape(tape(Left,[Symb|Input]),Symb1,Dir,tape(Left1,Right1)),
+ dump_to_mpost("turing",[(State0,tape(Left,[Symb|Input]))]),
+ run_turing_machine_rec(Program,Left1,Right1,State1,Output,FinalState,Dump).
 
 /*
 %Question 1.1
