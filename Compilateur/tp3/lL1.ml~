@@ -1,29 +1,33 @@
 open Grammar
 
+/* Permet de représenter le résultat logique d'une implication (res => fa). Utiliser dans les fonctions acc, gen et null */
 let implic res fa = not res || fa
 
+/* Permet de savoir si le paramètre vn est un terminal ou un non-terminal de la grammaire */
 let is_vn : vn -> v -> bool = 
  fun vn v -> 
   match v with
   | Vt _ -> false
   | Vn vn' -> vn_equal vn vn'
 
-
+/* Retourne la liste de tous les non-terminaux en fonction de la règle actuel et met à jour la table des non-terminaux que le peut atteindre. 'g' représente la grammaire, 'f' la partie courante de 'acc' et 'vn' le non-terminal à traiter */
 let acc_vn g f = 
   fun vn ->
   if vn_equal vn (axiom g) then true
   else List.exists f (filter_production g (fun (nv,l) -> if List.exists (is_vn vn) l then Some nv else None))
 
+(* Permet de retourner le plus petit point fixe de la fonctionnelle acc_vn. Cela permet de vérifier que toutes les règles de grammaires sont bien accessibles *)
 let acc g = kleene_fun g implic (acc_vn g) false
 
 (*===================================================*)
 
+/* Fonction qui permet d'implémenter les équations de la "productivité" d'un non-terminal */
 let rec gen_prod f = function
   | [] -> true
   | (Vt vt)::r -> gen_prod f r
   | (Vn vn)::r -> f vn && gen_prod f r
   
-
+(*  *)
 let gen_vn g f =  
  fun vn -> 
    List.exists (gen_prod f) (production g vn)
