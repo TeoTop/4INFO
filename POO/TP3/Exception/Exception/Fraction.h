@@ -131,7 +131,7 @@ public:
 	*/
 	friend Fraction* operator/(const Fraction& f1, const Fraction f2);
 	/**
-	* \fn friend bool operator<<(ostream& os, Fraction& f)
+	* \fn friend ostream& operator<<(ostream& os, Fraction& f)
 	* \brief Overloads << operator
 	* Return output stream to display Fraction object
 	* \param[in,out] os ostream&
