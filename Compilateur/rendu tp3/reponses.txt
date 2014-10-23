@@ -1,0 +1,379 @@
+Grammaire =======================================
+
+<Super>    --> <Expr> eof
+<Expr>     --> <Termb> <Expr2>
+<Expr2>    --> "ou" <Termb> <Expr2> | E
+<Termb>    --> <Facteurb> <Termb2>
+<Termb2>   --> "et" <Facteurb> <Termb2> | E
+<Facteurb> --> <Relation> | parouv <Expr> parferm | si <Expr> alors <Expr> sinon <Expr> fsi
+<Relation> --> ident <Op> ident,
+<Op>       --> "=" | "<>" | "<" | ">" | ">=" | "<="
+
+
+Equation ==========================================
+
+premier(Super)	= premier(Expr eof)
+				= premier(Expr)
+				= {"(", "si", "ident"}
+
+premier(Expr)   = premier(Termb Expr2)
+				= premier(Termb)
+				= {"(", "si", "ident"}
+
+premier(Expr2)  = premier("ou" Termb Expr2) U {E}
+				= {"ou"}
+
+premier(Termb)  = premier(Facteurb Termb2)
+				= premier(Facteurb)  
+				= {"(", "si", "ident"}
+
+premier(Termb2) = premier("et" Facteurb Termb2) U {E}
+				= {"et"}
+
+premier(Facteurb)	= premier(Relation) U premier("parouv" Expr "parferm") U premier("si" Expr "alors" Expr "sinon" Expr "fsi")
+					= premier(Relation) U {"parouv"} U {"si"}
+					= {"(", "si", "ident"}
+
+premier(Relation)	= premier("ident" Op "ident")
+					= {"ident"}
+					= {"ident"}
+
+premier(Op)		= premier("=") U premier("<>") U premier("<") U premier(">") U premier(">=") U premier("<=")
+				= {"=", "<>", "<", ">", ">=", "<="}
+
+
+suivant(super)	= vide
+
+suivant(Expr)	= {"eof"} U {"parferm"} U {"alors"} U {"sinon"} U {"fsi"}
+				= {eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Expr2)  = suivant(Expr) U suivant(Expr2) U {E}
+				= suivant(Expr)
+				= {eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Termb)  = premier(Expr2) U suivant(Expr2) U {E}
+				= premier(Expr2) U suivant(Expr2)
+				= {"ou", eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Termb2) = premier(Termb) U suivant(Termb2) U {E}
+				= premier(Termb)
+				= {"ou", eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Facteurb) 	= premier(Termb2) U suivant(Termb2) U {E}
+					= premier(Expr2) U suivant(Expr2)
+					= {"et", "ou", eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Relation)	= suivant(Facteurb)
+					= {"et", "ou", eof, ")", "alors", "sinon", "fsi"}
+
+suivant(Op)   	= {"ident"}
+
+
+null(Expr)        = false
+null(Expr)        = false
+null(Expr2)       = true
+null(Termb)       = false
+null(Termb2)      = true
+null(Facteurb)    = false
+null(Relation)    = false
+null(Op)          = false
+
+
+Vérification LL1 ===============================================
+
+
+Super:
+	Pas d'intersection
+	null(Super) = false
+
+Expr:
+	Pas d'intersection
+	null(Expr) = false
+
+Expr2:
+	premier("ou") inter premier(vide) = vide
+	null(Expr2) = true
+	premier(Expr2) inter suivant(Expr2) = vide
+
+Termb:
+	Pas d'intersection
+	null(Super) = false
+
+Termb2:
+	premier("et") inter premier(vide) = vide
+	null(Termb2) = true
+	premier(Termb2) inter suivant(Termb2) = vide
+
+Facteurb:
+	premier(Relation) inter premier("parouv") inter premier("si") = vide
+	null(Facteurb) = false
+
+Relation:
+	Pas d'intersection
+	null(Relation) = false
+
+Op:
+	premier("=") inter premier("<>") inter premier("<") inter premier(">") inter premier(">=") inter premier("<=") = vide
+	null(Op) = false
+
+Toutes les règles respectent bien les vérifications. C'est une grammaire LL1.
+
+
+
+Arbre concret ===========================================
+
+
+Exemple 1.1 :
+	t > y et (x = y)
+
+Arbre concret :
+
+                                                        Expr
+                                       ________________/    \_______________
+                                   Termb                                   Expr2
+                        __________/     \___________                            \_____
+                 Facteurb                          Termb2                            E
+                     |                      ______/  |   \____
+                 Relation                "et"     Facteurb   Termb2
+                /   |    \                      _/   |    \_       \___
+            Ident   Op   Ident                "("   Expr   ")"        E
+              |     |      |                       /    \
+              t    ">"     y                   Termb    Expr2
+                                              /     \        \
+                                       Facteurb     Termb2    E
+                                          |            |
+                                       Relation        E
+                                      /   |    \
+                                  Ident   Op   Ident
+                                    |     |      |
+                                    x    "="     y
+
+
+
+Test (sans Relation -> ident Op ident) : non-terminaux inaccessibles
+
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Expr2, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Termb Expr2,
+	  Expr2  -> ou Termb Expr2,
+	  Expr2  ->,	
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation ->,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )
+
+Non terminal Op is not accessible
+Dans ce cas, nous avons mis la règle "Relation" à vide pour empécher d'atteindre le terminaux de la règle "Op". 
+
+
+
+Test (sans Expr2 ->) : non-terminaux inaccessiblesqui ne sont pas productifs
+
+
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Expr2, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Termb Expr2,
+	  Expr2  -> ou Termb Expr2,
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation -> ident Op ident,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )
+
+
+Non terminal Expr is not generative
+Non terminal Expr2 is not generative
+Non terminal Super is not generative
+Dans ce cas, nous avons retirer la partie vide de la règle "Expr2" afin de boucler sur la clause "ou" de la grammaire et ainsi obliger celle-ci à être non-terminal.
+
+
+
+Test (Expr normal) : grammaire non LL1
+
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Expr ou Termb,
+	  Expr  -> Termb,
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation -> ident Op ident,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )
+
+Grammar is well-formed
+
+Null Expr = false
+Null Facteurb = false
+Null Op = false
+Null Relation = false
+Null Super = false
+Null Termb = false
+Null Termb2 = true
+
+First Expr = { ident parouv si }
+First Facteurb = { ident parouv si }
+First Op = { diff egal inf infeg sup supeg }
+First Relation = { ident }
+First Super = { ident parouv si }
+First Termb = { ident parouv si }
+First Termb2 = { et }
+
+Follow Expr = { # alors fsi ou parferm sinon }
+Follow Facteurb = { # alors et fsi ou parferm sinon }
+Follow Op = { ident }
+Follow Relation = { # alors et fsi ou parferm sinon }
+Follow Super = { # }
+Follow Termb = { # alors fsi ou parferm sinon }
+Follow Termb2 = { # alors fsi ou parferm sinon }
+
+The grammar is NOT LL1
+Dans ce cas, nous avons réutiliser la première grammaire sur la règle "Expr" afin de placer la dérivation à gauche et non à droite comme convenue pour qu'une grammaire soit LL1.
+
+
+
+Test (Expr normal) : grammaire non LL1
+
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Expr2, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Termb Expr2,
+	  Expr2  -> ou Termb Expr2,
+	  Expr2  ->,	
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation -> ident Op ident,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )
+
+
+Grammar is well-formed
+
+Null Expr = false
+Null Expr2 = true
+Null Facteurb = false
+Null Op = false
+Null Relation = false
+Null Super = false
+Null Termb = false
+Null Termb2 = true
+
+First Expr = { ident parouv si }
+First Expr2 = { ou }
+First Facteurb = { ident parouv si }
+First Op = { diff egal inf infeg sup supeg }
+First Relation = { ident }
+First Super = { ident parouv si }
+First Termb = { ident parouv si }
+First Termb2 = { et }
+
+Follow Expr = { # alors fsi parferm sinon }
+Follow Expr2 = { # alors fsi parferm sinon }
+Follow Facteurb = { # alors et fsi ou parferm sinon }
+Follow Op = { ident }
+Follow Relation = { # alors et fsi ou parferm sinon }
+Follow Super = { # }
+Follow Termb = { # alors fsi ou parferm sinon }
+Follow Termb2 = { # alors fsi ou parferm sinon }
+
+The grammar is LL1
+Cas final du TP.
+
+
+Test (mot reconnu) : grammaire  LL1
+
+a=b
+
+Super---Expr-+-Termb-+-Facteurb---Relation-+-UL_IDENTa
+             |       |                     |-Op---UL_EGAL
+             |       |                     `-UL_IDENTb
+             |       `-Termb2
+             `-Expr2
+
+
+si a=b alors a=b sinon a=c fsi
+
+Super---Expr-+-Termb-+-Facteurb-+-UL_SI
+             |       |          |-Expr-+-Termb-+-Facteurb---Relation-+-UL_IDENTa
+             |       |          |      |       |                     |-Op---UL_EGAL
+             |       |          |      |       |                     `-UL_IDENTb
+             |       |          |      |       `-Termb2
+             |       |          |      `-Expr2
+             |       |          |-UL_ALORS
+             |       |          |-Expr-+-Termb-+-Facteurb---Relation-+-UL_IDENTa
+             |       |          |      |       |                     |-Op---UL_EGAL
+             |       |          |      |       |                     `-UL_IDENTb
+             |       |          |      |       `-Termb2
+             |       |          |      `-Expr2
+             |       |          |-UL_SINON
+             |       |          |-Expr-+-Termb-+-Facteurb---Relation-+-UL_IDENTa
+             |       |          |      |       |                     |-Op---UL_EGAL
+             |       |          |      |       |                     `-UL_IDENTc
+             |       |          |      |       `-Termb2
+             |       |          |      `-Expr2
+             |       |          `-UL_FSI
+             |       `-Termb2
+             `-Expr2
+
+a=b et a<>c
+
+Super---Expr-+-Termb-+-Facteurb---Relation-+-UL_IDENTa
+             |       |                     |-Op---UL_EGAL
+             |       |                     `-UL_IDENTb
+             |       `-Termb2-+-UL_ET
+             |                |-Facteurb---Relation-+-UL_IDENTa
+             |                |                     |-Op---UL_DIFF
+             |                |                     `-UL_IDENTc
+             |                `-Termb2
+             `-Expr2
+
+
+
+
+Test (mot non reconnu) : grammaire  LL1
+
+a et b
+Failure("No derivation")
+
+a(b) = c
+Failure("No derivation")
+

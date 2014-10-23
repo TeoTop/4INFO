@@ -1,0 +1,20 @@
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Expr2, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Termb Expr2,
+	  Expr2  -> ou Termb Expr2,
+	  Expr2  ->,	
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation -> ident Op ident,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )

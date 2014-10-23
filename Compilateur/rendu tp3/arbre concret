@@ -1,0 +1,19 @@
+                                                        Expr
+                                       ________________/    \_______________
+                                   Termb                                   Expr2
+                        __________/     \___________                            \_____
+                 Facteurb                          Termb2                            E
+                     |                      ______/  |   \____
+                 Relation                "et"     Facteurb   Termb2
+                /   |    \                      _/   |    \_       \___
+            Ident   Op   Ident                "("   Expr   ")"        E
+              |     |      |                       /    \
+              t    ">"     y                   Termb    Expr2
+                                              /     \        \
+                                       Facteurb     Termb2    E
+                                          |            |
+                                       Relation        E
+                                      /   |    \
+                                  Ident   Op   Ident
+                                    |     |      |
+                                    x    "="     y

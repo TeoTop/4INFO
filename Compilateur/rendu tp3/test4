@@ -1,0 +1,52 @@
+({parouv, parferm, egal, diff, inf, sup, et, ou, si, alors, sinon, fsi, supeg, infeg, ident}, {Super, Expr, Expr2, Termb, Termb2, Facteurb, Relation, Op}, Super,
+        {       
+	  Super  -> Expr,
+	  Expr   -> Termb Expr2,
+	  Expr2  -> ou Termb Expr2,
+	  Expr2  ->,	
+	  Termb  -> Facteurb Termb2,
+	  Termb2 -> et Facteurb Termb2,
+	  Termb2 ->,
+	  Facteurb -> Relation,
+	  Facteurb -> parouv Expr parferm,
+	  Facteurb -> si Expr alors Expr sinon Expr fsi,
+	  Relation -> ident Op ident,
+	  Op -> egal,
+	  Op -> diff,
+	  Op -> inf,
+	  Op -> sup,
+	  Op -> supeg,
+	  Op -> infeg
+	  } )
+
+
+Grammar is well-formed
+
+Null Expr = false
+Null Expr2 = true
+Null Facteurb = false
+Null Op = false
+Null Relation = false
+Null Super = false
+Null Termb = false
+Null Termb2 = true
+
+First Expr = { ident parouv si }
+First Expr2 = { ou }
+First Facteurb = { ident parouv si }
+First Op = { diff egal inf infeg sup supeg }
+First Relation = { ident }
+First Super = { ident parouv si }
+First Termb = { ident parouv si }
+First Termb2 = { et }
+
+Follow Expr = { # alors fsi parferm sinon }
+Follow Expr2 = { # alors fsi parferm sinon }
+Follow Facteurb = { # alors et fsi ou parferm sinon }
+Follow Op = { ident }
+Follow Relation = { # alors et fsi ou parferm sinon }
+Follow Super = { # }
+Follow Termb = { # alors fsi ou parferm sinon }
+Follow Termb2 = { # alors fsi ou parferm sinon }
+
+The grammar is LL1
