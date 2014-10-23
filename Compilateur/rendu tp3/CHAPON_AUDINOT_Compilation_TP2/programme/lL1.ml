@@ -172,7 +172,7 @@ let is_ll1 : grammar -> (vn -> bool) -> (vn -> VTSet.t) -> (vn -> VTSet.t) -> bo
 
 (*==============================*)
 
-(*Permet de savoir si l'exemple t est dérivable par la grammaire g *)
+(*Permet de savoir si l'exemple x est dérivable par la grammaire g *)
 let deriv g null first follow x t =
   if(VTSet.mem t (first x)) then
     let ll = production g x in
