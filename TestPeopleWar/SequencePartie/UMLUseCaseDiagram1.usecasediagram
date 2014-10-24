@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="a9e1ead7-1e5a-4586-b3b8-57b44285e3b4" name="UMLUseCaseDiagram1" linkedPackageId="d37bb544-7264-4a20-a29b-242542ffbaa7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="88075832-c5ad-47a4-ae32-230e03957fa6">
+      <profileInstance Id="0683a4f1-3e18-473d-9919-d959dec46096" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1b17fc74-330f-4780-9d23-643c217e7637">
+      <profileInstance Id="8449ac44-c752-4232-91a1-987ce0c6ccba" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0f24d357-f139-4816-b5ab-82cb7aee1894" name="Joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fddf0f73-f40b-4826-9045-505a011f5b4b" />
+        <targetEnds>
+          <association Id="101890f0-896b-4239-9f60-63aabe9fcd32" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Déplacer les unités" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82a7b73d-baef-4989-9c25-8c461b9fb77b" LastKnownName="Déplacer les unités" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d1c34e0-09e5-48c1-80f8-af9de6740183" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7a1c2ba4-a1a9-4dd2-8166-9f0d72ba89e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb36f508-600c-4d6f-8afe-de0f52057b5e" name="Déplacer les unités" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8443101-0bfa-4716-b8be-1d5fa3f76ed7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="569b039a-7a78-4894-a78d-0bda6258f16d" />
+          </association>
+          <association Id="47bc7b42-1f31-4633-88ad-c2d6f28395d1" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Cliquer unité" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a52b3272-ef8d-4f76-9f33-2453a390be41" LastKnownName="Cliquer unité" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9625b523-7c0f-4934-a1d0-dd3d8428ff12" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="80960e33-b8e9-4e97-8fd1-00abb2fd47bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4872dabd-64bf-4565-929b-d0d7a1681706" name="Cliquer unité" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3c8c9dae-803e-4c80-919a-c3eb5e911b96" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0a8d85b5-73d0-4372-b8db-513f173b8cf4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" name="Administration" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="454874a0-dd5c-4a83-935c-2c13f72ae40c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="d3ee4a7b-cc6d-4b18-8414-885f071f126f" name="Créer une partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cc2b087b-ad22-4b8f-8c27-23e0c744e6b0" />
+        <additions>
+          <include Id="39568b33-408a-44c5-a2ea-4eeaf29e67a4">
+            <useCaseMoniker Id="1768db86-a78a-4639-b261-12c351ce26fa" LastKnownName="Créer carte" />
+            <elementDefinition Id="cfb9fb47-8db7-440f-b7ee-59272845a34b" />
+          </include>
+          <include Id="7c8eeeb6-f247-4e17-9a79-9d2a27b1bb94">
+            <useCaseMoniker Id="e39d205d-1fce-47c3-a28d-931ed3f66dbc" LastKnownName="Créer joueur" />
+            <elementDefinition Id="60d05148-5a5b-4a32-b128-59310ee3cc9d" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="dbea2f72-f825-4ee3-8aec-54716de937ed" name="Utilisateur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="73baefe5-b396-4fb4-b8f6-75c267448b21" />
+        <targetEnds>
+          <association Id="fc4abf9d-791d-43aa-8403-dfbd5d70c100" isDerived="false" sourceEndRoleName="Utilisateur" targetEndRoleName="Créer une partie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d3ee4a7b-cc6d-4b18-8414-885f071f126f" LastKnownName="Créer une partie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd5e1ae4-f6c1-4065-938a-11183a4588a6" name="Utilisateur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b2fcb0a2-02f5-486e-83e1-af465f63b7c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29758300-3db8-4069-9f2a-4c15818a56ba" name="Créer une partie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c1f933c-3452-4274-a144-3b69fea7529d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e40a5582-4975-4ea7-97a7-f15ac7cc92ef" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1768db86-a78a-4639-b261-12c351ce26fa" name="Créer carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bbb42132-dc74-4c3b-a419-218d6310bca7" />
+        <additions>
+          <include Id="bef18707-2a6b-46f5-aa22-6b971b995d54">
+            <useCaseMoniker Id="651f3cd9-a023-4624-9c55-1a869a4396f5" LastKnownName="Créer case" />
+            <elementDefinition Id="246abb3f-1c6e-4467-a332-bfbfa3602722" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e39d205d-1fce-47c3-a28d-931ed3f66dbc" name="Créer joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cc774cc2-7c66-4de4-bece-e6d8638848a1" />
+        <targetEnds>
+          <association Id="a846eb13-b9c9-4e02-b570-906ac29b5cda" isDerived="false" sourceEndRoleName="Créer joueur" targetEndRoleName="Joueur" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="0f24d357-f139-4816-b5ab-82cb7aee1894" LastKnownName="Joueur" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fbd4117-2649-4847-8b8a-de16f2d31b53" name="Créer joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="70ccdd38-b4dc-40ae-a67c-08b95f6cce1f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e919b6ae-3949-4ed1-831e-f9d0e31a4162" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="99152195-c758-46f1-8c40-a2fbf387ecf2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6278628e-e14d-4488-a15a-9e4e656ed694" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="149e9714-c7d0-4359-b4ab-0305d594b2e1">
+            <useCaseMoniker Id="0e264754-3674-487b-a022-91147c9ee6e6" LastKnownName="Créer peuple" />
+            <elementDefinition Id="29f21532-bfd2-476a-a48c-edf42d8b81e9" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="651f3cd9-a023-4624-9c55-1a869a4396f5" name="Créer case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="23110638-795b-4a99-b5a2-9a4876603488" />
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="7726b8d3-6f92-45d1-afaf-b427d8865012" name="Partie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b942ec23-079b-42d4-ba39-f13a9b2d1e70" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="0e264754-3674-487b-a022-91147c9ee6e6" name="Créer peuple" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2f42cb3-ee51-4c68-a3bd-170b8a966b9c" />
+        <additions>
+          <include Id="f224eaa7-6a92-48af-8063-53fa1817abcf">
+            <useCaseMoniker Id="700525c7-df68-4850-923d-8ccfe9a46b32" LastKnownName="Créer unité" />
+            <elementDefinition Id="2de6b914-ee05-4180-9159-52d9c4b941d8" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="700525c7-df68-4850-923d-8ccfe9a46b32" name="Créer unité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0f852d0e-8cbf-428a-8a3a-893cdf67aba3" />
+        <additions>
+          <include Id="3b73c5b0-17d8-4cc8-a437-b7303e0f02fa">
+            <useCaseMoniker Id="fdda6ca1-b82d-4ba3-98cb-228c383853fb" LastKnownName="Placer unité" />
+            <elementDefinition Id="48a10c38-2133-4d72-84e0-f2dc61f0e29e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="82a7b73d-baef-4989-9c25-8c461b9fb77b" name="Déplacer les unités" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e5c8def-40b2-437c-8985-d9441e0b78ba" />
+        <extendedCases>
+          <extend Id="c6d9351e-82d3-428c-8a34-9e3dca28a911">
+            <useCaseMoniker Id="920f2fa6-a425-45cf-9b4c-997999dba53e" LastKnownName="Attaquer" />
+            <elementDefinition Id="2d6ff0e7-026b-4f6e-b4cc-121348d80bd5" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fdda6ca1-b82d-4ba3-98cb-228c383853fb" name="Placer unité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7740a52f-45e1-434e-bfa8-a6df1d22a1bf" />
+        <subjects>
+          <subsystemMoniker Id="924d7b66-7435-4b60-8b86-f4b254e3bcc9" LastKnownName="Administration" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a52b3272-ef8d-4f76-9f33-2453a390be41" name="Cliquer unité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1d68171-fddc-4dc9-a4ca-335a4942833c" />
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="920f2fa6-a425-45cf-9b4c-997999dba53e" name="Attaquer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="46497b26-9a8e-4159-98f7-20c3870591ea" />
+        <extendedCases>
+          <extend Id="3ba11891-4a16-4e01-8d2a-c7df05306488">
+            <useCaseMoniker Id="6bb7d2cc-17be-478b-ae8c-b66888874af1" LastKnownName="Gagner" />
+            <elementDefinition Id="39e27e08-aa86-4815-96aa-fef4b8fb07e0" />
+          </extend>
+          <extend Id="18bea6a2-24f6-4f70-b187-db318dbc1fde">
+            <useCaseMoniker Id="488ef928-1f3d-41ca-b7b7-6d06e8b6b0ae" LastKnownName="Perdre" />
+            <elementDefinition Id="a379b95c-a2f3-4dce-8bd6-e13fe2bc766f" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6bb7d2cc-17be-478b-ae8c-b66888874af1" name="Gagner" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4a958411-fe4b-44fa-9d23-435e220b913d" />
+        <extendedCases>
+          <extend Id="2cf0e217-3ecb-4529-8adc-84c30f2f5da0">
+            <useCaseMoniker Id="f4524cfd-c068-4a44-9f13-945192e08a23" LastKnownName="Rester sur la même case" />
+            <elementDefinition Id="d5c84cd1-e8c6-4d33-9d8f-15640735093f" />
+          </extend>
+          <extend Id="19a754fa-8de9-445a-ada3-c08bcad7155e">
+            <useCaseMoniker Id="0b01f42e-a9a2-4805-a3ce-a2c7a943846d" LastKnownName="Se déplacer dans une autre case" />
+            <elementDefinition Id="f9a6da8f-d26b-4e04-a95a-652291564a09" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="488ef928-1f3d-41ca-b7b7-6d06e8b6b0ae" name="Perdre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe74e979-8987-4119-a2ca-6d6fccc36bce" />
+        <extendedCases>
+          <extend Id="33b2b262-a847-4c33-b63b-372b4f960b4c">
+            <useCaseMoniker Id="9a017a38-8122-4304-a3ac-5a83bd436e5d" LastKnownName="Détruire unité" />
+            <elementDefinition Id="ae112d91-94d9-42d6-bf76-6cc69d26f679" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="b05ab856-a690-4026-97ea-f235cee55f16">
+            <useCaseMoniker Id="04d0de43-ecad-4ab4-9441-4b296399a2ee" LastKnownName="Perdre pv" />
+            <elementDefinition Id="79832c8f-6e15-473c-a57e-558a4334f3e6" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="04d0de43-ecad-4ab4-9441-4b296399a2ee" name="Perdre pv" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0283fbcd-d293-495e-a7f1-324f77149eb2" />
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9a017a38-8122-4304-a3ac-5a83bd436e5d" name="Détruire unité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e3abbd2c-54fc-46ae-9023-030fc0cd64e3" />
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f4524cfd-c068-4a44-9f13-945192e08a23" name="Rester sur la même case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4bcab77f-4f58-4761-a327-845afbabc88b" />
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0b01f42e-a9a2-4805-a3ce-a2c7a943846d" name="Se déplacer dans une autre case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8607f69d-3c12-4e4e-93d2-0c8fed8f4551" />
+        <subjects>
+          <subsystemMoniker Id="7726b8d3-6f92-45d1-afaf-b427d8865012" LastKnownName="Partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="d37bb544-7264-4a20-a29b-242542ffbaa7" name="SequencePartie">
+    <elementDefinition Id="055b3d5f-1833-4ca5-bdd2-2e34f0586d74" />
+  </package>
+</useCaseModelRoot>
