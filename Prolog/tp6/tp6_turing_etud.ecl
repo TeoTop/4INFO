@@ -104,19 +104,18 @@ run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState):
   Question 1.4 : produire une liste représentant les différentes étapes de l'exécution de la machine de turing
 */
 run_turing_machine(Program, [Symb|Input], Output, FinalState, Dump):-initial_state(Program, InitialState),next(Program,InitialState,Symb,Symb1,Dir,State1),update_tape(tape([' '],[Symb|Input]), Symb1, Dir, tape(Left,Right)),
- dump_to_mpost("turing",[(State0,tape([' '],[Symb|Input]))]),
-run_turing_machine_rec(Program,Left,Right,State1,Output,FinalState, Dump),!.
+append_strings("turing","0",Name), dump_to_mpost(Name,[(State0,tape([' '],[Symb|Input]))]),
+run_turing_machine_rec(Program,Left,Right,State1,Output,FinalState, Dump, 1),!.
 
-run_turing_machine_rec(Program, Left, Right, State0, Output, State0, Dump):- final_states(Program, FinalStates),member(State0,FinalStates),
- dump_to_mpost("turing",[(State0,tape(Left,Right))]),
+run_turing_machine_rec(Program, Left, Right, State0, Output, State0, Dump, Nb):- final_states(Program, FinalStates),member(State0,FinalStates),
+ number_string(Nb,Nb_str), append_strings("turing",Nb_str,Name), dump_to_mpost(Name,[(State0,tape(Left,Right))]),
 append(Left,Right,Output).
 
 
-run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState, Dump):-
- next(Program,State0,Symb,Symb1,Dir,State1), 
- update_tape(tape(Left,[Symb|Input]),Symb1,Dir,tape(Left1,Right1)),
- dump_to_mpost("turing",[(State0,tape(Left,[Symb|Input]))]),
- run_turing_machine_rec(Program,Left1,Right1,State1,Output,FinalState,Dump).
+run_turing_machine_rec(Program, Left, [Symb|Input], State0, Output, FinalState, Dump, Nb):-
+ next(Program,State0,Symb,Symb1,Dir,State1), update_tape(tape(Left,[Symb|Input]),Symb1,Dir,tape(Left1,Right1)), number_string(Nb,Nb_str), append_strings("turing",Nb_str,Name), dump_to_mpost(Name,[(State0,tape(Left,[Symb|Input]))]), Nb1 is Nb + 1, run_turing_machine_rec(Program,Left1,Right1,State1,Output,FinalState,Dump, Nb1).
+
+
 
 /*
 %Question 1.1
