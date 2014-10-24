@@ -1,0 +1,10 @@
+begin
+int a,
+int c;
+a <- c;
+c <- a + c;
+begin
+bool b;
+b <- b and b
+end
+end
