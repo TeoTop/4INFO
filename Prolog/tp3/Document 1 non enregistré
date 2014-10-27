@@ -1,3 +1,0 @@
-["~/4INFO/Prolog/tp3/tp_listes_squelette.pl"].
-
-elim([1,5,4,7,1,1,2,2,4,7],Y).
