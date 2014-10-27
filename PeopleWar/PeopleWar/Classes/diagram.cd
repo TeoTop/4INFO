@@ -176,7 +176,7 @@
     <Position X="18.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DirecteurPartie.cs</FileName>
+      <FileName>Classes\Implementation\DirecteurPartie.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="PeopleWar.Peuple">

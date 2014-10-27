@@ -39,8 +39,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Classes\Implementation\Caracteristique.cs" />
+    <Compile Include="Classes\Interface\Carte.cs" />
+    <Compile Include="Classes\Implementation\CarteA.cs" />
+    <Compile Include="Classes\Implementation\CarteImp.cs" />
+    <Compile Include="Classes\Interface\Case.cs" />
+    <Compile Include="Classes\Implementation\CaseA.cs" />
+    <Compile Include="Classes\Interface\Combat.cs" />
+    <Compile Include="Classes\Implementation\CombatImp.cs" />
+    <Compile Include="Classes\Implementation\Demo.cs" />
+    <Compile Include="Classes\Implementation\Desert.cs" />
+    <Compile Include="Classes\Implementation\Elf.cs" />
+    <Compile Include="Classes\Implementation\Erreur.cs" />
+    <Compile Include="Classes\Implementation\FabriqueCarte.cs" />
+    <Compile Include="Classes\Implementation\FabriqueCase.cs" />
+    <Compile Include="Classes\Implementation\FabriquePeuple.cs" />
+    <Compile Include="Classes\Implementation\Foret.cs" />
+    <Compile Include="Classes\Interface\Joueur.cs" />
+    <Compile Include="Classes\Implementation\JoueurImp.cs" />
+    <Compile Include="Classes\Implementation\Montagne.cs" />
+    <Compile Include="Classes\Implementation\MonteurPartie.cs" />
+    <Compile Include="Classes\Implementation\Nain.cs" />
+    <Compile Include="Classes\Implementation\Normale.cs" />
+    <Compile Include="Classes\Implementation\Orc.cs" />
+    <Compile Include="Classes\Interface\Partie.cs" />
+    <Compile Include="Classes\Implementation\PartieImp.cs" />
+    <Compile Include="Classes\Implementation\Petite.cs" />
+    <Compile Include="Classes\Interface\Peuple.cs" />
+    <Compile Include="Classes\Implementation\PeupleA.cs" />
+    <Compile Include="Classes\Implementation\Plaine.cs" />
+    <Compile Include="Classes\Implementation\DirecteurPartie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Interface\Tour.cs" />
+    <Compile Include="Classes\Implementation\TourImp.cs" />
+    <Compile Include="Classes\Interface\Unite.cs" />
+    <Compile Include="Classes\Implementation\UniteImp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Classes\diagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
