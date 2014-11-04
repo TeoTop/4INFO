@@ -1,8 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="8f2eb552-7899-4b70-9ed7-95be013f80d2"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="e7a744be-d13d-4d80-9e66-d1dcfa73a944">
+      <body>Fin avec erreur
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+          LastKnownName="ActivityFinal1"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="df812012-b6b9-4639-996f-66c3beb3ba39">
+      <body>Fin normale
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+          LastKnownName="ActivityFinal2"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="29d31e7f-142b-4d11-85c8-b5e8f5b9858c">
+      <body>Fin normale
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="893a86af-913a-4372-8f43-4545d9cc8132"
+          LastKnownName="ActivityFinal1"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2bfba8c1-810d-493e-9eec-8d6dbf5887f7">
+      <body>Diagramme d'activité déjà fait</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+          LastKnownName="Combat"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -35,7 +80,7 @@
               <behaviorExecutionSpecificationMoniker
                 Id="a0c49ba8-1596-48c3-ba11-4cbe0757d594"
                 LastKnownName="BehaviorExecutionSpecification12"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </annotatedElements>
           </comment>
           <comment
@@ -46,7 +91,7 @@
               <behaviorExecutionSpecificationMoniker
                 Id="865f8ded-d0a6-48d7-9b06-22af50175d25"
                 LastKnownName="BehaviorExecutionSpecification14"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </annotatedElements>
           </comment>
           <comment
@@ -57,7 +102,7 @@ action = "passer"</body>
               <interactionOperandMoniker
                 Id="3360821a-8ac4-48f4-8cd0-66e22ccba3ee"
                 LastKnownName="passerUnite"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </annotatedElements>
           </comment>
           <comment
@@ -68,7 +113,7 @@ action = res</body>
               <behaviorExecutionSpecificationMoniker
                 Id="a4e1130d-c800-4b1f-adf5-5098793e8f55"
                 LastKnownName="BehaviorExecutionSpecification6"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </annotatedElements>
           </comment>
         </ownedCommentsInternal>
@@ -82,19 +127,19 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <operands>
               <interactionOperand
@@ -104,19 +149,19 @@ action = res</body>
                   <lifelineMoniker
                     Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                     LastKnownName="Partie : PartieImp"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <lifelineMoniker
                     Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                     LastKnownName="Joueur : JoueurImp"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <lifelineMoniker
                     Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                     LastKnownName="Unite : UniteImp"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <lifelineMoniker
                     Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                     LastKnownName="Case : CaseImp"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                 </coveredLifelines>
                 <fragments>
                   <combinedFragment
@@ -128,15 +173,15 @@ action = res</body>
                       <lifelineMoniker
                         Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                         LastKnownName="Joueur : JoueurImp"
-                        LastKnownLocation="ModelingProject1.uml" />
+                        LastKnownLocation="SequenceJouerPartie.uml" />
                       <lifelineMoniker
                         Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                         LastKnownName="Unite : UniteImp"
-                        LastKnownLocation="ModelingProject1.uml" />
+                        LastKnownLocation="SequenceJouerPartie.uml" />
                       <lifelineMoniker
                         Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                         LastKnownName="Case : CaseImp"
-                        LastKnownLocation="ModelingProject1.uml" />
+                        LastKnownLocation="SequenceJouerPartie.uml" />
                     </coveredLifelines>
                     <operands>
                       <interactionOperand
@@ -146,15 +191,15 @@ action = res</body>
                           <lifelineMoniker
                             Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                             LastKnownName="Joueur : JoueurImp"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <lifelineMoniker
                             Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                             LastKnownName="Unite : UniteImp"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <lifelineMoniker
                             Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                             LastKnownName="Case : CaseImp"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                         </coveredLifelines>
                         <fragments>
                           <combinedFragment
@@ -165,11 +210,11 @@ action = res</body>
                               <lifelineMoniker
                                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                                 LastKnownName="Unite : UniteImp"
-                                LastKnownLocation="ModelingProject1.uml" />
+                                LastKnownLocation="SequenceJouerPartie.uml" />
                               <lifelineMoniker
                                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                                 LastKnownName="Case : CaseImp"
-                                LastKnownLocation="ModelingProject1.uml" />
+                                LastKnownLocation="SequenceJouerPartie.uml" />
                             </coveredLifelines>
                             <operands>
                               <interactionOperand
@@ -179,11 +224,11 @@ action = res</body>
                                   <lifelineMoniker
                                     Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                                     LastKnownName="Unite : UniteImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <lifelineMoniker
                                     Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                                     LastKnownName="Case : CaseImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </coveredLifelines>
                                 <guard>
                                   <interactionConstraint
@@ -194,19 +239,19 @@ action = res</body>
                                   <operandOccurrenceSpecificationMoniker
                                     Id="1771d630-6dd9-4041-88ce-4cb7e99c90b7"
                                     LastKnownName="OperandOccurrenceSpecification31"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="2e68b998-8119-4445-bf10-0c2065385e18"
                                     LastKnownName="OperandOccurrenceSpecification32"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="f0dfb0f0-40c5-44e1-8852-c67550fe9bcb"
                                     LastKnownName="OperandOccurrenceSpecification33"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="a1f619cf-87ad-4f3c-baf2-e03a654a9a8a"
                                     LastKnownName="OperandOccurrenceSpecification34"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </operandOccurrenceSpecifications>
                               </interactionOperand>
                               <interactionOperand
@@ -216,11 +261,11 @@ action = res</body>
                                   <lifelineMoniker
                                     Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                                     LastKnownName="Unite : UniteImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <lifelineMoniker
                                     Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                                     LastKnownName="Case : CaseImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </coveredLifelines>
                                 <guard>
                                   <interactionConstraint
@@ -231,19 +276,73 @@ action = res</body>
                                   <operandOccurrenceSpecificationMoniker
                                     Id="447d703c-51ba-446d-a9f4-cdee80abc100"
                                     LastKnownName="OperandOccurrenceSpecification35"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="5c3c98a0-5f42-45a1-87c6-5b9b005b172a"
                                     LastKnownName="OperandOccurrenceSpecification36"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="1b83cc0a-6ff2-4f84-9a2b-9618454a7ded"
                                     LastKnownName="OperandOccurrenceSpecification37"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="0dfa868b-1182-4292-952a-e85ab1dcdf1f"
                                     LastKnownName="OperandOccurrenceSpecification38"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                </operandOccurrenceSpecifications>
+                              </interactionOperand>
+                            </operands>
+                          </combinedFragment>
+                          <combinedFragment
+                            Id="d0de0f1a-573b-4986-a074-f2dfb739c86b"
+                            name="CombinedFragment2"
+                            interactionOperator="Opt">
+                            <coveredLifelines>
+                              <lifelineMoniker
+                                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                                LastKnownName="Joueur : JoueurImp"
+                                LastKnownLocation="SequenceJouerPartie.uml" />
+                              <lifelineMoniker
+                                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                                LastKnownName="Unite : UniteImp"
+                                LastKnownLocation="SequenceJouerPartie.uml" />
+                            </coveredLifelines>
+                            <operands>
+                              <interactionOperand
+                                Id="3d5ce16e-b097-4ffd-a528-9a1dc2569184"
+                                name="InteractionOperand1">
+                                <coveredLifelines>
+                                  <lifelineMoniker
+                                    Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                                    LastKnownName="Joueur : JoueurImp"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                  <lifelineMoniker
+                                    Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                                    LastKnownName="Unite : UniteImp"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                </coveredLifelines>
+                                <guard>
+                                  <interactionConstraint
+                                    Id="56381ec6-c71d-4991-88cc-545a581f53fc"
+                                    guardText="action=&quot;mort&quot;" />
+                                </guard>
+                                <operandOccurrenceSpecifications>
+                                  <operandOccurrenceSpecificationMoniker
+                                    Id="a2fe2d61-7247-4837-ad76-6f11d8dd6150"
+                                    LastKnownName="OperandOccurrenceSpecification79"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                  <operandOccurrenceSpecificationMoniker
+                                    Id="78450564-ac20-47ee-b6c5-d8e108ecc2c4"
+                                    LastKnownName="OperandOccurrenceSpecification80"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                  <operandOccurrenceSpecificationMoniker
+                                    Id="424e8c15-e169-403d-823f-00e0ac7a7cd6"
+                                    LastKnownName="OperandOccurrenceSpecification81"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
+                                  <operandOccurrenceSpecificationMoniker
+                                    Id="90923c69-9a7b-49aa-a10a-142ff6dd819b"
+                                    LastKnownName="OperandOccurrenceSpecification82"
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </operandOccurrenceSpecifications>
                               </interactionOperand>
                             </operands>
@@ -256,7 +355,7 @@ action = res</body>
                               <lifelineMoniker
                                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                                 LastKnownName="Joueur : JoueurImp"
-                                LastKnownLocation="ModelingProject1.uml" />
+                                LastKnownLocation="SequenceJouerPartie.uml" />
                             </coveredLifelines>
                             <operands>
                               <interactionOperand
@@ -266,7 +365,7 @@ action = res</body>
                                   <lifelineMoniker
                                     Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                                     LastKnownName="Joueur : JoueurImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </coveredLifelines>
                                 <guard>
                                   <interactionConstraint
@@ -277,65 +376,11 @@ action = res</body>
                                   <operandOccurrenceSpecificationMoniker
                                     Id="d35360a5-30f3-419d-802a-f3ef264d14bb"
                                     LastKnownName="OperandOccurrenceSpecification73"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                   <operandOccurrenceSpecificationMoniker
                                     Id="425e9821-8706-47ee-b91a-057587264243"
                                     LastKnownName="OperandOccurrenceSpecification74"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                </operandOccurrenceSpecifications>
-                              </interactionOperand>
-                            </operands>
-                          </combinedFragment>
-                          <combinedFragment
-                            Id="d0de0f1a-573b-4986-a074-f2dfb739c86b"
-                            name="CombinedFragment2"
-                            interactionOperator="Opt">
-                            <coveredLifelines>
-                              <lifelineMoniker
-                                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
-                                LastKnownName="Unite : UniteImp"
-                                LastKnownLocation="ModelingProject1.uml" />
-                              <lifelineMoniker
-                                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
-                                LastKnownName="Joueur : JoueurImp"
-                                LastKnownLocation="ModelingProject1.uml" />
-                            </coveredLifelines>
-                            <operands>
-                              <interactionOperand
-                                Id="3d5ce16e-b097-4ffd-a528-9a1dc2569184"
-                                name="InteractionOperand1">
-                                <coveredLifelines>
-                                  <lifelineMoniker
-                                    Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
-                                    LastKnownName="Unite : UniteImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                  <lifelineMoniker
-                                    Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
-                                    LastKnownName="Joueur : JoueurImp"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                </coveredLifelines>
-                                <guard>
-                                  <interactionConstraint
-                                    Id="56381ec6-c71d-4991-88cc-545a581f53fc"
-                                    guardText="action=&quot;mort&quot;" />
-                                </guard>
-                                <operandOccurrenceSpecifications>
-                                  <operandOccurrenceSpecificationMoniker
-                                    Id="a2fe2d61-7247-4837-ad76-6f11d8dd6150"
-                                    LastKnownName="OperandOccurrenceSpecification79"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                  <operandOccurrenceSpecificationMoniker
-                                    Id="78450564-ac20-47ee-b6c5-d8e108ecc2c4"
-                                    LastKnownName="OperandOccurrenceSpecification80"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                  <operandOccurrenceSpecificationMoniker
-                                    Id="424e8c15-e169-403d-823f-00e0ac7a7cd6"
-                                    LastKnownName="OperandOccurrenceSpecification81"
-                                    LastKnownLocation="ModelingProject1.uml" />
-                                  <operandOccurrenceSpecificationMoniker
-                                    Id="90923c69-9a7b-49aa-a10a-142ff6dd819b"
-                                    LastKnownName="OperandOccurrenceSpecification82"
-                                    LastKnownLocation="ModelingProject1.uml" />
+                                    LastKnownLocation="SequenceJouerPartie.uml" />
                                 </operandOccurrenceSpecifications>
                               </interactionOperand>
                             </operands>
@@ -360,27 +405,27 @@ action = res</body>
                           <operandOccurrenceSpecificationMoniker
                             Id="f8aec437-7b0d-4047-be33-40a314b181a3"
                             LastKnownName="OperandOccurrenceSpecification39"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <operandOccurrenceSpecificationMoniker
                             Id="58dd3b0e-0a2c-42be-8481-290c97c182f4"
                             LastKnownName="OperandOccurrenceSpecification40"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <operandOccurrenceSpecificationMoniker
                             Id="5f83b1e5-d1e3-4f63-acd6-87325c2a2180"
                             LastKnownName="OperandOccurrenceSpecification41"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <operandOccurrenceSpecificationMoniker
                             Id="ffe43585-bca0-498f-98c4-cadc3a119f74"
                             LastKnownName="OperandOccurrenceSpecification42"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <operandOccurrenceSpecificationMoniker
                             Id="350632f3-084e-4135-a923-f55c1101e763"
                             LastKnownName="OperandOccurrenceSpecification43"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                           <operandOccurrenceSpecificationMoniker
                             Id="7b65fd1e-d931-4fd1-89e0-22b5d4d49267"
                             LastKnownName="OperandOccurrenceSpecification44"
-                            LastKnownLocation="ModelingProject1.uml" />
+                            LastKnownLocation="SequenceJouerPartie.uml" />
                         </operandOccurrenceSpecifications>
                       </interactionOperand>
                     </operands>
@@ -405,35 +450,35 @@ action = res</body>
                   <operandOccurrenceSpecificationMoniker
                     Id="61c655b7-da87-4c12-a7b5-79a1774de9e0"
                     LastKnownName="OperandOccurrenceSpecification9"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="c93008cb-06f6-4727-8650-9ac7dbe0d531"
                     LastKnownName="OperandOccurrenceSpecification10"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="a05b8fe9-21dd-46e0-b17a-b2ccfea4f454"
                     LastKnownName="OperandOccurrenceSpecification11"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="0dacfb0b-5e38-462e-93f6-90908ab66593"
                     LastKnownName="OperandOccurrenceSpecification12"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="4c92a290-8ff1-4807-9058-20b11166349c"
                     LastKnownName="OperandOccurrenceSpecification13"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="1818a9cb-3d6a-49fe-8708-d98800490be1"
                     LastKnownName="OperandOccurrenceSpecification14"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="4808fd75-5547-4646-bf71-b8773ced8179"
                     LastKnownName="OperandOccurrenceSpecification15"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                   <operandOccurrenceSpecificationMoniker
                     Id="93694f8f-2a3c-49e4-8784-97b84f015029"
                     LastKnownName="OperandOccurrenceSpecification16"
-                    LastKnownLocation="ModelingProject1.uml" />
+                    LastKnownLocation="SequenceJouerPartie.uml" />
                 </operandOccurrenceSpecifications>
               </interactionOperand>
             </operands>
@@ -445,7 +490,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -455,7 +500,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -465,7 +510,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -475,7 +520,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -485,85 +530,85 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="4d9c54c5-b8b4-4493-bd68-d8d667d50e7c"
                 LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="f03bf625-371b-45b5-afeb-3b7b6ebb7dd3"
                 LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="8a33d019-f4f0-4859-8734-a288162ba885"
                 LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="5f83b1e5-d1e3-4f63-acd6-87325c2a2180"
                 LastKnownName="OperandOccurrenceSpecification41"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="c27d7b36-ec5e-4c37-a9c5-ddcbf808a32f"
                 LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="fca37a52-c13d-43d2-867b-8ccd21e75257"
                 LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="424e8c15-e169-403d-823f-00e0ac7a7cd6"
                 LastKnownName="OperandOccurrenceSpecification81"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="f4d8d033-09d0-4cd5-a266-ddfaeb05e9fd"
                 LastKnownName="MessageOccurrenceSpecification29"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="90923c69-9a7b-49aa-a10a-142ff6dd819b"
                 LastKnownName="OperandOccurrenceSpecification82"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="5d891b23-bb2e-43b6-b423-fe1f4e6f84d7"
                 LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="b714e76a-32b4-4285-a412-7da22604643c"
                 LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="d35360a5-30f3-419d-802a-f3ef264d14bb"
                 LastKnownName="OperandOccurrenceSpecification73"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="3f843c92-fd0d-42b5-a6f0-2594be3e3a6e"
                 LastKnownName="MessageOccurrenceSpecification39"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="f9c74c7a-0271-4fb1-bb66-597177dbde19"
                 LastKnownName="ExecutionOccurrenceSpecification27"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="f1de3a44-7be1-4f5a-8474-ef1ed7e303d5"
                 LastKnownName="ExecutionOccurrenceSpecification28"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="425e9821-8706-47ee-b91a-057587264243"
                 LastKnownName="OperandOccurrenceSpecification74"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="ffe43585-bca0-498f-98c4-cadc3a119f74"
                 LastKnownName="OperandOccurrenceSpecification42"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="45fb408c-01d6-488f-a711-297face68c10"
                 LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -574,14 +619,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="286754cf-8056-4af1-8dc9-bd1e9fa81b4e"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -591,7 +636,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -601,7 +646,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -611,7 +656,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -621,7 +666,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -631,7 +676,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -641,53 +686,53 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="56574175-ae3c-4748-bad2-25ac46620cef"
                 LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="45618a51-d271-42e6-8881-bb02cace21b3"
                 LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="df5d2255-b2cb-4035-b879-c1263e721263"
                 LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="f0dfb0f0-40c5-44e1-8852-c67550fe9bcb"
                 LastKnownName="OperandOccurrenceSpecification33"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="e6c5609e-2628-473c-94fb-81badbb7df7e"
                 LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="f5529697-68c2-4bb7-a44b-69f921ad2b59"
                 LastKnownName="MessageOccurrenceSpecification18"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="a1f619cf-87ad-4f3c-baf2-e03a654a9a8a"
                 LastKnownName="OperandOccurrenceSpecification34"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="1b83cc0a-6ff2-4f84-9a2b-9618454a7ded"
                 LastKnownName="OperandOccurrenceSpecification37"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="0dfa868b-1182-4292-952a-e85ab1dcdf1f"
                 LastKnownName="OperandOccurrenceSpecification38"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="b23425fb-3d6f-4058-bd31-1f4e64329eca"
                 LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -698,14 +743,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="5cf3c37d-465c-4d59-864b-fad8eb375c3c"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -715,7 +760,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -725,7 +770,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -735,7 +780,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -745,7 +790,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -755,29 +800,29 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="a3078528-aff5-4544-83d5-f2dcc9513b1e"
                 LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="16c59df4-7f68-453e-879b-13f3ca45a1d5"
                 LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="b717ec86-cc3e-457f-95c0-27ffd0285032"
                 LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="3065f711-4f69-489a-8757-d1783e34dafc"
                 LastKnownName="MessageOccurrenceSpecification17"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -788,14 +833,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="9cae85f8-973d-4c50-903d-0fb77edfe531"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -805,7 +850,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -815,7 +860,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -825,7 +870,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -835,7 +880,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -846,14 +891,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="cefcd3bb-ec0c-4200-a2fc-290390d7dac1"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -863,7 +908,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -873,7 +918,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -883,7 +928,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -893,7 +938,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -903,7 +948,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -913,7 +958,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -923,7 +968,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -933,7 +978,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -944,14 +989,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="185658fc-081a-404b-8c22-2009cb347847"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -961,7 +1006,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -971,7 +1016,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -981,25 +1026,25 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="150f4257-e403-4157-b6ed-91ae35a4b3e2"
                 LastKnownName="ExecutionOccurrenceSpecification20"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="a508e407-30e3-4ec4-bbe4-41adc56deea4"
                 LastKnownName="ExecutionOccurrenceSpecification19"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="ea5be8da-0b95-4269-adc1-4b649c8735ee"
                 LastKnownName="MessageOccurrenceSpecification30"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -1010,14 +1055,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="a8a041e2-4f21-4668-bfbc-18687ae9846c"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1027,7 +1072,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1037,7 +1082,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1048,14 +1093,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="87d45f57-c1b9-467b-ac35-4ce391ba9c94"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1065,7 +1110,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1075,7 +1120,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -1085,29 +1130,29 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="65230a0d-c78f-404b-b47d-e646c2223c73"
                 LastKnownName="ExecutionOccurrenceSpecification24"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="0343e564-bc92-4dbe-ba42-c9bc3b7101eb"
                 LastKnownName="ExecutionOccurrenceSpecification23"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="7add4f06-8df4-43b3-84e7-4b62a6be1b61"
                 LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="b353f229-8a6b-45db-a403-aa367b873f62"
                 LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -1118,14 +1163,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="8431a0ed-9330-4bec-a952-a7f1cfc22cf9"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1135,7 +1180,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1145,7 +1190,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1155,7 +1200,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1165,7 +1210,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1176,14 +1221,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="a5adea8e-46f0-40b2-bd33-3a52eb2dde05"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1193,7 +1238,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1203,7 +1248,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -1213,25 +1258,25 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="f1de3a44-7be1-4f5a-8474-ef1ed7e303d5"
                 LastKnownName="ExecutionOccurrenceSpecification28"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="f9c74c7a-0271-4fb1-bb66-597177dbde19"
                 LastKnownName="ExecutionOccurrenceSpecification27"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="f65ccb26-eb90-4db7-9c44-b588ae8dd91e"
                 LastKnownName="MessageOccurrenceSpecification40"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -1242,14 +1287,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="3871aae7-fbec-4e0f-b92a-d90c7b172298"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1259,7 +1304,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1270,14 +1315,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="a84043c0-43c1-4391-82b5-213c8c3e20b1"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1287,7 +1332,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1297,7 +1342,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1307,7 +1352,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1317,7 +1362,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1327,7 +1372,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1337,7 +1382,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1348,14 +1393,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="d140441c-41c3-46b3-80d4-aca305d64547"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1365,7 +1410,7 @@ action = res</body>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1375,7 +1420,7 @@ action = res</body>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1385,7 +1430,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1395,7 +1440,7 @@ action = res</body>
               <lifelineMoniker
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1405,7 +1450,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -1415,25 +1460,25 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
                 Id="f9cb46f2-dd72-49d9-b554-551fff69c66a"
                 LastKnownName="ExecutionOccurrenceSpecification34"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
                 Id="2dd9582b-f99f-4604-aacb-02f8fd684451"
                 LastKnownName="ExecutionOccurrenceSpecification33"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="1dde0512-33a9-4f20-8538-9fc38377cd70"
                 LastKnownName="MessageOccurrenceSpecification48"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -1444,14 +1489,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="b937d728-19fd-4642-a9ba-737d7570248d"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1461,7 +1506,7 @@ action = res</body>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1472,14 +1517,14 @@ action = res</body>
                 <executionEventMoniker
                   Id="9321489f-fda3-46eb-801b-2daca698d409"
                   LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject1.uml" />
+                  LastKnownLocation="SequenceJouerPartie.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
@@ -1493,31 +1538,31 @@ action = res</body>
               <operandOccurrenceSpecificationMoniker
                 Id="a05b8fe9-21dd-46e0-b17a-b2ccfea4f454"
                 LastKnownName="OperandOccurrenceSpecification11"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="69452c10-f395-428f-8556-e45befbe2946"
                 LastKnownName="MessageOccurrenceSpecification1"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="e7982173-0e65-479a-8494-7ec3e32127da"
                 LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="0dacfb0b-5e38-462e-93f6-90908ab66593"
                 LastKnownName="OperandOccurrenceSpecification12"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="711d84b9-20aa-4971-8dad-0d5fbaa1010a"
                 LastKnownName="MessageOccurrenceSpecification47"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="2dd9582b-f99f-4604-aacb-02f8fd684451"
                 LastKnownName="ExecutionOccurrenceSpecification33"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="f9cb46f2-dd72-49d9-b554-551fff69c66a"
                 LastKnownName="ExecutionOccurrenceSpecification34"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
@@ -1529,19 +1574,19 @@ action = res</body>
               <operandOccurrenceSpecificationMoniker
                 Id="61c655b7-da87-4c12-a7b5-79a1774de9e0"
                 LastKnownName="OperandOccurrenceSpecification9"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="f03bf625-371b-45b5-afeb-3b7b6ebb7dd3"
                 LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="4d9c54c5-b8b4-4493-bd68-d8d667d50e7c"
                 LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="c93008cb-06f6-4727-8650-9ac7dbe0d531"
                 LastKnownName="OperandOccurrenceSpecification10"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
@@ -1553,51 +1598,51 @@ action = res</body>
               <operandOccurrenceSpecificationMoniker
                 Id="4c92a290-8ff1-4807-9058-20b11166349c"
                 LastKnownName="OperandOccurrenceSpecification13"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="f8aec437-7b0d-4047-be33-40a314b181a3"
                 LastKnownName="OperandOccurrenceSpecification39"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="45618a51-d271-42e6-8881-bb02cace21b3"
                 LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="56574175-ae3c-4748-bad2-25ac46620cef"
                 LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="a2fe2d61-7247-4837-ad76-6f11d8dd6150"
                 LastKnownName="OperandOccurrenceSpecification79"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="a508e407-30e3-4ec4-bbe4-41adc56deea4"
                 LastKnownName="ExecutionOccurrenceSpecification19"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="150f4257-e403-4157-b6ed-91ae35a4b3e2"
                 LastKnownName="ExecutionOccurrenceSpecification20"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="78450564-ac20-47ee-b6c5-d8e108ecc2c4"
                 LastKnownName="OperandOccurrenceSpecification80"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="0343e564-bc92-4dbe-ba42-c9bc3b7101eb"
                 LastKnownName="ExecutionOccurrenceSpecification23"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="65230a0d-c78f-404b-b47d-e646c2223c73"
                 LastKnownName="ExecutionOccurrenceSpecification24"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="58dd3b0e-0a2c-42be-8481-290c97c182f4"
                 LastKnownName="OperandOccurrenceSpecification40"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="1818a9cb-3d6a-49fe-8708-d98800490be1"
                 LastKnownName="OperandOccurrenceSpecification14"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
@@ -1609,43 +1654,43 @@ action = res</body>
               <operandOccurrenceSpecificationMoniker
                 Id="4808fd75-5547-4646-bf71-b8773ced8179"
                 LastKnownName="OperandOccurrenceSpecification15"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="350632f3-084e-4135-a923-f55c1101e763"
                 LastKnownName="OperandOccurrenceSpecification43"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="1771d630-6dd9-4041-88ce-4cb7e99c90b7"
                 LastKnownName="OperandOccurrenceSpecification31"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="16c59df4-7f68-453e-879b-13f3ca45a1d5"
                 LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="a3078528-aff5-4544-83d5-f2dcc9513b1e"
                 LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="2e68b998-8119-4445-bf10-0c2065385e18"
                 LastKnownName="OperandOccurrenceSpecification32"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="447d703c-51ba-446d-a9f4-cdee80abc100"
                 LastKnownName="OperandOccurrenceSpecification35"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="5c3c98a0-5f42-45a1-87c6-5b9b005b172a"
                 LastKnownName="OperandOccurrenceSpecification36"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="7b65fd1e-d931-4fd1-89e0-22b5d4d49267"
                 LastKnownName="OperandOccurrenceSpecification44"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="93694f8f-2a3c-49e4-8784-97b84f015029"
                 LastKnownName="OperandOccurrenceSpecification16"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </topLevelOccurrences>
           </lifeline>
         </lifelines>
@@ -1660,13 +1705,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="69452c10-f395-428f-8556-e45befbe2946"
                 LastKnownName="MessageOccurrenceSpecification1"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="8a33d019-f4f0-4859-8734-a288162ba885"
                 LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1679,13 +1724,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="c27d7b36-ec5e-4c37-a9c5-ddcbf808a32f"
                 LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="df5d2255-b2cb-4035-b879-c1263e721263"
                 LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1698,13 +1743,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="e6c5609e-2628-473c-94fb-81badbb7df7e"
                 LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="b717ec86-cc3e-457f-95c0-27ffd0285032"
                 LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1717,13 +1762,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="3065f711-4f69-489a-8757-d1783e34dafc"
                 LastKnownName="MessageOccurrenceSpecification17"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="f5529697-68c2-4bb7-a44b-69f921ad2b59"
                 LastKnownName="MessageOccurrenceSpecification18"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1736,13 +1781,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="b23425fb-3d6f-4058-bd31-1f4e64329eca"
                 LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="fca37a52-c13d-43d2-867b-8ccd21e75257"
                 LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1755,13 +1800,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="f4d8d033-09d0-4cd5-a266-ddfaeb05e9fd"
                 LastKnownName="MessageOccurrenceSpecification29"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="ea5be8da-0b95-4269-adc1-4b649c8735ee"
                 LastKnownName="MessageOccurrenceSpecification30"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1774,13 +1819,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="5d891b23-bb2e-43b6-b423-fe1f4e6f84d7"
                 LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="7add4f06-8df4-43b3-84e7-4b62a6be1b61"
                 LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1793,13 +1838,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="b353f229-8a6b-45db-a403-aa367b873f62"
                 LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="b714e76a-32b4-4285-a412-7da22604643c"
                 LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1812,13 +1857,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="3f843c92-fd0d-42b5-a6f0-2594be3e3a6e"
                 LastKnownName="MessageOccurrenceSpecification39"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="f65ccb26-eb90-4db7-9c44-b588ae8dd91e"
                 LastKnownName="MessageOccurrenceSpecification40"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1831,13 +1876,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="45fb408c-01d6-488f-a711-297face68c10"
                 LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="e7982173-0e65-479a-8494-7ec3e32127da"
                 LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
           <message
@@ -1850,13 +1895,13 @@ action = res</body>
               <messageOccurrenceSpecificationMoniker
                 Id="711d84b9-20aa-4971-8dad-0d5fbaa1010a"
                 LastKnownName="MessageOccurrenceSpecification47"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="1dde0512-33a9-4f20-8538-9fc38377cd70"
                 LastKnownName="MessageOccurrenceSpecification48"
-                LastKnownLocation="ModelingProject1.uml" />
+                LastKnownLocation="SequenceJouerPartie.uml" />
             </receiveEvent>
           </message>
         </messages>
@@ -1931,6 +1976,523 @@ action = res</body>
       <executionEvent
         Id="9321489f-fda3-46eb-801b-2daca698d409"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="02e6e42d-7b83-45e2-8816-82ee5bc9844a"
+        name="Combat"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="e82358b1-7cf7-4417-9ca9-f84b5d389aba"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="400d5395-59f1-45db-b78e-8011043c7f0f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="48fc842c-6905-466c-9fb6-5bc3938e355b"
+                  LastKnownName="Attaquer une case à côté"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="48fc842c-6905-466c-9fb6-5bc3938e355b"
+            name="Attaquer une case à côté"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="67680e70-27ac-4bc1-8280-6cd3e506e469"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="f4a48ee3-9200-4ef2-b0f0-dd3d27e600c9"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bee9cfeb-b96f-4a91-b91c-4a8f49706874"
+            name="Choisir la plus défensive"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="53491a73-4412-4962-89b5-e4a842af7464"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+            name="Attaquer cette unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="98a680a5-2657-413f-9321-fa863cdda4eb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="56990ff8-f5e7-4f58-9e1c-5c2034e3a4f2"
+                  LastKnownName="Calculer le nombre de combat"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e54e33fd-c187-4bef-ad4e-68cfc19f7006"
+            name="Calculer l'attaque"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0097f3e1-1f82-4c43-9054-38dc93f3164a"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+                  LastKnownName="Join1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ff592782-e11c-49b2-a796-8f9cc7c30a15"
+            name="Calculer la défense"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="985f5d1f-86b4-4eaf-9dc2-2e2b0b41e495"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+                  LastKnownName="Join1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="f4a48ee3-9200-4ef2-b0f0-dd3d27e600c9"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae227f1e-33c0-4990-a647-a0f8db47a4a4"
+                guard="1 seule unité présente sur la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="fd3a7dcc-0ac2-4a97-9d81-312ef1113703"
+                guard="Plusieurs unités sur cette case"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="990ebcf7-7b75-48c2-bd19-48b134a2e494"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="990ebcf7-7b75-48c2-bd19-48b134a2e494"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d3bde352-60e3-4986-9eee-5325012cbd60"
+                guard="Les unités n'ont pas la même défense"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bee9cfeb-b96f-4a91-b91c-4a8f49706874"
+                  LastKnownName="Choisir la plus défensive"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="201f8d14-c753-4308-a28c-c3f583a4193e"
+                guard="Les unités ont la même défense"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7955fdfc-44c1-4042-a0db-2945337dd6fc"
+                  LastKnownName="Choisir aléatoirement une unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="7955fdfc-44c1-4042-a0db-2945337dd6fc"
+            name="Choisir aléatoirement une unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f1984cea-f093-40e0-b87c-c281c6a9ecec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="56990ff8-f5e7-4f58-9e1c-5c2034e3a4f2"
+            name="Calculer le nombre de combat"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4ee01c5b-a271-40c2-ab63-0fe3da5d53dd"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="b726b42b-a643-425d-af09-65e422d3e910"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8d12fdd3-1d3d-4ef3-b06a-f1cbf3a05565"
+            name="Calculer la probabilité de réussite de l'attaque"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="78e5b121-162b-481f-9a7b-9ab50a11ea01"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="089bc8d4-8a01-46da-9f77-c44ea56ddfc6"
+                  LastKnownName="Attaquer"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="8e45096e-e8b1-4250-b2ec-e327a5f0fae9"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="18a2c263-fe14-4dd7-8d82-9d1459b8fd58"
+                guard="Att. réussie"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0163500b-24e0-4a6b-8509-6b3cef846773"
+                  LastKnownName="-1pv au défenseur"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="29def840-8fbb-4126-bd9e-b9b21263a0ea"
+                guard="Att. échouée"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6b5456af-2bb2-4fd4-8f12-9d2697ab8e60"
+                  LastKnownName="-1pv à l'attaquant"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="6b5456af-2bb2-4fd4-8f12-9d2697ab8e60"
+            name="-1pv à l'attaquant"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6474583f-cb00-4e17-9120-601f43bc2498"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0163500b-24e0-4a6b-8509-6b3cef846773"
+            name="-1pv au défenseur"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1812e4fb-3202-4060-a306-98918172f90e"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="1ba97f32-fc62-4aaf-a7b0-0459dab6b9d8"
+            name="Decision4"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e36ba232-c0fc-4b25-ae63-0e0bc97aad4f"
+                guard="L'unité a 0 de vie"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d2a7460e-659e-4bcb-9df9-57dc778be394"
+                  LastKnownName="Détruire l'unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="235df80b-8d11-43e9-a458-b71c1f6b7967"
+                guard="L'unité a au moins 1 de vie"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="893a86af-913a-4372-8f43-4545d9cc8132"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="d2a7460e-659e-4bcb-9df9-57dc778be394"
+            name="Détruire l'unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c7a309d3-c60b-4edf-8c44-4de68453d4f3"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="893a86af-913a-4372-8f43-4545d9cc8132"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="893a86af-913a-4372-8f43-4545d9cc8132"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <forkNode
+            Id="b726b42b-a643-425d-af09-65e422d3e910"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5b2ddc6b-5d23-46d7-a387-e62415d357de"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e54e33fd-c187-4bef-ad4e-68cfc19f7006"
+                  LastKnownName="Calculer l'attaque"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3166e514-6fca-46b2-900e-51171c684e7e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ff592782-e11c-49b2-a796-8f9cc7c30a15"
+                  LastKnownName="Calculer la défense"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode
+            Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d0d765f1-556e-4c62-832e-03e43b52eb87"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8d12fdd3-1d3d-4ef3-b06a-f1cbf3a05565"
+                  LastKnownName="Calculer la probabilité de réussite de l'attaque"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="089bc8d4-8a01-46da-9f77-c44ea56ddfc6"
+            name="Attaquer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d84a4c37-509e-4b8b-93f2-49c02fc2c673"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="8e45096e-e8b1-4250-b2ec-e327a5f0fae9"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode
+            Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="93902ae1-6dc5-41ec-9064-a80134c515a6"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="1ba97f32-fc62-4aaf-a7b0-0459dab6b9d8"
+                  LastKnownName="Decision4"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="240258eb-6a2d-4029-ab62-694bbb0adbda"
+        name="Deplacement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="348a5785-d4ff-465c-9fea-86bfa0746029"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1c63125e-7ed0-44d6-b7c6-f53d3e87d338"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5663fbb1-528a-4f8e-b357-20a79869b168"
+                  LastKnownName="Se déplacer"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="5663fbb1-528a-4f8e-b357-20a79869b168"
+            name="Se déplacer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="99c0d826-64d3-469e-921f-a6645af18b8c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="25d1615d-ea01-4ff4-840d-6ca195a2d4d1"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="25d1615d-ea01-4ff4-840d-6ca195a2d4d1"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8040f727-5eba-423b-9e5c-18d4b778442b"
+                guard="Case non juxtaposée"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8151c058-3ebd-4696-8852-56d85831e8e0"
+                  LastKnownName="Afficher une erreur"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="add72165-a4e9-4e16-9fde-49f238c2d0b4"
+                guard="Case juxtaposée"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="45369c1e-05a5-49dd-a7ee-1664d6cb0d6e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="8151c058-3ebd-4696-8852-56d85831e8e0"
+            name="Afficher une erreur"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1eb3840d-a6a9-49ae-9893-2fae054ea16e"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="b4dd0971-c0bb-40dc-aba1-1da98b7012fe"
+            name="Effacer l'unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2b0a479-c334-4014-b939-944880d11e74"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="79c577d3-f7f2-4868-8baf-15b356425950"
+                  LastKnownName="Créer une unité avec les mêmes caractéristiques de l'autre"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="79c577d3-f7f2-4868-8baf-15b356425950"
+            name="Créer une unité avec les mêmes caractéristiques de l'autre"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="81df5745-18f3-4a7e-8e9b-9065f5dcb375"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+            name="ActivityFinal2"
+            isLeaf="false" />
+          <decisionNode
+            Id="45369c1e-05a5-49dd-a7ee-1664d6cb0d6e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0f8b875d-ebde-4035-997c-f88a6cba61f3"
+                guard="Aucune unité adverse n'occupe cette case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b4dd0971-c0bb-40dc-aba1-1da98b7012fe"
+                  LastKnownName="Effacer l'unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9ca0eed0-41d0-4477-a05c-13074e3e45aa"
+                guard="Une ou plusieurs unités adverses occupent déjà la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+                  LastKnownName="Combat"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+            name="Combat"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

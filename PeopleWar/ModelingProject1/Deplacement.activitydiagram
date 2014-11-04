@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="11cd3076-4c6b-4b2b-8733-29a4c9054141" name="Deplacement" linkedPackageId="7e488506-528d-42c1-8ba3-7419a95c5b82" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="99a8ed05-1e3f-439e-b0d8-4e146da52fcb">
+      <elementDefinition Id="e7a744be-d13d-4d80-9e66-d1dcfa73a944" />
+      <body>Fin avec erreur
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="8638063f-9a70-4759-aca9-8477a508696b" LastKnownName="ActivityFinal1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="1f1978ff-b974-4bdf-a307-363234613ec7">
+      <elementDefinition Id="df812012-b6b9-4639-996f-66c3beb3ba39" />
+      <body>Fin normale
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="e451b075-1bba-4b2b-b3d5-56f849d00ae6" LastKnownName="ActivityFinal2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="6da9eb0b-6ac2-4593-9d76-fb705efcdc4a">
+      <elementDefinition Id="2bfba8c1-810d-493e-9eec-8d6dbf5887f7" />
+      <body>Diagramme d'activité déjà fait</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="cc946054-6f70-403c-b213-e90b8ac69edf" LastKnownName="Combat" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0b3f803a-7389-4e96-95c5-c555e7efe462">
+      <profileInstance Id="15df0b61-66a0-4455-9dba-a7a141aa46c6" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1cd378f4-8ad0-4136-90a0-0e1f72129215">
+      <profileInstance Id="689673f6-55c4-47cb-82e0-46fc13190587" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="bdb58b3d-d1d7-4ff0-9ab7-7dedead3ff2c" name="Deplacement" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="240258eb-6a2d-4029-ab62-694bbb0adbda" />
+        <nodes>
+          <initialNode Id="4ee8d845-887f-497a-94fe-5f0ca8b498b1" name="Initial1" isLeaf="false">
+            <elementDefinition Id="348a5785-d4ff-465c-9fea-86bfa0746029" />
+            <flowNodeTargets>
+              <controlFlow Id="9b643359-48b3-480d-825b-2229f1e28912" isLeaf="false">
+                <opaqueActionMoniker Id="135025a7-2dca-4762-87fc-0f89ba4b7217" LastKnownName="Se déplacer" />
+                <elementDefinition Id="1c63125e-7ed0-44d6-b7c6-f53d3e87d338" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="135025a7-2dca-4762-87fc-0f89ba4b7217" name="Se déplacer" isLeaf="false">
+            <elementDefinition Id="5663fbb1-528a-4f8e-b357-20a79869b168" />
+            <flowNodeTargets>
+              <controlFlow Id="49adc9dd-f48e-4b07-bd1c-395a07abf0d3" isLeaf="false">
+                <decisionNodeMoniker Id="609c6138-7841-4e28-ae8f-d5c40558ac6b" LastKnownName="Decision1" />
+                <elementDefinition Id="99c0d826-64d3-469e-921f-a6645af18b8c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="609c6138-7841-4e28-ae8f-d5c40558ac6b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="25d1615d-ea01-4ff4-840d-6ca195a2d4d1" />
+            <flowNodeTargets>
+              <controlFlow Id="b45c5da7-743e-4a5f-89e7-de5f93bfc928" guard="Case non juxtaposée" isLeaf="false">
+                <opaqueActionMoniker Id="8df8314b-2340-4d86-900d-deb2ab1738ab" LastKnownName="Afficher une erreur" />
+                <elementDefinition Id="8040f727-5eba-423b-9e5c-18d4b778442b" />
+              </controlFlow>
+              <controlFlow Id="38811943-5a4a-4c00-ae32-af789d6d3efe" guard="Case juxtaposée" isLeaf="false">
+                <decisionNodeMoniker Id="ee092357-3fce-4546-aecd-946f5d482d25" LastKnownName="Decision2" />
+                <elementDefinition Id="add72165-a4e9-4e16-9fde-49f238c2d0b4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="8df8314b-2340-4d86-900d-deb2ab1738ab" name="Afficher une erreur" isLeaf="false">
+            <elementDefinition Id="8151c058-3ebd-4696-8852-56d85831e8e0" />
+            <flowNodeTargets>
+              <controlFlow Id="303e01ec-1878-4f94-8a3f-a4db6e2e6612" isLeaf="false">
+                <activityFinalNodeMoniker Id="8638063f-9a70-4759-aca9-8477a508696b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="1eb3840d-a6a9-49ae-9893-2fae054ea16e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="8638063f-9a70-4759-aca9-8477a508696b" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d8097636-72bb-481f-aabc-cdc25968bfdd" />
+          </activityFinalNode>
+          <opaqueAction Id="28ec2115-1b40-4f8c-a096-5f4b305f449b" name="Effacer l'unité" isLeaf="false">
+            <elementDefinition Id="b4dd0971-c0bb-40dc-aba1-1da98b7012fe" />
+            <flowNodeTargets>
+              <controlFlow Id="a9a1753b-8228-4610-918e-f1692f45b941" isLeaf="false">
+                <opaqueActionMoniker Id="1b918d76-3271-4f7d-9139-a55a56eb379b" LastKnownName="Créer une unité avec les mêmes caractéristiques de l'autre" />
+                <elementDefinition Id="f2b0a479-c334-4014-b939-944880d11e74" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1b918d76-3271-4f7d-9139-a55a56eb379b" name="Créer une unité avec les mêmes caractéristiques de l'autre" isLeaf="false">
+            <elementDefinition Id="79c577d3-f7f2-4868-8baf-15b356425950" />
+            <flowNodeTargets>
+              <controlFlow Id="69d756b0-449d-439e-a65f-391d20db5bc7" isLeaf="false">
+                <activityFinalNodeMoniker Id="e451b075-1bba-4b2b-b3d5-56f849d00ae6" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="81df5745-18f3-4a7e-8e9b-9065f5dcb375" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="e451b075-1bba-4b2b-b3d5-56f849d00ae6" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="81047365-fcc2-4f33-aa95-34eac6db07d7" />
+          </activityFinalNode>
+          <decisionNode Id="ee092357-3fce-4546-aecd-946f5d482d25" name="Decision2" isLeaf="false">
+            <elementDefinition Id="45369c1e-05a5-49dd-a7ee-1664d6cb0d6e" />
+            <flowNodeTargets>
+              <controlFlow Id="a4db98be-cf49-4b8b-9aa1-d565955f36ce" guard="Aucune unité adverse n'occupe cette case" isLeaf="false">
+                <opaqueActionMoniker Id="28ec2115-1b40-4f8c-a096-5f4b305f449b" LastKnownName="Effacer l'unité" />
+                <elementDefinition Id="0f8b875d-ebde-4035-997c-f88a6cba61f3" />
+              </controlFlow>
+              <controlFlow Id="62ee6bc5-1f9a-48b6-b8c0-1113b6ef334d" guard="Une ou plusieurs unités adverses occupent déjà la case" isLeaf="false">
+                <opaqueActionMoniker Id="cc946054-6f70-403c-b213-e90b8ac69edf" LastKnownName="Combat" />
+                <elementDefinition Id="9ca0eed0-41d0-4477-a05c-13074e3e45aa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="cc946054-6f70-403c-b213-e90b8ac69edf" name="Combat" isLeaf="false">
+            <elementDefinition Id="228c0d96-67cb-4da3-987f-1aa35b84089e" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="7e488506-528d-42c1-8ba3-7419a95c5b82" name="ModelingProject1">
+    <elementDefinition Id="8f2eb552-7899-4b70-9ed7-95be013f80d2" />
+  </package>
+</activityRootModel>
