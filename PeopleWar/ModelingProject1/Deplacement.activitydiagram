@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="11cd3076-4c6b-4b2b-8733-29a4c9054141" name="Deplacement" linkedPackageId="7e488506-528d-42c1-8ba3-7419a95c5b82" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="11cd3076-4c6b-4b2b-8733-29a4c9054141" name="Deplacement" linkedPackageId="7e488506-528d-42c1-8ba3-7419a95c5b82" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="99a8ed05-1e3f-439e-b0d8-4e146da52fcb">
       <elementDefinition Id="e7a744be-d13d-4d80-9e66-d1dcfa73a944" />
@@ -24,21 +24,14 @@
         <opaqueActionMoniker Id="cc946054-6f70-403c-b213-e90b8ac69edf" LastKnownName="Combat" />
       </annotatedElements>
     </comment>
+    <comment Id="06aaf2cc-9957-4cf3-ae28-a87803befda9">
+      <elementDefinition Id="89c86ad9-ed30-4c58-bf61-45af36f55512" />
+      <body>Le nombre de pm requis dépend du type de l'unité et du type de la case où il se déplace</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="961b0dac-a125-4edb-8c9b-af00e29c84d4" LastKnownName="Decision3" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="0b3f803a-7389-4e96-95c5-c555e7efe462">
-      <profileInstance Id="15df0b61-66a0-4455-9dba-a7a141aa46c6" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1cd378f4-8ad0-4136-90a0-0e1f72129215">
-      <profileInstance Id="689673f6-55c4-47cb-82e0-46fc13190587" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="bdb58b3d-d1d7-4ff0-9ab7-7dedead3ff2c" name="Deplacement" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -69,9 +62,9 @@
                 <opaqueActionMoniker Id="8df8314b-2340-4d86-900d-deb2ab1738ab" LastKnownName="Afficher une erreur" />
                 <elementDefinition Id="8040f727-5eba-423b-9e5c-18d4b778442b" />
               </controlFlow>
-              <controlFlow Id="38811943-5a4a-4c00-ae32-af789d6d3efe" guard="Case juxtaposée" isLeaf="false">
-                <decisionNodeMoniker Id="ee092357-3fce-4546-aecd-946f5d482d25" LastKnownName="Decision2" />
-                <elementDefinition Id="add72165-a4e9-4e16-9fde-49f238c2d0b4" />
+              <controlFlow Id="204a6cf8-d930-4296-b7ad-04960d5eb8c9" guard="Case juxtaposée" isLeaf="false">
+                <decisionNodeMoniker Id="961b0dac-a125-4edb-8c9b-af00e29c84d4" LastKnownName="Decision3" />
+                <elementDefinition Id="7bad54d2-eddd-486d-bd7d-a5746e20d21c" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
@@ -124,11 +117,38 @@
           <opaqueAction Id="cc946054-6f70-403c-b213-e90b8ac69edf" name="Combat" isLeaf="false">
             <elementDefinition Id="228c0d96-67cb-4da3-987f-1aa35b84089e" />
           </opaqueAction>
+          <decisionNode Id="961b0dac-a125-4edb-8c9b-af00e29c84d4" name="Decision3" isLeaf="false">
+            <elementDefinition Id="1344362e-1053-4bb2-bab1-2c755c9e321a" />
+            <flowNodeTargets>
+              <controlFlow Id="a902ea80-9feb-4f95-8327-0e0f2b146e5c" guard="L'unité a 0 pm" isLeaf="false">
+                <activityFinalNodeMoniker Id="8638063f-9a70-4759-aca9-8477a508696b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="64dbf9ca-eb11-4a9d-a508-fa3c5ccab942" />
+              </controlFlow>
+              <controlFlow Id="bf0518bc-8400-4fa4-ae40-388c3265f00a" guard="L'unité a au moins 1 pm" isLeaf="false">
+                <decisionNodeMoniker Id="ee092357-3fce-4546-aecd-946f5d482d25" LastKnownName="Decision2" />
+                <elementDefinition Id="8e1d63fd-3c90-4dfc-b9c9-a8aa9ec6db3b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
   <package Id="7e488506-528d-42c1-8ba3-7419a95c5b82" name="ModelingProject1">
     <elementDefinition Id="8f2eb552-7899-4b70-9ed7-95be013f80d2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0b3f803a-7389-4e96-95c5-c555e7efe462">
+        <profileInstance Id="15df0b61-66a0-4455-9dba-a7a141aa46c6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1cd378f4-8ad0-4136-90a0-0e1f72129215">
+        <profileInstance Id="689673f6-55c4-47cb-82e0-46fc13190587" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
