@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="055b3d5f-1833-4ca5-bdd2-2e34f0586d74"
   name="SequencePartie" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -187,22 +187,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="4d3a9c1b-6bf2-42cc-b0c3-f1c1b31c948e"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="bbb2c12c-8fd1-4b59-94ed-a4fef255bd6a"
-                LastKnownName="Partie"
-                LastKnownLocation="SequencePartie.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="e92536b8-3f57-4da6-97fd-70f13aed268b"
             name="MessageOccurrenceSpecification12">
             <covered>
               <lifelineMoniker
                 Id="f0fef59b-8e5d-4752-8591-33d5d519057b"
                 LastKnownName="Joueur1"
+                LastKnownLocation="SequencePartie.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4d3a9c1b-6bf2-42cc-b0c3-f1c1b31c948e"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="bbb2c12c-8fd1-4b59-94ed-a4fef255bd6a"
+                LastKnownName="Partie"
                 LastKnownLocation="SequencePartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -315,22 +315,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="dffb9d9b-1b38-457f-ba6d-ce3c99362643"
-            name="MessageOccurrenceSpecification18">
-            <covered>
-              <lifelineMoniker
-                Id="bbb2c12c-8fd1-4b59-94ed-a4fef255bd6a"
-                LastKnownName="Partie"
-                LastKnownLocation="SequencePartie.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="6ca8c918-5e78-437a-b215-4652ad819947"
             name="MessageOccurrenceSpecification17">
             <covered>
               <lifelineMoniker
                 Id="703d049a-a452-4059-b8a3-d5f3bcc18385"
                 LastKnownName="Joueur2"
+                LastKnownLocation="SequencePartie.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dffb9d9b-1b38-457f-ba6d-ce3c99362643"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="bbb2c12c-8fd1-4b59-94ed-a4fef255bd6a"
+                LastKnownName="Partie"
                 LastKnownLocation="SequencePartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1125,6 +1125,80 @@
             LastKnownLocation="SequencePartie.uml" />
         </subjects>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="580a8879-99ba-459e-918e-b67768856716"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f40229fa-ca00-4f4d-b29c-34ee042c08b5">
+            <interfaceMoniker
+              Id="b12a9daa-e930-41c2-a797-af995744a879"
+              LastKnownName="Interface1"
+              LastKnownLocation="SequencePartie.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="732fc343-b487-442b-8f38-37a735843832"
+            isDerived="false"
+            sourceEndRoleName="Class1"
+            targetEndRoleName="Class2"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="adfa41ac-4f10-44f2-adb8-8bc8078bf03a"
+              LastKnownName="Class2"
+              LastKnownLocation="SequencePartie.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de260b44-9954-43b4-9a5d-29e28fb6827c"
+                  name="Class1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c444cb3-6ff5-46c5-a341-d2fd5059ddbe"
+                  name="Class2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="adfa41ac-4f10-44f2-adb8-8bc8078bf03a"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b12a9daa-e930-41c2-a797-af995744a879"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
