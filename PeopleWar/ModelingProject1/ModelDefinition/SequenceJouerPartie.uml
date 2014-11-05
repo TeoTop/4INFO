@@ -1,8 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+=======
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+>>>>>>> origin/master
   dslVersion="1.0.0.0"
   Id="8f2eb552-7899-4b70-9ed7-95be013f80d2"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="e7a744be-d13d-4d80-9e66-d1dcfa73a944">
+      <body>Fin avec erreur
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+          LastKnownName="ActivityFinal1"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="df812012-b6b9-4639-996f-66c3beb3ba39">
+      <body>Fin normale
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+          LastKnownName="ActivityFinal2"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="29d31e7f-142b-4d11-85c8-b5e8f5b9858c">
+      <body>Fin normale
+</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker
+          Id="893a86af-913a-4372-8f43-4545d9cc8132"
+          LastKnownName="ActivityFinal1"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2bfba8c1-810d-493e-9eec-8d6dbf5887f7">
+      <body>Diagramme d'activité déjà fait</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+          LastKnownName="Combat"
+          LastKnownLocation="SequenceJouerPartie.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -65,9 +114,15 @@ action = "passer"</body>
             <body>faire diagramme de sequence d'un déplacement
 action = res</body>
             <annotatedElements>
+<<<<<<< HEAD
               <interactionUseMoniker
                 Id="dc17e7e9-e427-4dd2-bbe1-ce3dfbccad47"
                 LastKnownName="deplacement"
+=======
+              <behaviorExecutionSpecificationMoniker
+                Id="a4e1130d-c800-4b1f-adf5-5098793e8f55"
+                LastKnownName="BehaviorExecutionSpecification6"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </annotatedElements>
           </comment>
@@ -609,8 +664,13 @@ action = res</body>
             name="OperandOccurrenceSpecification39">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
+=======
+                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                LastKnownName="Joueur : JoueurImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -632,6 +692,19 @@ action = res</body>
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
+=======
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f8aec437-7b0d-4047-be33-40a314b181a3"
+            name="OperandOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                LastKnownName="Unite : UniteImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+>>>>>>> origin/master
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
@@ -664,9 +737,19 @@ action = res</body>
                 Id="f0dfb0f0-40c5-44e1-8852-c67550fe9bcb"
                 LastKnownName="OperandOccurrenceSpecification33"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
               <interactionUseOccurrenceSpecificationMoniker
                 Id="9bf43d2b-7e9a-49b0-9f53-56a55b7abd28"
                 LastKnownName="InteractionUseOccurrenceSpecification2"
+=======
+              <messageOccurrenceSpecificationMoniker
+                Id="e6c5609e-2628-473c-94fb-81badbb7df7e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f5529697-68c2-4bb7-a44b-69f921ad2b59"
+                LastKnownName="MessageOccurrenceSpecification18"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="a1f619cf-87ad-4f3c-baf2-e03a654a9a8a"
@@ -705,6 +788,19 @@ action = res</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
+<<<<<<< HEAD
+=======
+            Id="df5d2255-b2cb-4035-b879-c1263e721263"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                LastKnownName="Unite : UniteImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+>>>>>>> origin/master
             Id="c27d7b36-ec5e-4c37-a9c5-ddcbf808a32f"
             name="MessageOccurrenceSpecification5">
             <covered>
@@ -734,9 +830,75 @@ action = res</body>
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
+<<<<<<< HEAD
           <operandOccurrenceSpecification
             Id="f0dfb0f0-40c5-44e1-8852-c67550fe9bcb"
             name="OperandOccurrenceSpecification33">
+=======
+          <behaviorExecutionSpecification
+            Id="a4e1130d-c800-4b1f-adf5-5098793e8f55"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
+                LastKnownName="Case : CaseImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a3078528-aff5-4544-83d5-f2dcc9513b1e"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="16c59df4-7f68-453e-879b-13f3ca45a1d5"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b717ec86-cc3e-457f-95c0-27ffd0285032"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3065f711-4f69-489a-8757-d1783e34dafc"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="16c59df4-7f68-453e-879b-13f3ca45a1d5"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9cae85f8-973d-4c50-903d-0fb77edfe531"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
+                LastKnownName="Case : CaseImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b717ec86-cc3e-457f-95c0-27ffd0285032"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
+                LastKnownName="Case : CaseImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6c5609e-2628-473c-94fb-81badbb7df7e"
+            name="MessageOccurrenceSpecification15">
+>>>>>>> origin/master
             <covered>
               <lifelineMoniker
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
@@ -752,10 +914,20 @@ action = res</body>
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
+=======
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3065f711-4f69-489a-8757-d1783e34dafc"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+>>>>>>> origin/master
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
                 LastKnownName="Case : CaseImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
             </coveredLifelines>
             <interactionUseOccurrenceSpecifications>
               <interactionUseOccurrenceSpecificationMoniker
@@ -781,6 +953,21 @@ action = res</body>
           <interactionUseOccurrenceSpecification
             Id="cae814a2-5fc2-4b19-a0a1-d63b26ca85c4"
             name="InteractionUseOccurrenceSpecification3">
+=======
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a3078528-aff5-4544-83d5-f2dcc9513b1e"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cefcd3bb-ec0c-4200-a2fc-290390d7dac1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+>>>>>>> origin/master
             <covered>
               <lifelineMoniker
                 Id="b2a3c336-a72d-4fbd-823f-4f1a3f73e678"
@@ -891,8 +1078,13 @@ action = res</body>
             name="OperandOccurrenceSpecification79">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
+=======
+                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                LastKnownName="Joueur : JoueurImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -901,8 +1093,13 @@ action = res</body>
             name="OperandOccurrenceSpecification81">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
+=======
+                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                LastKnownName="Unite : UniteImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -957,8 +1154,13 @@ action = res</body>
             name="MessageOccurrenceSpecification30">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
+=======
+                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                LastKnownName="Joueur : JoueurImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -967,8 +1169,13 @@ action = res</body>
             name="MessageOccurrenceSpecification29">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
+=======
+                Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
+                LastKnownName="Unite : UniteImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1230,6 +1437,19 @@ action = res</body>
                 Id="861e1e45-9ed5-462f-93e6-6ad7171620c8"
                 LastKnownName="Unite : UniteImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
+=======
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ffe43585-bca0-498f-98c4-cadc3a119f74"
+            name="OperandOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
+                LastKnownName="Joueur : JoueurImp"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+>>>>>>> origin/master
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
@@ -1247,8 +1467,13 @@ action = res</body>
             name="OperandOccurrenceSpecification42">
             <covered>
               <lifelineMoniker
+<<<<<<< HEAD
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
+=======
+                Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
+                LastKnownName="Partie : PartieImp"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1260,6 +1485,7 @@ action = res</body>
                 Id="449fb792-7d4c-4d5b-9b88-2831274bba1a"
                 LastKnownName="Joueur : JoueurImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
@@ -1270,6 +1496,8 @@ action = res</body>
                 Id="75baae23-3760-4346-ac8b-6dd3e1e4d559"
                 LastKnownName="Partie : PartieImp"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+=======
+>>>>>>> origin/master
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
@@ -1550,9 +1778,19 @@ action = res</body>
                 Id="1771d630-6dd9-4041-88ce-4cb7e99c90b7"
                 LastKnownName="OperandOccurrenceSpecification31"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
               <interactionUseOccurrenceSpecificationMoniker
                 Id="cae814a2-5fc2-4b19-a0a1-d63b26ca85c4"
                 LastKnownName="InteractionUseOccurrenceSpecification3"
+=======
+              <executionOccurrenceSpecificationMoniker
+                Id="16c59df4-7f68-453e-879b-13f3ca45a1d5"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a3078528-aff5-4544-83d5-f2dcc9513b1e"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+>>>>>>> origin/master
                 LastKnownLocation="SequenceJouerPartie.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="2e68b998-8119-4445-bf10-0c2065385e18"
@@ -1614,6 +1852,47 @@ action = res</body>
                 Id="df5d2255-b2cb-4035-b879-c1263e721263"
                 LastKnownName="MessageOccurrenceSpecification6"
                 LastKnownLocation="SequenceJouerPartie.uml" />
+<<<<<<< HEAD
+=======
+            </receiveEvent>
+          </message>
+          <message
+            Id="0923d0cf-ca97-4d89-98f8-1d1eb86b58c7"
+            name="seDeplacer(unite,case)"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6c5609e-2628-473c-94fb-81badbb7df7e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b717ec86-cc3e-457f-95c0-27ffd0285032"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="835cb76a-71b0-44ac-8a32-b9fd14198a36"
+            name="&lt;&lt;return res&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3065f711-4f69-489a-8757-d1783e34dafc"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f5529697-68c2-4bb7-a44b-69f921ad2b59"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="SequenceJouerPartie.uml" />
+>>>>>>> origin/master
             </receiveEvent>
           </message>
           <message
@@ -1811,6 +2090,523 @@ action = res</body>
       <executionEvent
         Id="9321489f-fda3-46eb-801b-2daca698d409"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="02e6e42d-7b83-45e2-8816-82ee5bc9844a"
+        name="Combat"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="e82358b1-7cf7-4417-9ca9-f84b5d389aba"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="400d5395-59f1-45db-b78e-8011043c7f0f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="48fc842c-6905-466c-9fb6-5bc3938e355b"
+                  LastKnownName="Attaquer une case à côté"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="48fc842c-6905-466c-9fb6-5bc3938e355b"
+            name="Attaquer une case à côté"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="67680e70-27ac-4bc1-8280-6cd3e506e469"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="f4a48ee3-9200-4ef2-b0f0-dd3d27e600c9"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bee9cfeb-b96f-4a91-b91c-4a8f49706874"
+            name="Choisir la plus défensive"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="53491a73-4412-4962-89b5-e4a842af7464"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+            name="Attaquer cette unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="98a680a5-2657-413f-9321-fa863cdda4eb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="56990ff8-f5e7-4f58-9e1c-5c2034e3a4f2"
+                  LastKnownName="Calculer le nombre de combat"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e54e33fd-c187-4bef-ad4e-68cfc19f7006"
+            name="Calculer l'attaque"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0097f3e1-1f82-4c43-9054-38dc93f3164a"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+                  LastKnownName="Join1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ff592782-e11c-49b2-a796-8f9cc7c30a15"
+            name="Calculer la défense"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="985f5d1f-86b4-4eaf-9dc2-2e2b0b41e495"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+                  LastKnownName="Join1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="f4a48ee3-9200-4ef2-b0f0-dd3d27e600c9"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae227f1e-33c0-4990-a647-a0f8db47a4a4"
+                guard="1 seule unité présente sur la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="fd3a7dcc-0ac2-4a97-9d81-312ef1113703"
+                guard="Plusieurs unités sur cette case"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="990ebcf7-7b75-48c2-bd19-48b134a2e494"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="990ebcf7-7b75-48c2-bd19-48b134a2e494"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d3bde352-60e3-4986-9eee-5325012cbd60"
+                guard="Les unités n'ont pas la même défense"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bee9cfeb-b96f-4a91-b91c-4a8f49706874"
+                  LastKnownName="Choisir la plus défensive"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="201f8d14-c753-4308-a28c-c3f583a4193e"
+                guard="Les unités ont la même défense"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7955fdfc-44c1-4042-a0db-2945337dd6fc"
+                  LastKnownName="Choisir aléatoirement une unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="7955fdfc-44c1-4042-a0db-2945337dd6fc"
+            name="Choisir aléatoirement une unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f1984cea-f093-40e0-b87c-c281c6a9ecec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c216359-5d05-4b90-b73b-34e45d343e9e"
+                  LastKnownName="Attaquer cette unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="56990ff8-f5e7-4f58-9e1c-5c2034e3a4f2"
+            name="Calculer le nombre de combat"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4ee01c5b-a271-40c2-ab63-0fe3da5d53dd"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="b726b42b-a643-425d-af09-65e422d3e910"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8d12fdd3-1d3d-4ef3-b06a-f1cbf3a05565"
+            name="Calculer la probabilité de réussite de l'attaque"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="78e5b121-162b-481f-9a7b-9ab50a11ea01"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="089bc8d4-8a01-46da-9f77-c44ea56ddfc6"
+                  LastKnownName="Attaquer"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="8e45096e-e8b1-4250-b2ec-e327a5f0fae9"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="18a2c263-fe14-4dd7-8d82-9d1459b8fd58"
+                guard="Att. réussie"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0163500b-24e0-4a6b-8509-6b3cef846773"
+                  LastKnownName="-1pv au défenseur"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="29def840-8fbb-4126-bd9e-b9b21263a0ea"
+                guard="Att. échouée"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6b5456af-2bb2-4fd4-8f12-9d2697ab8e60"
+                  LastKnownName="-1pv à l'attaquant"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="6b5456af-2bb2-4fd4-8f12-9d2697ab8e60"
+            name="-1pv à l'attaquant"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6474583f-cb00-4e17-9120-601f43bc2498"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0163500b-24e0-4a6b-8509-6b3cef846773"
+            name="-1pv au défenseur"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1812e4fb-3202-4060-a306-98918172f90e"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="1ba97f32-fc62-4aaf-a7b0-0459dab6b9d8"
+            name="Decision4"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e36ba232-c0fc-4b25-ae63-0e0bc97aad4f"
+                guard="L'unité a 0 de vie"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d2a7460e-659e-4bcb-9df9-57dc778be394"
+                  LastKnownName="Détruire l'unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="235df80b-8d11-43e9-a458-b71c1f6b7967"
+                guard="L'unité a au moins 1 de vie"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="893a86af-913a-4372-8f43-4545d9cc8132"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="d2a7460e-659e-4bcb-9df9-57dc778be394"
+            name="Détruire l'unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c7a309d3-c60b-4edf-8c44-4de68453d4f3"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="893a86af-913a-4372-8f43-4545d9cc8132"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="893a86af-913a-4372-8f43-4545d9cc8132"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <forkNode
+            Id="b726b42b-a643-425d-af09-65e422d3e910"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5b2ddc6b-5d23-46d7-a387-e62415d357de"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e54e33fd-c187-4bef-ad4e-68cfc19f7006"
+                  LastKnownName="Calculer l'attaque"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3166e514-6fca-46b2-900e-51171c684e7e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ff592782-e11c-49b2-a796-8f9cc7c30a15"
+                  LastKnownName="Calculer la défense"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode
+            Id="b6f23fea-bd1b-4a07-a19c-e39786fce101"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d0d765f1-556e-4c62-832e-03e43b52eb87"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8d12fdd3-1d3d-4ef3-b06a-f1cbf3a05565"
+                  LastKnownName="Calculer la probabilité de réussite de l'attaque"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="089bc8d4-8a01-46da-9f77-c44ea56ddfc6"
+            name="Attaquer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d84a4c37-509e-4b8b-93f2-49c02fc2c673"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="8e45096e-e8b1-4250-b2ec-e327a5f0fae9"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode
+            Id="f81dcb39-3ced-477a-b506-5f91fc88601b"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="93902ae1-6dc5-41ec-9064-a80134c515a6"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="1ba97f32-fc62-4aaf-a7b0-0459dab6b9d8"
+                  LastKnownName="Decision4"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="240258eb-6a2d-4029-ab62-694bbb0adbda"
+        name="Deplacement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="348a5785-d4ff-465c-9fea-86bfa0746029"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1c63125e-7ed0-44d6-b7c6-f53d3e87d338"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5663fbb1-528a-4f8e-b357-20a79869b168"
+                  LastKnownName="Se déplacer"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="5663fbb1-528a-4f8e-b357-20a79869b168"
+            name="Se déplacer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="99c0d826-64d3-469e-921f-a6645af18b8c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="25d1615d-ea01-4ff4-840d-6ca195a2d4d1"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="25d1615d-ea01-4ff4-840d-6ca195a2d4d1"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8040f727-5eba-423b-9e5c-18d4b778442b"
+                guard="Case non juxtaposée"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8151c058-3ebd-4696-8852-56d85831e8e0"
+                  LastKnownName="Afficher une erreur"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="add72165-a4e9-4e16-9fde-49f238c2d0b4"
+                guard="Case juxtaposée"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="45369c1e-05a5-49dd-a7ee-1664d6cb0d6e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="8151c058-3ebd-4696-8852-56d85831e8e0"
+            name="Afficher une erreur"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1eb3840d-a6a9-49ae-9893-2fae054ea16e"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="d8097636-72bb-481f-aabc-cdc25968bfdd"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="b4dd0971-c0bb-40dc-aba1-1da98b7012fe"
+            name="Effacer l'unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2b0a479-c334-4014-b939-944880d11e74"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="79c577d3-f7f2-4868-8baf-15b356425950"
+                  LastKnownName="Créer une unité avec les mêmes caractéristiques de l'autre"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="79c577d3-f7f2-4868-8baf-15b356425950"
+            name="Créer une unité avec les mêmes caractéristiques de l'autre"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="81df5745-18f3-4a7e-8e9b-9065f5dcb375"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="81047365-fcc2-4f33-aa95-34eac6db07d7"
+            name="ActivityFinal2"
+            isLeaf="false" />
+          <decisionNode
+            Id="45369c1e-05a5-49dd-a7ee-1664d6cb0d6e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0f8b875d-ebde-4035-997c-f88a6cba61f3"
+                guard="Aucune unité adverse n'occupe cette case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b4dd0971-c0bb-40dc-aba1-1da98b7012fe"
+                  LastKnownName="Effacer l'unité"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9ca0eed0-41d0-4477-a05c-13074e3e45aa"
+                guard="Une ou plusieurs unités adverses occupent déjà la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+                  LastKnownName="Combat"
+                  LastKnownLocation="SequenceJouerPartie.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="228c0d96-67cb-4da3-987f-1aa35b84089e"
+            name="Combat"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

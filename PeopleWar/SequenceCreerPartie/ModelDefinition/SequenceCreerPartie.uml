@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="05a39ddf-b571-4a78-99ff-893d7ffccf95"
   name="SequenceCreerPartie" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -21,7 +21,7 @@
     <packageHasNamedElement>
       <interaction
         Id="5a29df96-4a44-43ea-b403-8ab1969b4323"
-        name="Sequence1"
+        name="CreerPartie"
         collapseFragmentsFlag="false"
         isActiveClass="false"
         isAbstract="false"
@@ -29,20 +29,63 @@
         isReentrant="false">
         <ownedCommentsInternal>
           <comment
-            Id="7e2fe480-183b-4c0d-bde5-81a8b44bca89">
-            <body>Il faut que créateur soit un bonhomme comme dans use case</body>
-          </comment>
-          <comment
             Id="938aca98-46cc-46d8-957e-36a94fd8663f">
             <body>creation des unités : idem que pour Elf</body>
-          </comment>
-          <comment
-            Id="bee2e7a9-9925-4b99-adcb-872dd68c3c85">
-            <body>c&amp;ation du deuxième joueur : idem que le premier</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="aa5d0e4a-ee0f-4e69-a41d-5f46792f01cd"
+                LastKnownName="BehaviorExecutionSpecification7"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+              <behaviorExecutionSpecificationMoniker
+                Id="3ba755d5-0074-49fe-9bb1-72711720df77"
+                LastKnownName="BehaviorExecutionSpecification8"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+            </annotatedElements>
           </comment>
           <comment
             Id="8dd67991-243b-42b9-88e5-2ea8b4ad1658">
             <body>creation des cartes : idem que pour demo</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="dee7af20-623d-450f-9366-44bdaf49fa6a"
+                LastKnownName="BehaviorExecutionSpecification13"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+              <behaviorExecutionSpecificationMoniker
+                Id="6f82d75b-3d99-4eba-aa8e-03b67cbb9e96"
+                LastKnownName="BehaviorExecutionSpecification12"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="bca78693-617d-4c2e-a563-b5fae27f8cec">
+            <body>p est soit p1 ou p2
+</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="01442ff5-864d-4126-89d8-0eb95598fa52"
+                LastKnownName="BehaviorExecutionSpecification3"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="e68c7dce-5dab-451e-bd29-6e52e88ca5be">
+            <body>Les cases désert, montagne, plaine et forêt doivent être égales en nombre</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="4d7819c5-3c6a-4367-806c-fc361d06f80d"
+                LastKnownName="BehaviorExecutionSpecification14"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="1d18233d-4370-451f-ba1f-1a656c8cd96d">
+            <body>Le nombre d'unité (n) est soit 4,6 ou 8. Il dépend du type de la carte</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="214cd927-9f1b-44d9-b60a-2b39d3730c27"
+                LastKnownName="BehaviorExecutionSpecification5"
+                LastKnownLocation="SequenceCreerPartie.uml" />
+            </annotatedElements>
           </comment>
         </ownedCommentsInternal>
         <fragments>
@@ -378,17 +421,18 @@
                                 </coveredLifelines>
                                 <guard>
                                   <interactionConstraint
-                                    Id="f4b7f324-d240-48c8-b972-6cad41317898"
-                                    guardText="loop(1,n)">
+                                    Id="f4b7f324-d240-48c8-b972-6cad41317898">
                                     <maxInt>
                                       <literalString
                                         Id="998cf67d-d796-4b88-a5cf-85ad62e98f63"
-                                        name="LiteralString1" />
+                                        name="LiteralString1"
+                                        value="n" />
                                     </maxInt>
                                     <minInt>
                                       <literalString
                                         Id="d6f460e2-75b5-4846-86c8-9d889991448a"
-                                        name="LiteralString2" />
+                                        name="LiteralString2"
+                                        value="1" />
                                     </minInt>
                                   </interactionConstraint>
                                 </guard>
@@ -613,17 +657,18 @@
                 </fragments>
                 <guard>
                   <interactionConstraint
-                    Id="0fa1d00c-f18d-4c17-b44f-5d6763042b21"
-                    guardText="loop(1,2)">
+                    Id="0fa1d00c-f18d-4c17-b44f-5d6763042b21">
                     <maxInt>
                       <literalString
                         Id="26409f05-3d71-4d96-98a5-9588f138ee42"
-                        name="LiteralString1" />
+                        name="LiteralString1"
+                        value="2" />
                     </maxInt>
                     <minInt>
                       <literalString
                         Id="57a997d2-c950-427f-99bb-bd65c43065e0"
-                        name="LiteralString2" />
+                        name="LiteralString2"
+                        value="1" />
                     </minInt>
                   </interactionConstraint>
                 </guard>
@@ -1774,17 +1819,18 @@
                 </coveredLifelines>
                 <guard>
                   <interactionConstraint
-                    Id="f0a59739-154d-4972-bfad-1bf72269344a"
-                    guardText="loop(1,2)">
+                    Id="f0a59739-154d-4972-bfad-1bf72269344a">
                     <maxInt>
                       <literalString
                         Id="860bbe7b-f277-43f6-acd9-9127097d5324"
-                        name="LiteralString1" />
+                        name="LiteralString1"
+                        value="2" />
                     </maxInt>
                     <minInt>
                       <literalString
                         Id="9c9bb01d-5d75-4d23-8bd9-a663a802f9ea"
-                        name="LiteralString2" />
+                        name="LiteralString2"
+                        value="1" />
                     </minInt>
                   </interactionConstraint>
                 </guard>
@@ -2583,17 +2629,18 @@
                         </fragments>
                         <guard>
                           <interactionConstraint
-                            Id="8719e3f5-0f3f-439c-bf5a-dc110d7af4cc"
-                            guardText="loop(1,25)">
+                            Id="8719e3f5-0f3f-439c-bf5a-dc110d7af4cc">
                             <maxInt>
                               <literalString
                                 Id="1585e56e-2d18-455c-b5bf-e99b53a4883d"
-                                name="LiteralString1" />
+                                name="LiteralString1"
+                                value="36" />
                             </maxInt>
                             <minInt>
                               <literalString
                                 Id="d6edf962-7639-4096-924e-1def95af399f"
-                                name="LiteralString2" />
+                                name="LiteralString2"
+                                value="1" />
                             </minInt>
                           </interactionConstraint>
                         </guard>
@@ -5352,7 +5399,7 @@
           <lifeline
             Id="e7648d0c-05d2-4a05-a090-da9151d8aa69"
             name="Createur"
-            isActor="false"
+            isActor="true"
             lifelineDisplayName="Createur">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
@@ -6177,7 +6224,7 @@
         <messages>
           <message
             Id="a3a088b6-9afd-4c13-91ab-13bea5aced6f"
-            name="creerPartie(carte,case,p1,p2)"
+            name="creerPartie(carte,p1,p2)"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6462,7 +6509,7 @@
           </message>
           <message
             Id="1af768ef-20ff-4c5c-9fbe-20d15e24febc"
-            name="creerCarte(carte,case)"
+            name="creerCarte(carte)"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6481,7 +6528,7 @@
           </message>
           <message
             Id="4fb57f37-0e6d-443b-bc3d-fa3f1ae63d0e"
-            name="creerDemo(case)"
+            name="creerDemo()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6747,7 +6794,7 @@
           </message>
           <message
             Id="e155b325-ccae-4d95-b37f-eb3034cbd1d3"
-            name="creerPetite(case)"
+            name="creerPetite()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6785,7 +6832,7 @@
           </message>
           <message
             Id="314e5e5c-520f-4643-903b-45bed561afd5"
-            name="creerNormale(case)"
+            name="creerNormale()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6823,7 +6870,7 @@
           </message>
           <message
             Id="4dd32601-d5b0-404d-8207-6443c55c4425"
-            name="&lt;&lt;return&gt;&gt;"
+            name="Carte"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
