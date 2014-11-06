@@ -7,15 +7,10 @@ namespace PeopleWar
 {
     public class FabriquePeuple
     {
-        public static PeupleA PeupleA
+        public static FabriquePeuple INSTANCE = new FabriquePeuple();
+        private FabriquePeuple()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new System.NotImplementedException();
         }
 
         public static Peuple creerPeuple(string p)

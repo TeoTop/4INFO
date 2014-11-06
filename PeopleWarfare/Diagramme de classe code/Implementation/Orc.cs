@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Orc : PeupleA
     {
+        public Orc()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

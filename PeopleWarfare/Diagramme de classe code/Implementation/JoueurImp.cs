@@ -18,5 +18,10 @@ namespace PeopleWar
             {
             }
         }
+
+        public void JoeueurImp()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

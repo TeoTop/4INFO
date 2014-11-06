@@ -8,7 +8,7 @@ namespace PeopleWar
     public class PartieImp : Partie
     {
 
-        public List<Joueur> Joueurs
+        public System.Collections.Generic.List<PeopleWar.JoueurImp> Joueurs
         {
             get
             {
@@ -30,7 +30,7 @@ namespace PeopleWar
             }
         }
         
-        public StrategieCarte CarteA
+        public StrategieCarte carte
         {
             get
             {

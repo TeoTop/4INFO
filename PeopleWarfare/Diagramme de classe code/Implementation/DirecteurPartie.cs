@@ -22,5 +22,10 @@ namespace PeopleWar
         {
             throw new System.NotImplementedException();
         }
+
+        public void definirMonteur(MonteurPartie monteurPartie)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

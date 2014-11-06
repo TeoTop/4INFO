@@ -6,8 +6,19 @@ using System.Text;
 namespace PeopleWar
 {
     public class FabriqueCase
-    {
-        private Dictionary<int, Case> Cases
+    { 
+        public static FabriqueCase INSTANCE = new FabriqueCase();
+        //faire une lazy instancation
+
+        private FabriqueCase()
+        {
+            Desert = null;
+            Foret = null;
+            Montagne = null;
+            Plaine = null;
+        }
+
+        public Desert Desert
         {
             get
             {
@@ -18,23 +29,42 @@ namespace PeopleWar
             }
         }
 
-        public static FabriqueCase INSTANCE = new FabriqueCase();
-        private Case Desert = new Desert();
-        private Case Foret = new Foret();
-        private Case Montagne = new Montagne();
-        private Case Plaine = new Plaine();
-        private FabriqueCase()
+        public Foret Foret
         {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        public Case obtenirCase(int cle)
+        public Montagne Montagne
         {
-            //creer la case quand la clé est null (-1)
-            throw new System.NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        private Case creerCase()
+        public Plaine Plaine
         {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+        
+        public Case getCase(string type)
+        {
+            //creer la case quand la clé est null
             throw new System.NotImplementedException();
         }
     }

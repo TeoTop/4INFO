@@ -7,18 +7,8 @@ namespace PeopleWar
 {
     public abstract class StrategieCarte : Carte
     {
-        public CaseA CaseA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        public CaseA CaseA1
+        public System.Collections.Generic.List<PeopleWar.CaseA> cases
         {
             get
             {

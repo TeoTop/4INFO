@@ -7,26 +7,13 @@ namespace PeopleWar
 {
     public class UniteImp : Unite
     {
-        public CombatImp CombatImp
+        private int x { get; set; }
+        private int y { get; set; }
+    
+        public UniteImp()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new System.NotImplementedException();
         }
 
-        public CombatImp CombatImp1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
     }
 }
