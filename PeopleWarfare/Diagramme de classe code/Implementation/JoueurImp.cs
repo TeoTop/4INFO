@@ -7,18 +7,8 @@ namespace PeopleWar
 {
     public class JoueurImp : Joueur
     {
-        public PeupleA PeupleA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        public PeupleA PeupleA1
+        public PeupleA PeupleA
         {
             get
             {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public abstract class CarteA : Carte
+    public abstract class StrategieCarte : Carte
     {
         public CaseA CaseA
         {
@@ -38,6 +38,11 @@ namespace PeopleWar
             set
             {
             }
+        }
+
+        public Carte creerCarte()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

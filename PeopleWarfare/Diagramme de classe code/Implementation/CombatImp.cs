@@ -7,18 +7,8 @@ namespace PeopleWar
 {
     public class CombatImp : Combat
     {
-        public CaseA CaseA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        public CaseA CaseA1
+        public CaseA CaseA
         {
             get
             {

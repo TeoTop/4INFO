@@ -7,5 +7,6 @@ namespace PeopleWar
 {
     public class Desert : CaseA
     {
+        public Desert() { }
     }
 }

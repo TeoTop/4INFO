@@ -7,18 +7,8 @@ namespace PeopleWar
 {
     public class PartieImp : Partie
     {
-        public CarteA CarteA
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        public JoueurImp JoueurImp
+        public List<Joueur> Joueurs
         {
             get
             {
@@ -39,30 +29,8 @@ namespace PeopleWar
             {
             }
         }
-
-        public TourImp TourImp1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public JoueurImp JoueurImp1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public CarteA CarteA1
+        
+        public StrategieCarte CarteA
         {
             get
             {

@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Montagne : CaseA
     {
+        public Montagne()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

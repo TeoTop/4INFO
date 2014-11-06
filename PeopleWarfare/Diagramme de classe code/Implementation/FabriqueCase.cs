@@ -19,6 +19,10 @@ namespace PeopleWar
         }
 
         public static FabriqueCase INSTANCE = new FabriqueCase();
+        private Case Desert = new Desert();
+        private Case Foret = new Foret();
+        private Case Montagne = new Montagne();
+        private Case Plaine = new Plaine();
         private FabriqueCase()
         {
         }

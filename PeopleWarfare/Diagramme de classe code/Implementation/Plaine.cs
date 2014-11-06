@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Plaine : CaseA
     {
+        public Plaine()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public static class FabriquePeuple
+    public class FabriquePeuple
     {
         public static PeupleA PeupleA
         {
@@ -17,13 +17,8 @@ namespace PeopleWar
             {
             }
         }
-    
-        public static Peuple creerPeuple()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public static Peuple obtenirPeuple()
+        public static Peuple creerPeuple(string p)
         {
             throw new System.NotImplementedException();
         }

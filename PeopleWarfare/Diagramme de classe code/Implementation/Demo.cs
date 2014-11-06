@@ -5,7 +5,11 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public class Demo : CarteA
+    public class Demo : StrategieCarte
     {
+        public Carte creerCarte()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

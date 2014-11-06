@@ -5,19 +5,18 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public class FabriqueCarte
+    public class ConcepteurCarte
     {
-        public static Carte creerDemo()
+
+        private Carte carte { get; }
+
+        public ConcepteurCarte() { }
+        public static void definirCarte()
         {
             throw new System.NotImplementedException();
         }
 
-        public static Carte creerPetite()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public static Carte creerNormale()
+        public static Carte creerCarte()
         {
             throw new System.NotImplementedException();
         }

@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Foret : CaseA
     {
+        public Foret()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -7,18 +7,8 @@ namespace PeopleWar
 {
     public abstract class PeupleA : Peuple
     {
-        public UniteImp UniteImp
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        public UniteImp UniteImp1
+        public UniteImp UniteImp
         {
             get
             {
