@@ -28,5 +28,16 @@ namespace PeopleWar
             {
             }
         }
+
+        public FabriqueCase FabriqueCase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

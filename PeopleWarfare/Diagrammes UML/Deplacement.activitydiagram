@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="01096dca-1118-418e-8800-9406c31629ad" name="Deplacement" linkedPackageId="a6ff9db9-a4d1-4fa3-9fe9-630bf594e522" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="01096dca-1118-418e-8800-9406c31629ad" name="Deplacement" linkedPackageId="a6ff9db9-a4d1-4fa3-9fe9-630bf594e522" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="5003bcf6-3188-4162-8746-be2fba25bea0">
       <elementDefinition Id="b0c5824c-9e86-49be-8686-8fdfc49dfbec" />
@@ -80,16 +80,7 @@
           <activityFinalNode Id="82390892-8909-40d3-9871-0711e5b9e21f" name="ActivityFinal1" isLeaf="false">
             <elementDefinition Id="dad0febd-dd63-42da-b45f-0ff99e9152f9" />
           </activityFinalNode>
-          <opaqueAction Id="d6f3f525-b07a-4a50-a35b-7d90d0f7dd00" name="Effacer l'unité" isLeaf="false">
-            <elementDefinition Id="d35d982d-2914-4657-9bf7-7ba37913d8ae" />
-            <flowNodeTargets>
-              <controlFlow Id="c2ce8fd9-c61f-4c0e-aa51-5274fc7708fd" isLeaf="false">
-                <opaqueActionMoniker Id="60204221-36d5-4acb-8657-eae70e154509" LastKnownName="Créer une unité avec les mêmes caractéristiques de l'autre" />
-                <elementDefinition Id="838d14c5-5923-4419-b7cc-05ebdd4f3c16" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction Id="60204221-36d5-4acb-8657-eae70e154509" name="Créer une unité avec les mêmes caractéristiques de l'autre" isLeaf="false">
+          <opaqueAction Id="60204221-36d5-4acb-8657-eae70e154509" name="Déplacer l'unité" isLeaf="false">
             <elementDefinition Id="e247a9b6-d522-4776-be2d-23cd3a22f7fa" />
             <flowNodeTargets>
               <controlFlow Id="d8a24cd1-77c1-48c5-b23a-2a39a34bb54f" isLeaf="false">
@@ -104,13 +95,13 @@
           <decisionNode Id="5e1cab28-2d0a-4389-b4dd-682a098836d6" name="Decision2" isLeaf="false">
             <elementDefinition Id="b783baf0-e1ef-46b4-9202-78947f48c4e0" />
             <flowNodeTargets>
-              <controlFlow Id="e22e7d92-4cf8-45e9-aeac-22af3d231244" guard="Aucune unité adverse n'occupe cette case" isLeaf="false">
-                <opaqueActionMoniker Id="d6f3f525-b07a-4a50-a35b-7d90d0f7dd00" LastKnownName="Effacer l'unité" />
-                <elementDefinition Id="be94c638-0f26-4d66-a7a2-026e9e3928bf" />
-              </controlFlow>
               <controlFlow Id="f0820ffa-308d-4f58-8211-3cc348d8fd62" guard="Une ou plusieurs unités adverses occupent déjà la case" isLeaf="false">
                 <opaqueActionMoniker Id="9c1f04b9-04dc-4e92-9231-ce866ac5c868" LastKnownName="Combat" />
                 <elementDefinition Id="715822b8-5245-4fcd-88dd-12ad3fd9f26a" />
+              </controlFlow>
+              <controlFlow Id="4662cac9-ffad-4983-99c5-7fb4b5fae392" guard="Aucune unité adverse n'occupe cette case" isLeaf="false">
+                <opaqueActionMoniker Id="60204221-36d5-4acb-8657-eae70e154509" LastKnownName="Déplacer l'unité" />
+                <elementDefinition Id="87aebe2f-8836-458f-8fdf-e9cacd01cd5d" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>

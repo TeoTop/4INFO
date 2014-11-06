@@ -28,5 +28,16 @@ namespace PeopleWar
             {
             }
         }
+
+        public List<Caracteristique> Caracteristique
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

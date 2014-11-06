@@ -7,7 +7,18 @@ namespace PeopleWar
 {
     public class DirecteurPartie
     {
-        public Partie creerPartie()
+        public MonteurPartie MonteurPartie
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
+        public Partie creerPartie(Carte carte, Peuple p1, Peuple p2)
         {
             throw new System.NotImplementedException();
         }

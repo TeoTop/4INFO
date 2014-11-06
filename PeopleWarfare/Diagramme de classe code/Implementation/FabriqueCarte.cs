@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public static class FabriqueCarte
+    public class FabriqueCarte
     {
         public static Carte creerDemo()
         {

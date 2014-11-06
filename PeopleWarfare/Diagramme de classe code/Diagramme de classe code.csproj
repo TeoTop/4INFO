@@ -39,10 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\Fenetre.cs" />
     <Compile Include="Implementation\Caracteristique.cs" />
     <Compile Include="Implementation\CarteA.cs" />
-    <Compile Include="Implementation\CarteImp.cs" />
     <Compile Include="Implementation\CaseA.cs" />
     <Compile Include="Implementation\CombatImp.cs" />
     <Compile Include="Implementation\Demo.cs" />

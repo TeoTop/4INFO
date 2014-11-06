@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="d79f1791-f510-4742-ba82-e6aad0bd9703" name="Combat" linkedPackageId="d7bb02da-d0ec-41d7-9f48-db9bf81e7645" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="d79f1791-f510-4742-ba82-e6aad0bd9703" name="Combat" linkedPackageId="d7bb02da-d0ec-41d7-9f48-db9bf81e7645" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="d1b2cb10-a34f-4a21-bd6f-d26841201ee4">
       <elementDefinition Id="8ee96690-04a5-4e07-ba9a-0fde3c127ac7" />
@@ -233,6 +233,12 @@
           </decisionNode>
           <opaqueAction Id="15bed657-c08a-4c85-a46b-b8bc05aba86c" name="Déplacer l'unité vers la case attaquée" isLeaf="false">
             <elementDefinition Id="8774298b-d743-4bdf-ab96-0e2da430862a" />
+            <flowNodeTargets>
+              <controlFlow Id="73723350-7057-4e0d-b308-bd76a966fdd1" isLeaf="false">
+                <activityFinalNodeMoniker Id="e2fadfaf-9443-4fa7-a53d-6faf82ec0051" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="01aec282-4a2c-4fa0-a07f-c8c5e023c164" />
+              </controlFlow>
+            </flowNodeTargets>
           </opaqueAction>
         </nodes>
       </activity>

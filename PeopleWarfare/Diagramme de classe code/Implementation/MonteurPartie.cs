@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public static class MonteurPartie
+    public abstract class MonteurPartie
     {
         public List<Joueur> creerJoueurs()
         {

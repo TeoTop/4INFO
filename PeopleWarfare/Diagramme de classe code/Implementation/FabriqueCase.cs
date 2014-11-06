@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PeopleWar
 {
-    public static class FabriqueCase
+    public class FabriqueCase
     {
-        public CaseA CaseA
+        private Dictionary<int, Case> Cases
         {
             get
             {
@@ -18,12 +18,18 @@ namespace PeopleWar
             }
         }
 
-        public static Case obtenirCase(int cle)
+        public static FabriqueCase INSTANCE = new FabriqueCase();
+        private FabriqueCase()
         {
+        }
+
+        public Case obtenirCase(int cle)
+        {
+            //creer la case quand la clé est null (-1)
             throw new System.NotImplementedException();
         }
 
-        public static Case creerCase()
+        private Case creerCase()
         {
             throw new System.NotImplementedException();
         }
