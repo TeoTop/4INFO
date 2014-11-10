@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="dans fabriquecase, on fait une lazy instanciation">
+    <Position X="2.21" Y="0.5" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="si on ajoute instance dans fabriquecase, on aura pas besoin d'ajouter un lien d'assoc entre strategiecarte et fabriquecase">
+    <Position X="11.018" Y="0.922" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="enum pour peuple et case">
+    <Position X="2.621" Y="7.603" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="PeopleWar.StrategieCarte" Collapsed="true">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <AssociationLine Name="FabriqueCase" Type="PeopleWar.FabriqueCase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.75" Y="1.125" />
+        <Point X="13.375" Y="1.125" />
+        <Point X="13.375" Y="0.781" />
+        <Point X="8.49" Y="0.781" Type="JumpStart" />
+        <Point X="8.323" Y="0.781" Type="JumpEnd" />
+        <Point X="7.5" Y="0.781" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.377" Y="0.119" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Implementation\StrategieCarte.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FabriqueCase" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="cases" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeopleWar.CaseA" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\CaseA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeopleWar.CombatImp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <AssociationLine Name="UniteImp2" Type="PeopleWar.UniteImp">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.385" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UniteImp1" Type="PeopleWar.UniteImp">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.004" Y="0.316" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Implementation\CombatImp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UniteImp2" />
+      <Property Name="UniteImp1" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PeopleWar.Demo" Collapsed="true">
+    <Position X="16" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Demo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Desert" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Desert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.DirecteurPartie">
+    <Position X="24.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\DirecteurPartie.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MonteurPartie" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PeopleWar.Elf" Collapsed="true">
+    <Position X="11" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Elf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Erreur" Collapsed="true">
+    <Position X="20.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Erreur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.ConcepteurCarte" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="carte" Type="PeopleWar.StrategieCarte" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.75" Y="0.75" />
+        <Point X="14.688" Y="0.75" />
+        <Point X="14.688" Y="1" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.26" Y="0.339" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIABAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\ConcepteurCarte.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="carte" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PeopleWar.FabriqueCase" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAAAAAAAAAACAAAAAAEQAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Implementation\FabriqueCase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Desert" />
+      <Property Name="Foret" />
+      <Property Name="Montagne" />
+      <Property Name="Plaine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PeopleWar.FabriquePeuple" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\FabriquePeuple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Foret" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Foret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.JoueurImp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\JoueurImp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PeupleA" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PeopleWar.Montagne" Collapsed="true">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Montagne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.MonteurPartie">
+    <Position X="21.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\MonteurPartie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Nain" Collapsed="true">
+    <Position X="13" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Nain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Normale" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Normale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.Orc" Collapsed="true">
+    <Position X="9" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Orc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.PartieImp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="4" Width="1.5" />
+    <AssociationLine Name="TourImp" Type="PeopleWar.TourImp" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="4.25" />
+        <Point X="12.5" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Joueurs" Type="PeopleWar.JoueurImp">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.812" Y="0.079" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\PartieImp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TourImp" />
+      <Property Name="carte" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Joueurs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PeopleWar.Petite" Collapsed="true">
+    <Position X="13.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Petite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.PeupleA" Collapsed="true">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\PeupleA.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="unites" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeopleWar.Plaine" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Plaine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeopleWar.TourImp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\TourImp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CombatImp" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PeopleWar.UniteImp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Implementation\UniteImp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Diagramme_de_classe_code.MonteurNvllePartie">
+    <Position X="20.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\MonteurNvllePartie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Diagramme_de_classe_code.MonteurChPartie">
+    <Position X="23.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\MonteurChPartie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PeopleWar.Carte">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Carte.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Case" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Case.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Combat" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Combat.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Joueur" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Joueur.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Partie" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Partie.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Peuple">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Peuple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Tour" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Tour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PeopleWar.Unite" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Unite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Diagramme_de_classe_code.Enum1">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
