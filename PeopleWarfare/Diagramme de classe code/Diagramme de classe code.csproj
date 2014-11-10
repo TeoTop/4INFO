@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum1.cs" />
-    <Compile Include="Implementation\Caracteristique.cs" />
+    <Compile Include="Implementation\EnumPeuple.cs" />
+    <Compile Include="Implementation\EnumCase.cs" />
     <Compile Include="Implementation\StrategieCarte.cs" />
     <Compile Include="Implementation\CaseA.cs" />
     <Compile Include="Implementation\CombatImp.cs" />

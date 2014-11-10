@@ -7,6 +7,11 @@ namespace PeopleWar
 {
     public class Erreur
     {
+        private Erreur()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public static Erreur INSTANCE
         {
             get

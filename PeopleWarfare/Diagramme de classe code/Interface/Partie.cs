@@ -7,5 +7,10 @@ namespace PeopleWar
 {
     public interface Partie
     {
+        Joueur getJoueur(int key);
+
+        Carte getCarte();
+
+        int getNbTour();
     }
 }

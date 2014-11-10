@@ -19,17 +19,6 @@ namespace PeopleWar
             }
         }
 
-        public FabriqueCase FabriqueCase
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         public Carte creerCarte()
         {
             throw new System.NotImplementedException();

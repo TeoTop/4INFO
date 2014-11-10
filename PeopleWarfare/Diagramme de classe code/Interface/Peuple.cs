@@ -7,5 +7,8 @@ namespace PeopleWar
 {
     public interface Peuple
     {
+        Unite uniteSuivante();
+
+        Unite selectionnerUnite();
     }
 }

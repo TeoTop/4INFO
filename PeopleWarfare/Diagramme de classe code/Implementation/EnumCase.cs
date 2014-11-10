@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Diagramme_de_classe_code
 {
-    public enum Enum1
+    public enum EnumCase
     {
+        Desert,
+        Foret,
+        Plaine,
+        Montagne,
     }
 }
