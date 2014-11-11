@@ -7,6 +7,11 @@ namespace PeopleWar
 {
     public class DirecteurPartie
     {
+        public DirecteurPartie()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public MonteurPartie MonteurPartie
         {
             get

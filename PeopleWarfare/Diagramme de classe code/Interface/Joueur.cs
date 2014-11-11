@@ -7,10 +7,7 @@ namespace PeopleWar
 {
     public interface Joueur
     {
-        Peuple getPeuple();
 
-        String getNom();
-
-        int jouerTour();
+        void calculerNbPoint();
     }
 }

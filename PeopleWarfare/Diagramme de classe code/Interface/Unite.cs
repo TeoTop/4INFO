@@ -9,18 +9,12 @@ namespace PeopleWar
     {
         void afficherCaracteristique();
 
-        int getX();
-
-        int getY();
-
-        int getVie();
-
-        int getAtt();
-
         int getAttEff();
 
-        int getDef();
-
         int getDefEff();
+
+        bool seDeplacer(int x, int y);
+
+        int combattre(Unite uniteAdv);
     }
 }

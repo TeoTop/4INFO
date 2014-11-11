@@ -7,5 +7,7 @@ namespace PeopleWar
 {
     public interface Tour
     {
+
+        Combat getCombat(int key);
     }
 }

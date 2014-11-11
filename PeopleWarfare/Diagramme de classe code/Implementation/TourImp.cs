@@ -7,8 +7,12 @@ namespace PeopleWar
 {
     public class TourImp : Tour
     {
+        public TourImp()
+        {
+            throw new System.NotImplementedException();
+        }
 
-        public CombatImp CombatImp
+        public List<PeopleWar.CombatImp> combats
         {
             get
             {

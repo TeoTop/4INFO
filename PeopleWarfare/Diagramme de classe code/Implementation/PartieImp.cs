@@ -19,7 +19,7 @@ namespace PeopleWar
             }
         }
 
-        public TourImp TourImp
+        public List<PeopleWar.TourImp> tours
         {
             get
             {
@@ -31,6 +31,50 @@ namespace PeopleWar
         }
         
         public StrategieCarte carte
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int nbTourMax
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int x
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int y
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int joueurCourant
         {
             get
             {

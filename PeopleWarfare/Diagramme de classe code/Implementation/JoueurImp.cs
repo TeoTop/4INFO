@@ -8,7 +8,29 @@ namespace PeopleWar
     public class JoueurImp : Joueur
     {
 
-        public PeupleA PeupleA
+        public PeupleA peuple
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int nbPoints
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public String nom
         {
             get
             {

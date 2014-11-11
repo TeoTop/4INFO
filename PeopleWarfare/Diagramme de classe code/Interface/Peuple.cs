@@ -9,6 +9,12 @@ namespace PeopleWar
     {
         Unite uniteSuivante();
 
-        Unite selectionnerUnite();
+        Unite getUnite(int key);
+
+        String getInformation();
+
+        List<Unite> verifierUnite(int x, int y);
+
+        int getNbUnite();
     }
 }

@@ -22,5 +22,10 @@ namespace PeopleWar
             {
             }
         }
+
+        public void afficherErreur()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

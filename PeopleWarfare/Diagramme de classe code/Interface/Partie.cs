@@ -9,8 +9,16 @@ namespace PeopleWar
     {
         Joueur getJoueur(int key);
 
-        Carte getCarte();
-
         int getNbTour();
+
+        bool verifierSelUnite();
+
+        Partie selectionnerCase(int x, int y);
+
+        bool verifierFinPartie();
+
+        void switcherJoueur();
+
+        Tour getTour(int key);
     }
 }

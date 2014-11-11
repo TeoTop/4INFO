@@ -7,7 +7,12 @@ namespace PeopleWar
 {
     public class CombatImp : Combat
     {
-        public UniteImp UniteImp2
+        public CombatImp(Unite uniteAtt, List<PeopleWar.Unite> unitesDef)
+        {
+            throw new System.NotImplementedException();
+        }
+    
+        public UniteImp uniteDef
         {
             get
             {
@@ -18,7 +23,7 @@ namespace PeopleWar
             }
         }
 
-        public UniteImp UniteImp1
+        public UniteImp uniteAtt
         {
             get
             {

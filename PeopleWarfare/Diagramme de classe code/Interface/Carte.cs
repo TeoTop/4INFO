@@ -9,16 +9,12 @@ namespace PeopleWar
     {
         Carte creerCarte();
 
-        String getType();
-
-        int getNbCase();
-
-        List<Case> getCases();
-
         Case getCase(int key);
 
-        int getX(string key);
+        int getX(int key);
 
-        int getY(string key);
+        int getY(int key);
+
+        int getNbCase();
     }
 }
