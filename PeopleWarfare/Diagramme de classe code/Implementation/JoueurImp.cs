@@ -8,7 +8,7 @@ namespace PeopleWar
     public class JoueurImp : Joueur
     {
 
-        public PeupleA PeupleA
+        public PeupleA peuple
         {
             get
             {
@@ -17,6 +17,33 @@ namespace PeopleWar
             set
             {
             }
+        }
+
+        public int nbPoints
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public String nom
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public void JoeueurImp()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

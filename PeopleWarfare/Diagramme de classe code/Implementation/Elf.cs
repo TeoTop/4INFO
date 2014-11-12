@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Elf : PeupleA
     {
+        public Elf()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

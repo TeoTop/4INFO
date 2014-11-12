@@ -7,6 +7,11 @@ namespace Diagramme_de_classe_code
 {
     public class MonteurNvllePartie : PeopleWar.MonteurPartie
     {
+        public MonteurNvllePartie()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public static Carte creerCarte(string carte)
         {
             throw new System.NotImplementedException();

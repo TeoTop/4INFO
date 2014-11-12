@@ -7,11 +7,12 @@ namespace PeopleWar
 {
     public class ConcepteurCarte
     {
+        public static ConcepteurCarte INSTANCE = new ConcepteurCarte();
 
-        private Carte carte { get; }
+        private StrategieCarte carte { get; }
 
-        public ConcepteurCarte() { }
-        public static void definirCarte()
+        private ConcepteurCarte() { }
+        public static void definirCarte(StrategieCarte carte)
         {
             throw new System.NotImplementedException();
         }

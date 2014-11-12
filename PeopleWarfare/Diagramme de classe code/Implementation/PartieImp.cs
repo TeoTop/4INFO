@@ -8,7 +8,7 @@ namespace PeopleWar
     public class PartieImp : Partie
     {
 
-        public List<Joueur> Joueurs
+        public System.Collections.Generic.List<PeopleWar.JoueurImp> Joueurs
         {
             get
             {
@@ -19,7 +19,7 @@ namespace PeopleWar
             }
         }
 
-        public TourImp TourImp
+        public List<PeopleWar.TourImp> tours
         {
             get
             {
@@ -30,7 +30,51 @@ namespace PeopleWar
             }
         }
         
-        public StrategieCarte CarteA
+        public StrategieCarte carte
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int nbTourMax
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int x
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int y
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int joueurCourant
         {
             get
             {

@@ -7,7 +7,10 @@ namespace PeopleWar
 {
     public class UniteImp : Unite
     {
-        public CombatImp CombatImp
+        private int x { get; set; }
+        private int y { get; set; }
+
+        public int attaque
         {
             get
             {
@@ -18,7 +21,7 @@ namespace PeopleWar
             }
         }
 
-        public CombatImp CombatImp1
+        public int defense
         {
             get
             {
@@ -28,5 +31,33 @@ namespace PeopleWar
             {
             }
         }
+
+        public int vie
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int pm
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
+        public UniteImp()
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }

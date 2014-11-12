@@ -7,5 +7,9 @@ namespace PeopleWar
 {
     public class Nain : PeupleA
     {
+        public Nain()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

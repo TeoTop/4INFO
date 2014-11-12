@@ -7,6 +7,33 @@ namespace PeopleWar
 {
     public class Petite : StrategieCarte
     {
+        public Petite()
+        {
+            throw new System.NotImplementedException();
+        }
+    
+        public String type
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int nbCase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public Carte creerCarte()
         {
             throw new System.NotImplementedException();

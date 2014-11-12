@@ -7,5 +7,16 @@ namespace PeopleWar
 {
     public interface Combat
     {
+        Unite getUniteAtt();
+
+        Unite getUniteDef();
+
+        int calculerNbCombat();
+
+        float calculerReussiteAtt();
+
+        int effectuerCombat();
+
+        Unite choisirUniteDef(List<Unite> UnitesDef);
     }
 }

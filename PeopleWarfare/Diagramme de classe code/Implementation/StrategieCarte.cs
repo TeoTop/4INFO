@@ -7,7 +7,8 @@ namespace PeopleWar
 {
     public abstract class StrategieCarte : Carte
     {
-        public CaseA CaseA
+
+        public System.Collections.Generic.List<PeopleWar.CaseA> cases
         {
             get
             {
@@ -18,7 +19,7 @@ namespace PeopleWar
             }
         }
 
-        public CaseA CaseA1
+        public String type
         {
             get
             {
@@ -29,7 +30,7 @@ namespace PeopleWar
             }
         }
 
-        public FabriqueCase FabriqueCase
+        public int nbCase
         {
             get
             {

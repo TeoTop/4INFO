@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="a9e1ead7-1e5a-4586-b3b8-57b44285e3b4" name="UMLUseCaseDiagram1" linkedPackageId="04a88633-9b32-415a-aa00-70c15567198c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a9e1ead7-1e5a-4586-b3b8-57b44285e3b4" name="UMLUseCaseDiagram1" linkedPackageId="04a88633-9b32-415a-aa00-70c15567198c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="be1f6ea9-b291-414e-a030-e12e99c6a86b" name="Joueur" isAbstract="false" isLeaf="false">
@@ -170,7 +170,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="11d56e5b-d958-4a40-9e5a-2c7ab8521ec0" name="Cliquer droit unité" isAbstract="false" isLeaf="false">
+      <useCase Id="11d56e5b-d958-4a40-9e5a-2c7ab8521ec0" name="Cliquer gauche unité" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e7622484-8cdb-438a-80a0-60d5a15b793a" />
         <subjects>
           <subsystemMoniker Id="0356f668-4a8a-445b-853d-c15ebdcb87ac" LastKnownName="Partie" />
@@ -198,7 +198,7 @@
         <elementDefinition Id="f33d178b-9037-4470-9065-256e08943f17" />
         <extendedCases>
           <extend Id="0e37cf17-bc27-4ed7-8fd6-a31a6d96320e">
-            <useCaseMoniker Id="11d56e5b-d958-4a40-9e5a-2c7ab8521ec0" LastKnownName="Cliquer droit unité" />
+            <useCaseMoniker Id="11d56e5b-d958-4a40-9e5a-2c7ab8521ec0" LastKnownName="Cliquer gauche unité" />
             <elementDefinition Id="f2d93ee4-b41c-4b7e-b2b6-cd345ac18f10" />
           </extend>
           <extend Id="6526ca6f-4619-4292-9a34-03ccf8c6993e">

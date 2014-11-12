@@ -39,7 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\Caracteristique.cs" />
+    <Compile Include="Implementation\EnumPeuple.cs" />
+    <Compile Include="Implementation\EnumCase.cs" />
     <Compile Include="Implementation\StrategieCarte.cs" />
     <Compile Include="Implementation\CaseA.cs" />
     <Compile Include="Implementation\CombatImp.cs" />
@@ -70,8 +71,8 @@
     <Compile Include="Interface\Joueur.cs" />
     <Compile Include="Interface\Partie.cs" />
     <Compile Include="Interface\Peuple.cs" />
-    <Compile Include="MonteurChPartie.cs" />
-    <Compile Include="MonteurNvllePartie.cs" />
+    <Compile Include="Implementation\MonteurChPartie.cs" />
+    <Compile Include="Implementation\MonteurNvllePartie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interface\Tour.cs" />
     <Compile Include="Interface\Unite.cs" />
