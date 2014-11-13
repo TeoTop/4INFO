@@ -1,0 +1,4 @@
+begin int a, int c;
+	a <- c;
+	c <- a + c
+end

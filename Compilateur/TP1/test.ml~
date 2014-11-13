@@ -1,0 +1,11 @@
+let test1 = "jojo et /* commentaires */) cheval = sinon (";;
+
+
+let scanner_list = 
+  | [] -> ()
+  | a::l -> scanner a;; 
+
+
+let tokens = scanner_list all_test in
+  List.iter (fun tk -> Printf.fprintf stdout "Token: %a\n" Ulex.print_token tk) tokens ;
+  Printf.printf "DONE\n"
