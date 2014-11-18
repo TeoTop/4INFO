@@ -1,7 +1,0 @@
-lexer.cmo : parser.cmi
-lexer.cmx : parser.cmx
-parser.cmo : parser.cmi
-parser.cmx : parser.cmi
-main.cmo : parser.cmi lexer.cmo
-main.cmx : parser.cmx lexer.cmx
-parser.cmi :

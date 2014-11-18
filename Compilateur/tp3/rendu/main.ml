@@ -42,7 +42,6 @@ List.iter
 	fun inst -> Printf.printf "Sinst\n";
 	f inst
 	)
-sinst
-;;
+sinst;;
 
 Printf.printf "Success !\n";;

@@ -1,0 +1,416 @@
+   0  $accept : %entry% $end
+
+   1  parse_prog : linstr
+
+   2  linstr : instr
+   3         | instr SEMICOLON linstr
+
+   4  instr : SET IDENT AFFECT expr
+   5        | WALK expr
+   6        | ROTATE dir expr
+   7        | CIRCLE WITH DIAMETER expr
+   8        | SET POSITION LP expr COMMA expr RP
+
+   9  dir : LEFT
+  10      | RIGHT
+
+  11  expr : IDENT
+  12       | INT
+  13       | expr PLUS expr
+  14       | expr MULT expr
+  15       | expr MINUS expr
+  16       | expr DIV expr
+
+  17  %entry% : '\001' parse_prog
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . parse_prog  (17)
+
+	SET  shift 3
+	WALK  shift 4
+	ROTATE  shift 5
+	CIRCLE  shift 6
+	.  error
+
+	parse_prog  goto 7
+	linstr  goto 8
+	instr  goto 9
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	instr : SET . IDENT AFFECT expr  (4)
+	instr : SET . POSITION LP expr COMMA expr RP  (8)
+
+	POSITION  shift 10
+	IDENT  shift 11
+	.  error
+
+
+state 4
+	instr : WALK . expr  (5)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 14
+
+
+state 5
+	instr : ROTATE . dir expr  (6)
+
+	LEFT  shift 15
+	RIGHT  shift 16
+	.  error
+
+	dir  goto 17
+
+
+state 6
+	instr : CIRCLE . WITH DIAMETER expr  (7)
+
+	WITH  shift 18
+	.  error
+
+
+state 7
+	%entry% : '\001' parse_prog .  (17)
+
+	.  reduce 17
+
+
+state 8
+	parse_prog : linstr .  (1)
+
+	.  reduce 1
+
+
+state 9
+	linstr : instr .  (2)
+	linstr : instr . SEMICOLON linstr  (3)
+
+	SEMICOLON  shift 19
+	$end  reduce 2
+
+
+state 10
+	instr : SET POSITION . LP expr COMMA expr RP  (8)
+
+	LP  shift 20
+	.  error
+
+
+state 11
+	instr : SET IDENT . AFFECT expr  (4)
+
+	AFFECT  shift 21
+	.  error
+
+
+state 12
+	expr : INT .  (12)
+
+	.  reduce 12
+
+
+state 13
+	expr : IDENT .  (11)
+
+	.  reduce 11
+
+
+state 14
+	instr : WALK expr .  (5)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	$end  reduce 5
+	SEMICOLON  reduce 5
+
+
+state 15
+	dir : LEFT .  (9)
+
+	.  reduce 9
+
+
+state 16
+	dir : RIGHT .  (10)
+
+	.  reduce 10
+
+
+state 17
+	instr : ROTATE dir . expr  (6)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 26
+
+
+state 18
+	instr : CIRCLE WITH . DIAMETER expr  (7)
+
+	DIAMETER  shift 27
+	.  error
+
+
+state 19
+	linstr : instr SEMICOLON . linstr  (3)
+
+	SET  shift 3
+	WALK  shift 4
+	ROTATE  shift 5
+	CIRCLE  shift 6
+	.  error
+
+	linstr  goto 28
+	instr  goto 9
+
+
+state 20
+	instr : SET POSITION LP . expr COMMA expr RP  (8)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 29
+
+
+state 21
+	instr : SET IDENT AFFECT . expr  (4)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 30
+
+
+state 22
+	expr : expr MULT . expr  (14)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 31
+
+
+state 23
+	expr : expr PLUS . expr  (13)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 32
+
+
+state 24
+	expr : expr DIV . expr  (16)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 33
+
+
+state 25
+	expr : expr MINUS . expr  (15)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 34
+
+
+state 26
+	instr : ROTATE dir expr .  (6)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	$end  reduce 6
+	SEMICOLON  reduce 6
+
+
+state 27
+	instr : CIRCLE WITH DIAMETER . expr  (7)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 35
+
+
+state 28
+	linstr : instr SEMICOLON linstr .  (3)
+
+	.  reduce 3
+
+
+state 29
+	instr : SET POSITION LP expr . COMMA expr RP  (8)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	COMMA  shift 36
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	.  error
+
+
+state 30
+	instr : SET IDENT AFFECT expr .  (4)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	$end  reduce 4
+	SEMICOLON  reduce 4
+
+
+state 31
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr MULT expr .  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	.  reduce 14
+
+
+state 32
+	expr : expr . PLUS expr  (13)
+	expr : expr PLUS expr .  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	DIV  shift 24
+	$end  reduce 13
+	RP  reduce 13
+	COMMA  reduce 13
+	SEMICOLON  reduce 13
+	PLUS  reduce 13
+	MINUS  reduce 13
+
+
+state 33
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+	expr : expr DIV expr .  (16)
+
+	.  reduce 16
+
+
+state 34
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr MINUS expr .  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	DIV  shift 24
+	$end  reduce 15
+	RP  reduce 15
+	COMMA  reduce 15
+	SEMICOLON  reduce 15
+	PLUS  reduce 15
+	MINUS  reduce 15
+
+
+state 35
+	instr : CIRCLE WITH DIAMETER expr .  (7)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	$end  reduce 7
+	SEMICOLON  reduce 7
+
+
+state 36
+	instr : SET POSITION LP expr COMMA . expr RP  (8)
+
+	INT  shift 12
+	IDENT  shift 13
+	.  error
+
+	expr  goto 37
+
+
+state 37
+	instr : SET POSITION LP expr COMMA expr . RP  (8)
+	expr : expr . PLUS expr  (13)
+	expr : expr . MULT expr  (14)
+	expr : expr . MINUS expr  (15)
+	expr : expr . DIV expr  (16)
+
+	RP  shift 38
+	MULT  shift 22
+	PLUS  shift 23
+	DIV  shift 24
+	MINUS  shift 25
+	.  error
+
+
+state 38
+	instr : SET POSITION LP expr COMMA expr RP .  (8)
+
+	.  reduce 8
+
+
+24 terminals, 7 nonterminals
+18 grammar rules, 39 states

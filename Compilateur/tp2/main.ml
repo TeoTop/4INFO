@@ -25,19 +25,53 @@ module type LexerI =
 module MyLexer : LexerI = 
 struct
 
- type ulex = () (* Replace with Ulex.ulex of TP1 *)
+ open Ulex
 
- let token = 
-  fun _ -> failwith "Main.MyLexer.token : use Lexer.token of TP1"
+ type ulex = Ulex.token
 
- let string_of_token  = 
-  fun _ -> failwith "Main.MyLexer.string_of_token : adapt Ulex.print_token of TP1"
+ let token = Lexer.token
 
- let terminal_of_ulex = 
-  fun _ _ -> failwith "Main.MyLexer.terminal_of_ulex : TODO"
+ let string_of_token  = function
+  | UL_EOF  -> "UL_EOF"
+  | UL_PARFERM -> "UL_PARFERM"
+  | UL_PAROUV -> "UL_PAROUV"
+  | UL_EGAL -> "UL_EGAL"
+  | UL_DIFF -> "UL_DIFF"
+  | UL_INF -> "UL_INF"
+  | UL_SUP -> "UL_SUP"
+  | UL_ET -> "UL_ET"
+  | UL_OU  -> "UL_OU"
+  | UL_IDENT id  -> "UL_IDENT" ^id
+  | UL_SI  -> "UL_SI"
+  | UL_ALORS  -> "UL_ALORS"
+  | UL_SINON  -> "UL_SINON"
+  | UL_FSI  -> "UL_FSI"
+  | UL_SUPEG  -> "UL_SUPEG"
+  | UL_INFEG  -> "UL_INFEG"
+
+
+ let terminal_of_ulex g = function
+  | UL_EOF  -> end_of_stream g
+  | UL_PARFERM -> string_to_vt "parferm"
+  | UL_PAROUV -> string_to_vt "parouv"
+  | UL_EGAL -> string_to_vt "egal"
+  | UL_DIFF -> string_to_vt "diff"
+  | UL_INF -> string_to_vt "inf"
+  | UL_SUP -> string_to_vt "sup"
+  | UL_ET -> string_to_vt "et"
+  | UL_OU  -> string_to_vt "ou"
+  | UL_IDENT _ -> string_to_vt "ident"
+  | UL_SI  -> string_to_vt "si"
+  | UL_ALORS  -> string_to_vt "alors"
+  | UL_SINON  -> string_to_vt "sinon"
+  | UL_FSI  -> string_to_vt "fsi"
+  | UL_SUPEG  -> string_to_vt "supeg"
+  | UL_INFEG  -> string_to_vt "infeg"
+
    
- let is_eof = 
-  function _ -> failwith "Main.MyLexer.is_eof : TODO"
+ let is_eof = function
+  | UL_EOF -> true
+  | _      -> false
 
 end
 

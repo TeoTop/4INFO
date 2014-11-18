@@ -1,0 +1,161 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\definecolor{grey}{rgb}{0.9,0.9,0.9}
+\definecolor{teal}{rgb}{0.0,0.5,0.5}
+\definecolor{violet}{rgb}{0.5,0,0.5}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\lstloadlanguages{caml}
+\lstdefinestyle{listing}{
+language=[Objective]Caml,
+captionpos=t,
+inputencoding=utf8/latin1,
+extendedchars=true,
+numbers=left,
+numberstyle=\tiny,
+numbersep=5pt,
+breaklines=true,
+breakatwhitespace=true,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+tabsize=2,
+basicstyle=\footnotesize\ttfamily,
+backgroundcolor=\color{grey},
+keywordstyle=\color{blue}\bfseries,
+commentstyle=\color{teal},
+identifierstyle=\color{black},
+stringstyle=\color{red},
+numberstyle=\color{violet},
+}
+\lstset{style=listing}
+\newcommand{\chevron}[1]{<\! \! #1 \! \!>}
+\title{TP1 - Analyse lexicale et crible}
+\author{\textsc{Hassan EL OMARI ALAOUI} - \textsc{Julien MARCHAIS}}
+\date{\today}
+\begin{document}
+\maketitle
+\section{Questions}
+\subsection{Question 1.1}
+Séparer le crible dans l'analyseur lexical permet d'avoir un analyseur lexical plus générique. Toutes les unités lexicales sont réunies au sein de la même fonction. La maintenance de cet analyseur lexical en est donc facilitée.
+\subsection{Question 1.2}
+Il est possible de reconnaître les mots-clés "et" et "ou" par le même lexème que ident. Cependant, cela aura pour impact de modifier l'interpretation du crible. En effet, nous n'aurons plus UL\_ET et UL\_OU mais UL\_IDENT "et" et UL\_IDENT "ou". De plus, cela diminuera le nombre d'états de l'AFD en compactant ces trois états en un seul.
+\subsection{Question 1.3}
+Les types énumérés en Ocaml permettent de réaliser un filtrage sur plusieurs constructeurs. Cela permet d'être plus explicite dans les valeurs retournées et d'éviter les erreurs de typage. Le code est plus optimisé, plus performant.
+\subsection{Question 1.4}
+L'intérêt de faire un scanner ne rendant qu'un lexème à la fois permet de simplifier l'implémentation de l'analyseur lexical. En effet, il est plus simple de rendre un seul lexème que de parcourir toute une liste.
+\subsection{Question 1.5}
+ident est un terminal car il est utilisé comme une unité lexicale.
+\subsection{Question 1.6}
+Il faut ajouter des règles pour les token "si", "sinon", "fsi" et les deux opérateurs de comparaison (fichier lexer.mll). De plus, il faut ajouter dans ulex.ml les token correspondants ainsi que leur message de sortie.
+\section{Code source}
+\lstinputlisting[caption=main.ml]{main.ml}
+\lstinputlisting[caption=ulex.ml]{ulex.ml}
+\lstinputlisting[caption=lexer.mll]{lexer.mll}
+\vspace{1cm}
+\section{Tests}
+\lstinputlisting[caption=test.ml]{test.ml}
+\section{Résultats \& Commentaires}
+\begin{lstlisting}
+TEST 1:
+	Token: UL_IDENT "jojo"
+	Token: UL_ET
+	Token: UL_PARFERM
+	Token: UL_IDENT "cheval"
+	Token: UL_EGAL
+	Token: UL_SINON
+	Token: UL_PAROUV
+	Token: UL_EOF
+	DONE
+	/*
+	 Test du TP 
+	*/
+TEST 2:
+	Token: UL_SI
+	Token: UL_IDENT "x"
+	Token: UL_EGAL
+	Token: UL_IDENT "un"
+	Token: UL_ALORS
+	Token: UL_IDENT "y"
+	Token: UL_EGAL
+	Token: UL_IDENT "deux"
+	Token: UL_SINON
+	Token: UL_IDENT "z"
+	Token: UL_EGAL
+	Token: UL_IDENT "trois"
+	Token: UL_EOF
+	DONE
+	/*
+	Test avec une condition.
+	*/
+TEST 3:
+	Token: UL_EOF
+	DONE
+	/*
+	Aucune unite lexical car test avec seulement des commentaires
+	*/
+TEST 4:
+	Token: UL_IDENT "Le"
+	Token: UL_IDENT "ciel"
+	Token: UL_IDENT "est"
+	Token: UL_IDENT "bleu"
+	Token: UL_EOF
+	DONE
+	/*
+	Test a avec seulement des idents
+	*/
+TEST 5:
+	Token: UL_IDENT "Mille"
+	Token: UL_IDENT "millions"
+	Token: UL_IDENT "de"
+	Token: UL_IDENT "mille"
+	Token: UL_IDENT "a"
+	Token: UL_EOF
+	DONE
+	/*
+	Test b avec seulement des idents
+	*/
+TEST 6:
+	Token: UL_SI
+	Token: UL_IDENT "x"
+	Token: UL_EGAL
+	Token: UL_IDENT "deux"
+	Token: UL_ET
+	Token: UL_IDENT "y"
+	Token: UL_EGAL
+	Token: UL_IDENT "trois"
+	Token: UL_ALORS
+	Token: UL_IDENT "z"
+	Token: UL_EGAL
+	Token: UL_IDENT "un"
+	Token: UL_OU
+	Token: UL_IDENT "z"
+	Token: UL_EGAL
+	Token: UL_IDENT "cinq"
+	Token: UL_SINON
+	Token: UL_SI
+	Token: UL_IDENT "z"
+	Token: UL_EGAL
+	Token: UL_IDENT "deux"
+	Token: UL_ALORS
+	Token: UL_IDENT "echo"
+	Token: UL_IDENT "test"
+	Token: UL_FSI
+	Token: UL_FSI
+	Token: UL_EOF
+	DONE
+	/*
+	Test avec des conditions imbriquees.
+	*/
+\end{lstlisting}
+L'ensemble des tests ont fonctionné correctement vis à vis de la grammaire donnée du TP.
+\end{document}

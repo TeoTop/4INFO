@@ -1,0 +1,9 @@
+lexer.cmo : parser.cmi
+lexer.cmx : parser.cmx
+type.cmo :
+type.cmx :
+main.cmo : type.cmo parser.cmi lexer.cmo
+main.cmx : type.cmx parser.cmx lexer.cmx
+parser.cmo : type.cmo parser.cmi
+parser.cmx : type.cmx parser.cmi
+parser.cmi : type.cmo

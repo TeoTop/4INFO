@@ -1,0 +1,231 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{plain}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png,.gif}
+
+\usepackage{color}
+\definecolor{grey}{rgb}{0.9,0.9,0.9}
+\definecolor{teal}{rgb}{0.0,0.5,0.5}
+\definecolor{violet}{rgb}{0.5,0,0.5}
+
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{amsmath}
+\lstloadlanguages{[Visual]C++}
+\lstdefinestyle{listing}{
+  language=Java,
+  captionpos=t,
+  inputencoding=utf8/latin1,
+  extendedchars=true,
+  resetmargins=true,
+  xleftmargin=-60pt,
+  xrightmargin=-70pt,
+%  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  breaklines=true,
+  breakatwhitespace=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  basicstyle=\footnotesize\ttfamily,
+  backgroundcolor=\color{grey},
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{teal},
+  identifierstyle=\color{black},
+  stringstyle=\color{red},
+  numberstyle=\color{violet},
+}
+\lstset{style=listing}
+
+\author{
+  Théo \textsc{CHAPON}, Alexandre \textsc{Audinot} \\ \\
+  INSA de Rennes \\
+  4INFO, groupe A
+}
+
+\title{Compte Rendu de compilation TP3}
+
+\begin{document}
+\maketitle{TP3 : Analyse syntaxique ascendante, ocamllex et ocamlyacc}
+
+\section{Question de compréhenion de TP}
+\medskip
+
+\paragraph{Question 3.1}
+Un crible filtre la suite des lexèmes et génère les identifiants. En utilisant ocamllex, on peut générer une hashtable pour stocker les unités lexicales de type string. Ils seront trouver par le générateur d'identifiants mais ne seront pas reconnus comme étant des identifiants mais bien comme des unités lexicales. (exemple : "and", "begin" etc.). 
+\medskip
+
+\paragraph{Question 3.2}
+Les avantages de la grammaire LR part rapport à la LL sont les suivants :
+\begin{itemize}
+\item La classe de grammaire couverte par LR est plus large.
+\item On peut traiter des grammaires ambiguës.
+\item La détection d'erreur est faite au plus tôt.
+\end{itemize}
+\medskip
+
+\paragraph{Question 3.3}
+Une colone vide dans une table SLR correspond à un token inutilisé.
+
+\section{Fermeture transitive}
+\subsection{Grammaire}
+<Inst> --> <Ident> \text{<-} <Expr> \\
+<Expr> --> <Expr> "+" <Expr> \\
+<Expr> --> <Expr> \text{<} <Expr> \\
+<Expr> --> <Expr> "and" <Expr> \\
+<Expr> --> "(" <Expr> ")" \\
+<Expr> --> <Ident> \\
+
+\subsection{Fermeture}
+
+\begin{align*}
+Fermeture(I) = & [I -> . ident \text{<-} E]
+\end{align*}
+
+\begin{align*}
+Fermeture(E) = & [E -> . E "+" E]\\
+{} & [E -> . E \text{<} E]\\
+{} & [E -> . E "and" E]\\
+{} & [E -> . "(" E ")"]\\
+{} & [E -> . ident]
+\end{align*}
+
+\subsection{Transition}
+
+\begin{align*}
+I0 = \{ Fermeture(I) \}
+\end{align*}
+
+\begin{align*}
+I1 = Tr(I0, ident) -> \{ [I -> ident . \text{<-} E] \}
+\end{align*}
+
+\begin{align*}
+I2 = Tr(I1, \text{<-}) -> \{ & [I -> ident \text{<-} . E],\\
+{} & Fermeture(E) \}
+\end{align*}
+
+\begin{align*}
+I3 = Tr(I2, E) -> \{ & [I -> ident \text{<-} E .],\\  
+{} & [E -> E . "+" E],\\
+{} & [E -> E . \text{<} E],\\ 
+{} & [E -> E . "and" E] \}
+\end{align*}
+
+\begin{align*}
+I4 = Tr(I2, "(") -> \{ & [E -> "(" . E ")"],\\
+{} & Fermeture(E) \}
+\end{align*}
+
+\begin{align*}
+I5 = Tr(I2, ident) -> \{ [E -> ident .] \}
+\end{align*}
+
+\begin{align*}
+I6 = Tr(I3, "+") -> \{ & [E -> E "+" . E],\\
+{} & Fermeture(E) \}
+\end{align*}
+
+\begin{align*}
+I7 = Tr(I3, \text{<}) -> \{ & [E -> E \text{<} . E],\\
+{} & Fermeture(E) \}
+\end{align*}
+
+\begin{align*}
+I8 = Tr(I3, "and") -> \{ & [E -> E "and" . E],\\
+{} & Fermeture(E) \}
+\end{align*}
+
+\begin{align*}
+I9 = Tr(I4, E) -> \{ [E -> "(" E . ")"] \}
+\end{align*}
+
+\begin{align*}
+I10 = Tr(I6, E) -> \{ & [E -> E "+" E .]\\
+{} & [E -> E . "+" E],\\
+{} & [E -> E . \text{<} E],\\
+{} & [E -> E . "and" E] \}
+\end{align*}
+
+\begin{align*}
+I11 = Tr(I7, E) -> \{ & [E -> E \text{<} E .]\\
+{} & [E -> E . "+" E],\\
+{} & [E -> E . \text{<} E],\\ 
+{} & [E -> E . "and" E] \}
+\end{align*}
+
+\begin{align*}
+I12 = Tr(I8, E) -> \{ & [E -> E "and" E .]\\
+{} & [E -> E . "+" E],\\
+{} & [E -> E . \text{<} E],\\ 
+{} & [E -> E . "and" E] \}
+\end{align*}
+
+\begin{align*}
+I13 = Tr(I9, ")") -> \{ [E -> "(" E ")" .] \}
+\end{align*}
+
+\newpage
+
+\section{Table SLR}
+\begin{center}
+  \begin{tabular}{| c || c | c | c | c | c | c | c || c |}
+    \hline
+      État & + & < & and & ( & ) & <- & Ident & Expr \\ \hline
+      0 & & & & & & & d1 & \\ \hline
+      1 & & & & & & d2 & & \\ \hline
+      2 & & & & d4& & & d5 & 3 \\ \hline
+      3 & d6& d7& d8 & & & & & \\ \hline
+      4 & & & & d4& & & d5 & 9 \\ \hline
+      5 &r14&r14&r14 & &r14& & & \\ \hline
+      6 & & & & d4& & & d5 & 10 \\ \hline
+      7 & & & & d4& & & d5 & 11 \\ \hline
+      8 & & & & d4& & & d5 & 12 \\ \hline
+      9 & d6& d7& d8& &d13& & & \\ \hline
+      10 &d6/r10 &d7/r10 &d8/r10 & &r10& & & \\ \hline
+      11 &d6/r11 &d7/r11 &d8/r11 & &r11& & & \\ \hline
+      12 &d6/r12 &d7/r12 &d8/r12 & &r12& & & \\ \hline
+      13 &r13&r13&r13 & &r13& & & \\ \hline
+  \end{tabular}
+\end{center}
+
+\bigskip
+
+\section{Résolution des conflits}
+
+On trouve 9 conflits dans la table SLR générés par 3 tokens (+, < et and) : 6 pour les conflits de prédominance entre deux tokens différents (ex : a and b < c) et 3 pour les conflits de réductions entre même tokens (ex : a + b + c).\\
+Le parser ne sait pas s'il doit continuer sur une nouvelle règle ou bien réduire. Il faut donc établir une hiérarchie entre ces 3 tokens.
+L'ordre de préfominance gardé correspond à celui donné par la grammaire : PLUS > INF > AND.
+De plus nous avons choisis un décalage à droite pour les conflits entre même tokens.
+
+\newpage
+
+\section{Fichiers de TP}
+
+\lstinputlisting[caption= Fichier Lexer et crible]{lexer.mll}
+
+\newpage
+
+\lstinputlisting[caption= Fichier Parser et grammaire]{parser.mly}
+
+\newpage
+
+\lstinputlisting[caption= Type pour l'arbre abstrait]{type.ml}
+
+\newpage
+
+\lstinputlisting[caption= Fichier Main : détection des erreurs et affichage de l'arbre]{main.ml}
+
+\end{document}
