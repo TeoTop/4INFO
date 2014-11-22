@@ -9,17 +9,26 @@ namespace PeopleWar
     {
         public static ConcepteurCarte INSTANCE = new ConcepteurCarte();
 
-        private StrategieCarte carte { get; }
+        public StrategieCarte carte { get; set; }
 
         private ConcepteurCarte() { }
-        public static void definirCarte(StrategieCarte carte)
+        /**
+         * Define the type of the builder
+         * @param Carte carte
+         * @return void
+         */
+        public void definirCarte(Carte carte)
         {
-            throw new System.NotImplementedException();
+            this.carte = (StrategieCarte)carte;
         }
 
-        public static Carte creerCarte()
+        /**
+         * Create the boxes of the map
+         * @return void
+         */
+        public void creerCarte()
         {
-            throw new System.NotImplementedException();
+            carte.creerCarte();
         }
     }
 }

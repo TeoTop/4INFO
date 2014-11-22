@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Diagramme_de_classe_code
+namespace PeopleWar
 {
     public class MonteurChPartie : PeopleWar.MonteurPartie
     {
@@ -11,13 +11,13 @@ namespace Diagramme_de_classe_code
         {
             throw new System.NotImplementedException();
         }
-    
-        public static Carte creerCarte(string carte)
+
+        public override Carte creerCarte(int carte)
         {
             throw new System.NotImplementedException();
         }
 
-        public List<Joueur> creerJoueurs(string carte, string p1, string p2)
+        public override PeopleWar.Joueur creerJoueur(string nom, int p, int nbUnite)
         {
             throw new System.NotImplementedException();
         }

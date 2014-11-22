@@ -8,5 +8,11 @@ namespace PeopleWar
     public class Desert : CaseA
     {
         public Desert() { }
+
+        public override String ToString()
+        {
+            return "Desert";
+        }
     }
+
 }

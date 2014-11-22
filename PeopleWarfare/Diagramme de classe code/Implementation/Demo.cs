@@ -9,34 +9,20 @@ namespace PeopleWar
     {
         public Demo()
         {
-            throw new System.NotImplementedException();
-        }
-    
-        public String type
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            cases = new List<CaseA>();
+            nbCase = 36;
+            type = (int) EnumCarte.DEMO;
         }
 
-        public int nbCase
+        public override int type
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
-    
-        public Carte creerCarte()
+        public override int nbCase
         {
-            throw new System.NotImplementedException();
+            get;
+            set;
         }
     }
 }

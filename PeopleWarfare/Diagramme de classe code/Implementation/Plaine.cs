@@ -9,7 +9,10 @@ namespace PeopleWar
     {
         public Plaine()
         {
-            throw new System.NotImplementedException();
+        }
+        public override String ToString()
+        {
+            return "Plaine";
         }
     }
 }

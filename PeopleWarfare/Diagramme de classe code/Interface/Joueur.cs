@@ -8,6 +8,8 @@ namespace PeopleWar
     public interface Joueur
     {
 
-        void calculerNbPoint();
+        int calculerNbPoint();
+
+        bool verifierDefaite();
     }
 }

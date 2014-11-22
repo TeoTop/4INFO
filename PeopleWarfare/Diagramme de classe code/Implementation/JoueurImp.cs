@@ -7,6 +7,10 @@ namespace PeopleWar
 {
     public class JoueurImp : Joueur
     {
+        public JoueurImp(string nom)
+        {
+            throw new System.NotImplementedException();
+        }
 
         public PeupleA peuple
         {
@@ -41,7 +45,12 @@ namespace PeopleWar
             }
         }
 
-        public void JoeueurImp()
+        public int calculerNbPoint()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool verifierDefaite()
         {
             throw new System.NotImplementedException();
         }

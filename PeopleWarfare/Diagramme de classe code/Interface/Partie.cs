@@ -13,7 +13,7 @@ namespace PeopleWar
 
         bool verifierSelUnite();
 
-        Partie selectionnerCase(int x, int y);
+        void selectionnerCase(int x, int y);
 
         bool verifierFinPartie();
 

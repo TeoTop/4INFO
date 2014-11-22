@@ -59,5 +59,30 @@ namespace PeopleWar
             throw new System.NotImplementedException();
         }
 
+
+        void Unite.afficherCaracteristique()
+        {
+            throw new NotImplementedException();
+        }
+
+        int Unite.getAttEff()
+        {
+            throw new NotImplementedException();
+        }
+
+        int Unite.getDefEff()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool Unite.seDeplacer(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        int Unite.combattre(Unite uniteAdv)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

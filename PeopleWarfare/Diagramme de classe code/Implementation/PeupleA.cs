@@ -18,5 +18,30 @@ namespace PeopleWar
             {
             }
         }
+
+        Unite Peuple.uniteSuivante()
+        {
+            throw new NotImplementedException();
+        }
+
+        Unite Peuple.getUnite(int key)
+        {
+            throw new NotImplementedException();
+        }
+
+        string Peuple.getInformation()
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Unite> Peuple.verifierUnite(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        int Peuple.getNbUnite()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

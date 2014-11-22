@@ -9,7 +9,10 @@ namespace PeopleWar
     {
         public Foret()
         {
-            throw new System.NotImplementedException();
+        }
+        public override String ToString()
+        {
+            return "Foret";
         }
     }
 }

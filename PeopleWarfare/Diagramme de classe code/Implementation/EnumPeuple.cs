@@ -7,8 +7,8 @@ namespace Diagramme_de_classe_code
 {
     public enum EnumPeuple
     {
-        Orc,
-        Elf,
-        Nain,
+        ORC,
+        ELF,
+        NAIN,
     }
 }

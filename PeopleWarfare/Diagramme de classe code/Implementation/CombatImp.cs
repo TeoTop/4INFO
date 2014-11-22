@@ -33,5 +33,35 @@ namespace PeopleWar
             {
             }
         }
+
+        Unite Combat.getUniteAtt()
+        {
+            throw new NotImplementedException();
+        }
+
+        Unite Combat.getUniteDef()
+        {
+            throw new NotImplementedException();
+        }
+
+        int Combat.calculerNbCombat()
+        {
+            throw new NotImplementedException();
+        }
+
+        float Combat.calculerReussiteAtt()
+        {
+            throw new NotImplementedException();
+        }
+
+        int Combat.effectuerCombat()
+        {
+            throw new NotImplementedException();
+        }
+
+        Unite Combat.choisirUniteDef(List<Unite> UnitesDef)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace PeopleWar
             {
             }
         }
+
+        Combat Tour.getCombat(int key)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

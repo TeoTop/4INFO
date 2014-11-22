@@ -9,34 +9,21 @@ namespace PeopleWar
     {
         public Normale()
         {
-            throw new System.NotImplementedException();
-        }
-    
-        public String type
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            cases = new List<CaseA>();
+            nbCase = 100;
+            type = (int)EnumCarte.PETITE;
         }
 
-        public int nbCase
+        public override int type
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
-    
-        public Carte creerCarte()
+
+        public override int nbCase
         {
-            throw new System.NotImplementedException();
+            get;
+            set;
         }
     }
 }

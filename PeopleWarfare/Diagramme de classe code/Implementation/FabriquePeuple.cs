@@ -13,7 +13,7 @@ namespace PeopleWar
             throw new System.NotImplementedException();
         }
 
-        public static Peuple creerPeuple(string p)
+        public Peuple creerPeuple(string p)
         {
             throw new System.NotImplementedException();
         }

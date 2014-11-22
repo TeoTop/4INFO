@@ -7,7 +7,7 @@ namespace PeopleWar
 {
     public interface Carte
     {
-        Carte creerCarte();
+        void creerCarte();
 
         Case getCase(int key);
 
@@ -15,6 +15,6 @@ namespace PeopleWar
 
         int getY(int key);
 
-        int getNbCase();
+        Boolean isValidkey(int key);
     }
 }

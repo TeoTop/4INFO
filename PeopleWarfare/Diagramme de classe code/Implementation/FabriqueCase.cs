@@ -8,7 +8,6 @@ namespace PeopleWar
     public class FabriqueCase
     { 
         public static FabriqueCase INSTANCE = new FabriqueCase();
-        //faire une lazy instancation
 
         private FabriqueCase()
         {
@@ -20,52 +19,69 @@ namespace PeopleWar
 
         public Desert Desert
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public Foret Foret
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public Montagne Montagne
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public Plaine Plaine
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
         
-        public Case getCase(string type)
+        /**
+         * Create a box from his 'type'
+         * Use of Lazy instanciation
+         * @param int type
+         * @return Case
+         */
+        public Case getCase(int type)
         {
-            //creer la case quand la clé est null
-            throw new System.NotImplementedException();
+            Case c = null;
+            switch (type)
+            {
+                case (int)EnumCase.DESERT:
+                    if (Desert == null)
+                    {
+                        Desert = new Desert();
+                    }
+                    c = Desert;
+                    break;
+                case (int)EnumCase.FORET:
+                    if (Foret == null)
+                    {
+                        Foret = new Foret();
+                    }
+                    c = Foret;
+                    break;
+                case (int)EnumCase.MONTAGNE:
+                    if (Montagne == null)
+                    {
+                        Montagne = new Montagne();
+                    }
+                    c = Montagne;
+                    break;
+                case (int)EnumCase.PLAINE:
+                    if (Plaine == null)
+                    {
+                        Plaine = new Plaine();
+                    }
+                    c = Plaine;
+                    break;
+            }
+            return c;
         }
     }
 }
