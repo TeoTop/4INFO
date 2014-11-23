@@ -7,57 +7,85 @@ namespace PeopleWar
 {
     public class CombatImp : Combat
     {
-    
+        /**
+         * @var UniteImp uniteDef
+         */ 
         public UniteImp uniteDef
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
+        /**
+         * @var UniteImp uniteAtt
+         */
         public UniteImp uniteAtt
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        public Unite getUniteAtt()
+        /**
+         * Constructor
+         * @param Unite uniteAtt
+         * @param List<Unite> unitesDef
+         */
+        public CombatImp(Unite uniteAtt, List<Unite> unitesDef)
         {
-            throw new NotImplementedException();
+            this.uniteAtt = (UniteImp) uniteAtt;
+            this.uniteDef = (UniteImp) choisirUniteDef(unitesDef);
         }
 
-        public Unite getUniteDef()
-        {
-            throw new NotImplementedException();
-        }
-
+        /**
+         * Calculate the number of battles
+         * @return int
+         */
         public int calculerNbCombat()
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+            int max = (uniteAtt.vie > uniteDef.vie) ? uniteAtt.vie : uniteDef.vie;
+            return rnd.Next(3, max + 2);
         }
 
+        /**
+         * Calculate the success' probability of the attack
+         * Between 0 and 1
+         * @return float
+         */
         public float calculerReussiteAtt()
         {
-            throw new NotImplementedException();
+            float att = 0,
+                  def = 0,
+                  taux = ((att = uniteAtt.getAttEff()) > (def = uniteDef.getDefEff())) ? def / att : att / def;
+            return 50 * (1 + taux);
         }
 
+        /**
+         * Launch a battle
+         * @return int
+         */
         public int effectuerCombat()
         {
             throw new NotImplementedException();
         }
 
-        public Unite choisirUniteDef(List<Unite> UnitesDef)
+        /**
+         * Choose the item who will defend the box
+         * @param List<Unite> unitesDef
+         * @return Unite
+         */
+        public Unite choisirUniteDef(List<Unite> unitesDef)
         {
-            throw new NotImplementedException();
+            if (unitesDef.Count() == 0) throw new ArgumentNullException();
+            Unite uniteDef = null;
+            foreach (Unite unite in unitesDef)
+            {
+                if (uniteDef == null || uniteDef.getDefEff() < unite.getDefEff())
+                {
+                    uniteDef = unite;
+                }
+            }
+            return uniteDef;
         }
     }
 }

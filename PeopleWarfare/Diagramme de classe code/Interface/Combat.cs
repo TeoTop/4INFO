@@ -7,9 +7,6 @@ namespace PeopleWar
 {
     public interface Combat
     {
-        Unite getUniteAtt();
-
-        Unite getUniteDef();
 
         int calculerNbCombat();
 

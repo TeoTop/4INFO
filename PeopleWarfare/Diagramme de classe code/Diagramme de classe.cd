@@ -43,7 +43,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAEAAABAAAAAIAAAEAAIIBAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAAAAEAAABAAAAAIAAAEAAIAAAAAA=</HashCode>
       <FileName>Implementation\CombatImp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -158,7 +158,7 @@
   <Class Name="PeopleWar.JoueurImp" BaseTypeListCollapsed="true">
     <Position X="25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAUAAAAIAIAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAUAAAAIAIAAAAAAAAAAIAAAAAAAgA=</HashCode>
       <FileName>Implementation\JoueurImp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -255,7 +255,7 @@
   <Class Name="PeopleWar.TourImp" BaseTypeListCollapsed="true">
     <Position X="17.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAGAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAEAAAAAA=</HashCode>
       <FileName>Implementation\TourImp.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -302,14 +302,14 @@
   <Interface Name="PeopleWar.Combat">
     <Position X="2.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAIIBAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAIAAAAAA=</HashCode>
       <FileName>Interface\Combat.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PeopleWar.Joueur">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAAAgA=</HashCode>
       <FileName>Interface\Joueur.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -330,7 +330,7 @@
   <Interface Name="PeopleWar.Tour">
     <Position X="2.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Interface\Tour.cs</FileName>
     </TypeIdentifier>
   </Interface>

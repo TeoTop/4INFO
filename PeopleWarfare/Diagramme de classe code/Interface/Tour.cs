@@ -9,6 +9,8 @@ namespace PeopleWar
     {
 
         Combat getCombat(int key);
-        Boolean isValidTour(int key);
+        Boolean isValidCbt(int key);
+
+        int getNbCbt();
     }
 }

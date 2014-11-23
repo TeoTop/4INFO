@@ -111,9 +111,9 @@ namespace PeopleWar
 
         /**
          * Return a round using a key
-         * The count begin from 0
+         * The count begins from 0
          * @param int key
-         * @return Tour|null
+         * @return TourImp|null
          */
         public Tour getTour(int key)
         {
