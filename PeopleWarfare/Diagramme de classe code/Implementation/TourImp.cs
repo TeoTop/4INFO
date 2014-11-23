@@ -7,10 +7,6 @@ namespace PeopleWar
 {
     public class TourImp : Tour
     {
-        public TourImp()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public List<PeopleWar.CombatImp> combats
         {
@@ -23,7 +19,12 @@ namespace PeopleWar
             }
         }
 
-        Combat Tour.getCombat(int key)
+        public Combat getCombat(int key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isValidTour(int key)
         {
             throw new NotImplementedException();
         }

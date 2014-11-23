@@ -8,23 +8,11 @@ namespace PeopleWar
     public abstract class StrategieCarte : Carte
     {
 
-        public List<CaseA> cases
-        {
-            get;
-            set;
-        }
+        public List<CaseA> cases { get; set; }
 
-        public abstract int type
-        {
-            get;
-            set;
-        }
+        public abstract EnumCarte type { get; set; }
 
-        public abstract int nbCase
-        {
-            get;
-            set;
-        }
+        public abstract int nbCase { get; set; }
 
         /**
          * Creates a map which contains the same number of each box
@@ -36,19 +24,19 @@ namespace PeopleWar
             int[] nb = new int[4] {0,0,0,0};
 
             bool drap = false;
-            for (int i = 0, type = 0; i < nbCase; i++)
+            for (int i = 0, typeCase = 0; i < nbCase; i++)
             {
                 drap = false;
                 while (!drap)
                 {
-                    type = rnd.Next(0, 4);
-                    if (nb[type] < nbCase / 4)
+                    typeCase = rnd.Next(0, 4);
+                    if (nb[typeCase] < nbCase / 4)
                     {
-                        nb[type] += 1;
+                        nb[typeCase] += 1;
                         drap = true;
                     }
                 }
-                cases.Add((CaseA)FabriqueCase.INSTANCE.getCase(type));
+                cases.Add((CaseA)FabriqueCase.INSTANCE.getCase((EnumCase)typeCase));
             }
         }
 

@@ -12,12 +12,12 @@ namespace PeopleWar
             throw new System.NotImplementedException();
         }
 
-        public override Carte creerCarte(int carte)
+        public override Carte creerCarte(EnumCarte carte)
         {
             throw new System.NotImplementedException();
         }
 
-        public override PeopleWar.Joueur creerJoueur(string nom, int p, int nbUnite)
+        public override PeopleWar.Joueur creerJoueur(string nom, EnumPeuple p, int nbUnite)
         {
             throw new System.NotImplementedException();
         }

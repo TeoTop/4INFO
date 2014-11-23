@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Diagramme_de_classe_code
+namespace PeopleWar
 {
     public enum EnumPeuple
     {

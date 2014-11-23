@@ -7,52 +7,49 @@ namespace PeopleWar
 {
     public class JoueurImp : Joueur
     {
-        public JoueurImp(string nom)
+        public PeupleA peuple { get; set; }
+
+        public int nbPoints { get; set; }
+
+        public String nom { get; set; }
+
+        public JoueurImp(String n, Peuple p)
         {
-            throw new System.NotImplementedException();
+            nom = n;
+            nbPoints = 0;
+            peuple = (PeupleA)p;
         }
 
-        public PeupleA peuple
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int nbPoints
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public String nom
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+        public Peuple getPeuple(){
+            return peuple;
         }
 
         public int calculerNbPoint()
         {
-            throw new NotImplementedException();
+            // adds 1 point for each unit still alive
+            // on ajoute 1 point par unité encore en vie
+            return nbPoints += peuple.unites.Count();
+
+            // !!!!!!!!!  vérifier les bonus
         }
 
         public bool verifierDefaite()
         {
-            throw new System.NotImplementedException();
+            //we check if the list still contains elements
+            //on regarde si il n'y plus d'élément
+            if (!peuple.unites.Any())
+            {
+                // player loses
+                // le joueur a perdu
+                return true;
+            }
+
+            return false;
+        }
+
+        public override String ToString()
+        {
+            return "Joueur : \n\t- Nom : " + nom + "\n\t- Peuple : " + peuple.GetType().Name + "\n\t- Nombre de points : " + nbPoints.ToString();
         }
     }
 }

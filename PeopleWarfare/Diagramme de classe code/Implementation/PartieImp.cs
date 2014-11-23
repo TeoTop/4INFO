@@ -24,53 +24,21 @@ namespace PeopleWar
             this.nbTourMax = nbTourMax;
         }
 
-        public List<PeopleWar.TourImp> tours
-        {
-            get;
-            set;
-        }
-        
-        public StrategieCarte carte
-        {
-            get;
-            set;
-        }
+        public List<PeopleWar.TourImp> tours { get; set; }
 
-        public int nbTourMax
-        {
-            get;
-            set;
-        }
+        public StrategieCarte carte { get; set; }
 
-        public int x
-        {
-            get;
-            set;
-        }
+        public int nbTourMax { get; set; }
 
-        public int y
-        {
-            get;
-            set;
-        }
+        public int xCourant { get; set; }
 
-        public int joueurCourant
-        {
-            get;
-            set;
-        }
+        public int yCourant { get; set; }
 
-        public JoueurImp j1
-        {
-            get;
-            set;
-        }
+        public int joueurCourant { get; set; }
 
-        public JoueurImp j2
-        {
-            get;
-            set;
-        }
+        public JoueurImp j1 { get; set; }
+
+        public JoueurImp j2 { get; set; }
 
         /**
          * Return one of the two players
@@ -106,8 +74,8 @@ namespace PeopleWar
          */
         public void selectionnerCase(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            xCourant = x;
+            yCourant = y;
         }
 
         /**
@@ -164,6 +132,18 @@ namespace PeopleWar
         public Boolean isValidTour(int key)
         {
             return (key > 0 && key < getNbTour());
+        }
+
+
+        bool Partie.verifierFinPartie()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Carte getCarte()
+        {
+            return carte;
         }
     }
 }

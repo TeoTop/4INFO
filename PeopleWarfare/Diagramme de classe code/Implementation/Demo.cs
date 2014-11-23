@@ -11,18 +11,11 @@ namespace PeopleWar
         {
             cases = new List<CaseA>();
             nbCase = 36;
-            type = (int) EnumCarte.DEMO;
+            type = EnumCarte.DEMO;
         }
 
-        public override int type
-        {
-            get;
-            set;
-        }
-        public override int nbCase
-        {
-            get;
-            set;
-        }
+        public override EnumCarte type { get; set; }
+
+        public override int nbCase { get; set; }
     }
 }

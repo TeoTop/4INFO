@@ -7,10 +7,6 @@ namespace PeopleWar
 {
     public class CombatImp : Combat
     {
-        public CombatImp(Unite uniteAtt, List<PeopleWar.Unite> unitesDef)
-        {
-            throw new System.NotImplementedException();
-        }
     
         public UniteImp uniteDef
         {
@@ -34,32 +30,32 @@ namespace PeopleWar
             }
         }
 
-        Unite Combat.getUniteAtt()
+        public Unite getUniteAtt()
         {
             throw new NotImplementedException();
         }
 
-        Unite Combat.getUniteDef()
+        public Unite getUniteDef()
         {
             throw new NotImplementedException();
         }
 
-        int Combat.calculerNbCombat()
+        public int calculerNbCombat()
         {
             throw new NotImplementedException();
         }
 
-        float Combat.calculerReussiteAtt()
+        public float calculerReussiteAtt()
         {
             throw new NotImplementedException();
         }
 
-        int Combat.effectuerCombat()
+        public int effectuerCombat()
         {
             throw new NotImplementedException();
         }
 
-        Unite Combat.choisirUniteDef(List<Unite> UnitesDef)
+        public Unite choisirUniteDef(List<Unite> UnitesDef)
         {
             throw new NotImplementedException();
         }

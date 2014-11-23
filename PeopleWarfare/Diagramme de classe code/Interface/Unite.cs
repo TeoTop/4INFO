@@ -7,14 +7,59 @@ namespace PeopleWar
 {
     public interface Unite
     {
-        void afficherCaracteristique();
+        /**
+         * Displays the current characteristics of a unit.
+         * @return string
+         */
+        string afficherCaracteristique();
 
-        int getAttEff();
+        /**
+         * Returns the line of the box where is the unit.
+         * @return int
+         */
+        int getX();
 
-        int getDefEff();
+        /**
+         * Returns the column of the box where is the unit.
+         * @return int
+         */
+        int getY();
 
+        /**
+         * Returns the attack function of life.
+         * @return float
+         */
+        float getAttEff();
+
+        /**
+         * Returns the defense function of life.
+         * @return float key
+         */
+        float getDefEff();
+
+        /**
+         * Modifies the box associated with the unit. 
+         * True if movement it's done.
+         * @param int x
+         * @param int y
+         * @return bool
+         */
         bool seDeplacer(int x, int y);
 
+        /**
+         * Lets fighting unity against enemy unit.
+         * @param Unite uniteAdv
+         * @return int
+         */
         int combattre(Unite uniteAdv);
+
+        /**
+         * Shows whether the unit can reach the box (x,y).
+         * True if it's possible
+         * @param int x
+         * @param int y
+         * @return bool
+         */
+        bool verifierDeplacement(int x, int y);
     }
 }

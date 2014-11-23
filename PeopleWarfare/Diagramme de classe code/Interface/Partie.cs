@@ -20,5 +20,7 @@ namespace PeopleWar
         void switcherJoueur();
 
         Tour getTour(int key);
+
+        Carte getCarte();
     }
 }

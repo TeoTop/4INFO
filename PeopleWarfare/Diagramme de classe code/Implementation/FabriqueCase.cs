@@ -17,63 +17,47 @@ namespace PeopleWar
             Plaine = null;
         }
 
-        public Desert Desert
-        {
-            get;
-            set;
-        }
+        public Desert Desert { get; set; }
 
-        public Foret Foret
-        {
-            get;
-            set;
-        }
+        public Foret Foret { get; set; }
 
-        public Montagne Montagne
-        {
-            get;
-            set;
-        }
+        public Montagne Montagne { get; set; }
 
-        public Plaine Plaine
-        {
-            get;
-            set;
-        }
-        
+        public Plaine Plaine { get; set; }
+
         /**
          * Create a box from his 'type'
          * Use of Lazy instanciation
-         * @param int type
+         * @param EnumCase type
          * @return Case
          */
-        public Case getCase(int type)
+        public Case getCase(EnumCase type)
         {
             Case c = null;
             switch (type)
             {
-                case (int)EnumCase.DESERT:
+                case EnumCase.DESERT:
                     if (Desert == null)
                     {
                         Desert = new Desert();
                     }
                     c = Desert;
                     break;
-                case (int)EnumCase.FORET:
+                case EnumCase.FORET:
                     if (Foret == null)
                     {
                         Foret = new Foret();
                     }
                     c = Foret;
                     break;
-                case (int)EnumCase.MONTAGNE:
+                case EnumCase.MONTAGNE:
                     if (Montagne == null)
                     {
                         Montagne = new Montagne();
                     }
                     c = Montagne;
                     break;
-                case (int)EnumCase.PLAINE:
+                case EnumCase.PLAINE:
                     if (Plaine == null)
                     {
                         Plaine = new Plaine();

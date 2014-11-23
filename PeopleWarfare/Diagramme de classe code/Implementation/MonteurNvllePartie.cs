@@ -14,21 +14,21 @@ namespace PeopleWar
 
         /**
          * Create a map from a type 'carte'
-         * @param int carte
+         * @param EnumCarte carte
          * @return Carte
          */
-        public override Carte creerCarte(int carte)
+        public override Carte creerCarte(EnumCarte carte)
         {
             Carte c = null;
             switch (carte)
             {
-                case (int)EnumCarte.DEMO:
+                case EnumCarte.DEMO:
                     c = new Demo();
                     break;
-                case (int)EnumCarte.PETITE:
+                case EnumCarte.PETITE:
                     c = new Normale();
                     break;
-                case (int)EnumCarte.NORMALE:
+                case EnumCarte.NORMALE:
                     c = new Petite();
                     break;
             }
@@ -37,9 +37,22 @@ namespace PeopleWar
             return c;
         }
 
-        public override Joueur creerJoueur(string nom, int p, int nbUnite)
+        /**
+         * Create a player with his people.
+         * @param string nom
+         * @param EnumPeuple p
+         * @param int nbUnite
+         * @return Carte
+         */
+        public override Joueur creerJoueur(string nom, EnumPeuple p, int nbUnite)
         {
-            throw new System.NotImplementedException();
+            //On crée le peuple qui sera ensuite associé au joueur. La race est définie par l'énumération p.
+            Peuple peuple = FabriquePeuple.INSTANCE.creerPeuple(p, nbUnite);
+
+            //on crée le joueur en lui associant un nom et son peuple
+            JoueurImp joueur = new JoueurImp(nom, peuple);
+
+            return joueur;
         }
     }
 }
