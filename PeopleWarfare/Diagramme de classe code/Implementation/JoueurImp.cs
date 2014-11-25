@@ -20,15 +20,20 @@ namespace PeopleWar
             peuple = (PeupleA)p;
         }
 
-        public Peuple getPeuple(){
-            return peuple;
-        }
-
         public int calculerNbPoint()
         {
+            /*if (peuple.GetType().in)
+            {
+
+            }*/
+
             // adds 1 point for each unit still alive
-            // on ajoute 1 point par unité encore en vie
-            return nbPoints += peuple.unites.Count();
+            foreach (UniteImp u in peuple.unites)
+            {
+                nbPoints += u.point;
+            }
+
+            return nbPoints;
 
             // !!!!!!!!!  vérifier les bonus
         }
@@ -36,11 +41,9 @@ namespace PeopleWar
         public bool verifierDefaite()
         {
             //we check if the list still contains elements
-            //on regarde si il n'y plus d'élément
             if (!peuple.unites.Any())
             {
                 // player loses
-                // le joueur a perdu
                 return true;
             }
 

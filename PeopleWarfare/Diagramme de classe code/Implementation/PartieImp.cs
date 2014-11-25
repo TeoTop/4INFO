@@ -14,11 +14,11 @@ namespace PeopleWar
          * @param int p2
          * @param int nbTourMax
          */
-        public PartieImp(Carte carte, Joueur j1, Joueur j2, int nbTourMax)
+        public PartieImp(StrategieCarte carte, JoueurImp j1, JoueurImp j2, int nbTourMax)
         {
-            this.carte = (StrategieCarte)carte;
-            this.j1 = (JoueurImp)j1;
-            this.j2 = (JoueurImp)j2;
+            this.carte = carte;
+            this.j1 = j1;
+            this.j2 = j2;
             this.joueurCourant = 0;
             tours = new List<TourImp>();
             this.nbTourMax = nbTourMax;
@@ -132,18 +132,6 @@ namespace PeopleWar
         public Boolean isValidTour(int key)
         {
             return (key > 0 && key < getNbTour());
-        }
-
-
-        bool Partie.verifierFinPartie()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public Carte getCarte()
-        {
-            return carte;
         }
     }
 }

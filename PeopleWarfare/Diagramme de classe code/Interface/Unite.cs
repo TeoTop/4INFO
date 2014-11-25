@@ -14,18 +14,6 @@ namespace PeopleWar
         string afficherCaracteristique();
 
         /**
-         * Returns the line of the box where is the unit.
-         * @return int
-         */
-        int getX();
-
-        /**
-         * Returns the column of the box where is the unit.
-         * @return int
-         */
-        int getY();
-
-        /**
          * Returns the attack function of life.
          * @return float
          */

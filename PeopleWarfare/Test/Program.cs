@@ -10,7 +10,7 @@ class Test
     {
         DirecteurPartie dp = new DirecteurPartie();
         dp.definirMonteur(new MonteurNvllePartie());
-        Partie partie = dp.creerPartie("Theo", "Hassan", EnumCarte.PETITE, EnumPeuple.NAIN, EnumPeuple.ELF);
+        PartieImp partie = dp.creerPartie("Theo", "Hassan", EnumCarte.PETITE, EnumPeuple.NAIN, EnumPeuple.ELF);
 
         Console.WriteLine("Test");
         Console.WriteLine(partie.getJoueur(0).ToString());
@@ -21,13 +21,13 @@ class Test
 
         Console.WriteLine(partie.getJoueur(0).ToString());
 
-        Console.WriteLine(partie.getJoueur(0).getPeuple().getInformation());
-        Console.WriteLine(partie.getJoueur(1).getPeuple().getInformation());
+        Console.WriteLine(partie.j1.peuple.getInformation());
+        Console.WriteLine(partie.j2.peuple.getInformation());
 
-        Console.WriteLine(partie.getJoueur(0).getPeuple().getUnite(0).afficherCaracteristique());
+        Console.WriteLine(partie.j1.peuple.getUnite(0).afficherCaracteristique());
 
-        Console.WriteLine(partie.getCarte().ToString());
-        Console.WriteLine(partie.getCarte().getX(25) + " " + partie.getCarte().getY(25));
+        Console.WriteLine(partie.carte.ToString());
+        Console.WriteLine(partie.carte.getX(25) + " " + partie.carte.getY(25));
 
         Console.Read();
     }

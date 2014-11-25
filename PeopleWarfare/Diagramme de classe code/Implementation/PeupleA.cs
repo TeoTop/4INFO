@@ -18,7 +18,7 @@ namespace PeopleWar
 
         public Unite uniteSuivante()
         {
-            return getUnite(++uniteActuel);
+            return getUnite((++uniteActuel)%unites.Count);
         }
 
         public Unite getUnite(int key)
@@ -32,9 +32,9 @@ namespace PeopleWar
         {
             List<Unite> u = null;
 
-            foreach (Unite unite in unites)
+            foreach (UniteImp unite in unites)
             {
-                if (unite.getX() == x && unite.getY() == y) u.Add(unite);
+                if (unite.x == x && unite.y == y) u.Add(unite);
             }
 
             return u;

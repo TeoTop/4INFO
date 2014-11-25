@@ -8,8 +8,8 @@ namespace PeopleWar
     public abstract class MonteurPartie
     {
 
-        public abstract Carte creerCarte(EnumCarte carte);
+        public abstract StrategieCarte creerCarte(EnumCarte carte);
 
-        public abstract Joueur creerJoueur(string nom, EnumPeuple p, int nbUnite);
+        public abstract JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite);
     }
 }

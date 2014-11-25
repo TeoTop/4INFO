@@ -8,12 +8,6 @@ namespace PeopleWar
     public interface Joueur
     {
         /**
-         * Return the player's people
-         * @return Peuple
-         */
-        Peuple getPeuple();
-
-        /**
          * Calculats number of points scored by the player at the end of his turn.
          * @return int
          */

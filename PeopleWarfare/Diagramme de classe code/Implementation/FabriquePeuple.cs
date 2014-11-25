@@ -19,7 +19,7 @@ namespace PeopleWar
          * @return Peuple
          */
 
-        public Peuple creerPeuple(EnumPeuple p, int nbUnite)
+        public PeupleA creerPeuple(EnumPeuple p, int nbUnite)
         {
             // on instancie le peuple à null pour le return.
             PeupleA peuple = null;
@@ -41,7 +41,7 @@ namespace PeopleWar
                     break;
             }
 
-            return (Peuple) peuple;
+            return peuple;
         }
     }
 }

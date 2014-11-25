@@ -30,9 +30,9 @@ namespace PeopleWar
          * @param Unite uniteAtt
          * @param List<Unite> unitesDef
          */
-        public CombatImp(Unite uniteAtt, List<Unite> unitesDef)
+        public CombatImp(UniteImp uniteAtt, List<Unite> unitesDef)
         {
-            this.uniteAtt = (UniteImp) uniteAtt;
+            this.uniteAtt = uniteAtt;
             this.uniteDef = (UniteImp) choisirUniteDef(unitesDef);
         }
 

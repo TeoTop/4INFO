@@ -17,9 +17,9 @@ namespace PeopleWar
          * @param EnumCarte carte
          * @return Carte
          */
-        public override Carte creerCarte(EnumCarte carte)
+        public override StrategieCarte creerCarte(EnumCarte carte)
         {
-            Carte c = null;
+            StrategieCarte c = null;
             switch (carte)
             {
                 case EnumCarte.DEMO:
@@ -44,10 +44,10 @@ namespace PeopleWar
          * @param int nbUnite
          * @return Carte
          */
-        public override Joueur creerJoueur(string nom, EnumPeuple p, int nbUnite)
+        public override JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite)
         {
             //On crée le peuple qui sera ensuite associé au joueur. La race est définie par l'énumération p.
-            Peuple peuple = FabriquePeuple.INSTANCE.creerPeuple(p, nbUnite);
+            PeupleA peuple = FabriquePeuple.INSTANCE.creerPeuple(p, nbUnite);
 
             //on crée le joueur en lui associant un nom et son peuple
             JoueurImp joueur = new JoueurImp(nom, peuple);

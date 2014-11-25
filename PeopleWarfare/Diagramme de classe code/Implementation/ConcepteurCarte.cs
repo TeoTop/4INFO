@@ -17,9 +17,9 @@ namespace PeopleWar
          * @param Carte carte
          * @return void
          */
-        public void definirCarte(Carte carte)
+        public void definirCarte(StrategieCarte carte)
         {
-            this.carte = (StrategieCarte)carte;
+            this.carte = carte;
         }
 
         /**

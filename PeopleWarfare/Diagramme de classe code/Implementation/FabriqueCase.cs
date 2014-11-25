@@ -31,9 +31,9 @@ namespace PeopleWar
          * @param EnumCase type
          * @return Case
          */
-        public Case getCase(EnumCase type)
+        public CaseA getCase(EnumCase type)
         {
-            Case c = null;
+            CaseA c = null;
             switch (type)
             {
                 case EnumCase.DESERT:

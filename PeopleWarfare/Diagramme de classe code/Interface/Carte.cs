@@ -11,6 +11,8 @@ namespace PeopleWar
 
         Case getCase(int key);
 
+        int getKey(int x, int y);
+
         int getX(int key);
 
         int getY(int key);

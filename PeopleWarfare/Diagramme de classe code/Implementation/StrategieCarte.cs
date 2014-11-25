@@ -57,6 +57,17 @@ namespace PeopleWar
         }
 
         /**
+         * Return the key of the couple (x,y)
+         * @param int x
+         * @param int y
+         * @return int
+         */
+        public int getKey(int x, int y)
+        {
+            return (int) (x * Math.Sqrt(nbCase) + y);
+        }
+
+        /**
          * Return the abscissa of the box
          * If the key is not valid, it returns -1
          * @param int key
@@ -67,7 +78,7 @@ namespace PeopleWar
             // key / sqrt(nbCase)
             if (isValidkey(key))
             {
-                return (int) (key / Math.Sqrt(nbCase));
+                return (int) Math.Floor(key / Math.Sqrt(nbCase));
             }
             return -1;
         }

@@ -15,7 +15,10 @@ namespace PeopleWar
         public int defense { get; set; }
 
         public int vie { get; set; }
+
         public int pm { get; set; }
+
+        public int point { get; set; }
 
         public UniteImp()
         {
@@ -24,12 +27,13 @@ namespace PeopleWar
             defense = 1;
             vie = 5;
             pm = 1;
+            point = 1;
         }
 
         public string afficherCaracteristique()
         {
             return "Unite :\n\t- Attaque : " + attaque + "\n\t- Defense : " + defense + "\n\t- Vie : " + vie +
-                "\n\t- Point de mouvement : " + pm;
+                "\n\t- Point de mouvement : " + pm + "\n\t- Point rapporté : " + point;
         }
 
         public float getAttEff()
@@ -62,17 +66,6 @@ namespace PeopleWar
             return false;
 
                 // !!!!!!!!! vérifier bonus;
-        }
-
-
-        public int getX()
-        {
-            return x;
-        }
-
-        public int getY()
-        {
-            return y;
         }
     }
 }

@@ -18,17 +18,21 @@ namespace PeopleWar
          * @param EnumPeuple p2
          * @return Partie
          */
-        public Partie creerPartie(String nom1, String nom2, EnumCarte carte, EnumPeuple p1, EnumPeuple p2)
+        public PartieImp creerPartie(String nom1, String nom2, EnumCarte carte, EnumPeuple p1, EnumPeuple p2)
         {
-            Carte c = MonteurPartie.creerCarte(carte);
+            StrategieCarte c = MonteurPartie.creerCarte(carte);
             int nbUnite = 0;
             int nbTourMax = 0;
+            int posu1 = 0;
+            int posu2 = 0;
+            Random rnd = new Random();
 
             switch (carte)
             {
                 case EnumCarte.DEMO:
                     nbUnite = 4;
                     nbTourMax = 5;
+
                     break;
                 case EnumCarte.PETITE:
                     nbUnite = 6;
@@ -39,8 +43,8 @@ namespace PeopleWar
                     nbTourMax = 30;
                     break;
             }
-            Joueur j1 = MonteurPartie.creerJoueur(nom1, p1, nbUnite);
-            Joueur j2 = MonteurPartie.creerJoueur(nom2, p2, nbUnite);
+            JoueurImp j1 = MonteurPartie.creerJoueur(nom1, p1, nbUnite);
+            JoueurImp j2 = MonteurPartie.creerJoueur(nom2, p2, nbUnite);
             return new PartieImp(c, j1, j2, nbTourMax);
         }
 
