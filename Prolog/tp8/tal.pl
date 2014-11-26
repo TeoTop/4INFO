@@ -153,7 +153,7 @@ analyse([la,femme,qui,porte,un,pull,noir,mange,un,chien]).
 
 /* Question 2.2 : Réaliser un arbre de la grammaire à l'aide de prolog */
 
-/*
+
 analyse_arbre(L,A):-phrase_simple_arbre(L,[],A).
 phrase_simple_arbre(L,R,phr(A1,A2)):-gp_nominal_arbre(L,L1,A1),gp_verbal_arbre(L1,R,A2).
 gp_nominal_arbre(L,R,gn(A1,A2)):-article_arbre(L,L1,A1),nom_commun_arbre(L1,R,A2).
@@ -169,7 +169,7 @@ gp_verbal_arbre(L,R,gv(A)):-verbe_arbre(L,R,A).
 gp_verbal_arbre(L,R,gv(A1,A2)):-verbe_arbre(L,L1,A1),gp_prepositionnel_arbre(L1,R,A2).
 gp_verbal_arbre(L,R,gv(A1,A2)):-verbe_arbre(L,L1,A1),gp_nominal_arbre(L1,R,A2).
 gp_prepositionnel_arbre(L,R,gp(A1,A2)):-prep_arbre(L,L1,A1),gp_nominal_arbre(L1,R,A2).
-*/
+
 
 /* Test
 
@@ -193,7 +193,7 @@ analyse_arbre([la,femme,qui,porte,un,pull,noir,mange,un,chien],A).
 */
 
 /* Question 2.3 */
-/*analyse_arbre(L,A):-phrase_simple_arbre(L,[],A).
+analyse_arbre(L,A):-phrase_simple_arbre(L,[],A).
 phrase_simple_arbre(L,R,phr(A1,A2)):-gp_nominal_arbre(L,L1,A1,G,N),gp_verbal_arbre(L1,R,A2,N).
 
 gp_nominal_arbre(L,R,gn(A1,A2),G,N):-article_arbre(L,L1,A1,G,N),nom_commun_arbre(L1,R,A2,G,N).
@@ -214,7 +214,7 @@ gp_verbal_arbre(L,R,gv(A),N):-verbe_arbre(L,R,A,N).
 gp_verbal_arbre(L,R,gv(A1,A2),N):-verbe_arbre(L,L1,A1,N),gp_prepositionnel_arbre(L1,R,A2).
 
 gp_verbal_arbre(L,R,gv(A1,A2),N):-verbe_arbre(L,L1,A1,N),gp_nominal_arbre(L1,R,A2,_,_).
-gp_prepositionnel_arbre(L,R,gp(A1,A2)):-prep_arbre(L,L1,A1),gp_nominal_arbre(L1,R,A2,_,_).*/
+gp_prepositionnel_arbre(L,R,gp(A1,A2)):-prep_arbre(L,L1,A1),gp_nominal_arbre(L1,R,A2,_,_).
 
 /* Test
 analyse_arbre([paul,marche,dans,le,rue],A).
