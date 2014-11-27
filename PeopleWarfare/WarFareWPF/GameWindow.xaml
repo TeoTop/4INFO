@@ -1,31 +1,57 @@
-﻿<Window x:Class="WarFareWPF.MainWindow"
+﻿<Window x:Class="WarFareWPF.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="800" Width="800">
-    <Grid Margin="5,5,5,5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="2*"/>
-        </Grid.RowDefinitions>
-        <Button Content="Changer unité" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top" Width="130" Height="30"/>
-        <Button Content="Fin de tour" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="30,120.4,0,0" VerticalAlignment="Top" Width="130" Height="30"/>
-        <Grid HorizontalAlignment="Left" Height="190" Grid.Row="1" VerticalAlignment="Top" Width="588">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="Joueur1 : " FontSize="20" VerticalAlignment="Top"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="Joueur2 : " FontSize="20" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,40,0,0" TextWrapping="Wrap" Text="Nb points" FontSize="15" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,70,0,0" TextWrapping="Wrap" Text="Nb unités" FontSize="15" VerticalAlignment="Top"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="60,40,0,0" TextWrapping="Wrap" Text="Nb points" FontSize="15" VerticalAlignment="Top"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="60,70,0,0" TextWrapping="Wrap" Text="Nb unités" FontSize="15" VerticalAlignment="Top"/>
+        Title="GameWindow" Height="600" Width="800" Name="_this">
+    <Border BorderThickness="2" BorderBrush="Black" Margin="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Carte"></Label>
+                </Grid>
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+                <StackPanel Grid.Column="2">
+                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="15" Content="Tours et actions : "/>
+                </StackPanel>
+            </Grid>
+            <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" />
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,0,0" FontSize="20" Content="{Binding ElementName=_this, Path=partie.j1.nom}"/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,0,0" FontSize="20" Content="{Binding ElementName=_this, Path=partie.j2.nom}"/>
+                    <Label Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,50,0,0" FontSize="15" Content="Nombre d'unités : "/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,50,0,0" FontSize="15" Content="Nombre d'unités : "/>
+                    <Label Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="185,50,0,0" FontSize="15" Content="{Binding ElementName=_this, Path=nbUnitesj1}"/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="185,50,0,0" FontSize="15" Content="{Binding ElementName=_this, Path=nbUnitesj2}"/>
+                    <Label Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,80,0,0" FontSize="15" Content="Nombre de points : "/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,80,0,0" FontSize="15" Content="Nombre de points : "/>
+                    <Label Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="195,80,0,0" FontSize="15" Content="{Binding ElementName=_this, Path=partie.j1.nbPoints}"/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="195,80,0,0" FontSize="15" Content="{Binding ElementName=_this, Path=partie.j1.nbPoints}"/>
+                </Grid>
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+                <StackPanel Grid.Column="2">
+                    <Button Content="Fin tour" Margin="20,25" Height="30"/>
+                    <Button Content="Unité suivante" Margin="20,20"  Height="30"/>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Historique des tours : " FontSize="15" VerticalAlignment="Top" Height="20"/>
-    </Grid>
+    </Border>
 </Window>
-

@@ -27,7 +27,7 @@ namespace WarFareWPF
 
         private void NewGame(object sender, RoutedEventArgs e)
         {
-            NewGame w = new NewGame();
+            GameWindow w = new GameWindow();
             w.Show();
             this.Close();
         }

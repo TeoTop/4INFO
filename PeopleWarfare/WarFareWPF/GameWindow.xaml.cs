@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PeopleWar;
 
 namespace WarFareWPF
 {
@@ -19,9 +20,27 @@ namespace WarFareWPF
     /// </summary>
     public partial class GameWindow : Window
     {
+        public PartieImp partie { get; set; }
+
+        public int nbUnitesj1 { 
+            get { return partie.j1.peuple.getNbUnite(); }
+        }
+
+        public int nbUnitesj2 { 
+            get { return partie.j2.peuple.getNbUnite(); } 
+        }
+
         public GameWindow()
         {
+            DirecteurPartie dp = new DirecteurPartie();
+            dp.definirMonteur(new MonteurNvllePartie());
+            this.partie = dp.creerPartie("theo", "hassan", EnumCarte.DEMO, EnumPeuple.ORC, EnumPeuple.ELF);
             InitializeComponent();
+        }
+
+        public string nomJoueur()
+        {
+            return partie.j1.nom;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Diagrammes UML", "Diagrammes UML\Diagrammes UML.modelproj", "{B720C493-AC56-4B1C-AAAA-0C4455875864}"
 EndProject
@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{B1FD5C58-FF9C-43C4-AAC6-12E92DD5FAF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarFareWPF", "WarFareWPF\WarFareWPF.csproj", "{7FB72EBA-A183-4D17-AB5A-490C94E690CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A251431-5751-4B60-8B83-CBD541809A9E} = {7A251431-5751-4B60-8B83-CBD541809A9E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
