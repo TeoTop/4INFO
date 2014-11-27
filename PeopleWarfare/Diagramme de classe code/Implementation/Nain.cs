@@ -7,10 +7,10 @@ namespace PeopleWar
 {
     public class Nain : PeupleA
     {
-        public Nain(int nbUnite)
+        public Nain(int nbUnite, int posu)
         {
             // on crée les unités du peuple en fonction de nbUnite (méthode dans PeupleA)
-            creerUnites(nbUnite);
+            creerUnites(nbUnite, posu);
         }
 
         public override string getInformation()
@@ -20,6 +20,11 @@ namespace PeopleWar
                 "\n\t\t- Si l'unité Nain est sur une case Montagne, elle peut se déplacer sur n'importe quelle autre" +
                 " case Montagne à condition qu'il n'y ai pas d'unité adverse." +
                 "\n\t- Malus :\n\t\t- Une unité Orc n'acquière aucun point sur la case Plaine.";
+        }
+
+        public override EnumPeuple getType()
+        {
+            return EnumPeuple.NAIN;
         }
     }
 }

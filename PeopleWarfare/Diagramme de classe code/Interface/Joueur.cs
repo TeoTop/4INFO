@@ -11,7 +11,7 @@ namespace PeopleWar
          * Calculats number of points scored by the player at the end of his turn.
          * @return int
          */
-        int calculerNbPoint();
+        int calculerNbPoint(Carte carte);
 
         /**
          * Shows whether a player has lost all its units

@@ -20,7 +20,7 @@ namespace PeopleWar
 
         bool verifierSelUnite();
 
-        void selectionnerCase(int x, int y);
+        void selectionnerCase(int key);
 
         Joueur verifierFinPartie();
 

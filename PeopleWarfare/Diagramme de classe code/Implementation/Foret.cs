@@ -14,5 +14,9 @@ namespace PeopleWar
         {
             return "Foret";
         }
+        public override EnumCase getType()
+        {
+            return EnumCase.FORET;
+        }
     }
 }

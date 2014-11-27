@@ -30,9 +30,7 @@ namespace PeopleWar
 
         public int nbTourMax { get; set; }
 
-        public int xCourant { get; set; }
-
-        public int yCourant { get; set; }
+        public int caseCourant { get; set; }
 
         public int joueurCourant { get; set; }
 
@@ -67,15 +65,13 @@ namespace PeopleWar
         }
 
         /**
-         * Set x and y of the selected box
-         * @param int x
-         * @param int y
+         * Set number of the selected box
+         * @param int key
          * @return void
          */
-        public void selectionnerCase(int x, int y)
+        public void selectionnerCase(int key)
         {
-            xCourant = x;
-            yCourant = y;
+            caseCourant = key;
         }
 
         /**
@@ -95,7 +91,7 @@ namespace PeopleWar
             }
             else if (this.getNbTour() >= nbTourMax)
             {
-                return (this.j1.calculerNbPoint() > this.j2.calculerNbPoint()) ? this.j1 : this.j2;
+                return (this.j1.calculerNbPoint(carte) > this.j2.calculerNbPoint(carte)) ? this.j1 : this.j2;
             }
             return null;
         }

@@ -14,5 +14,10 @@ namespace PeopleWar
         {
             return "Plaine";
         }
+
+        public override EnumCase getType()
+        {
+            return EnumCase.PLAINE;
+        }
     }
 }

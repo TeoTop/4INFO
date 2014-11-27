@@ -32,13 +32,12 @@ namespace PeopleWar
         String getInformation();
 
         /**
-         * Shows whether there are units on the box (x,y).
+         * Shows whether there are units on the box c.
          * Return the list of units on the box
-         * @param int x
-         * @param int y
+         * @param int c
          * @return List<Unite>
          */
-        List<Unite> verifierUnite(int x, int y);
+        List<Unite> verifierUnite(int c);
 
         int getNbUnite();
 
@@ -47,6 +46,12 @@ namespace PeopleWar
          * @param int nbUnite
          * @return void
          */
-        void creerUnites(int nbUnite);
+        void creerUnites(int nbUnite, int posu);
+
+        /**
+         * Return the type of the people
+         * @return EnumPeuple
+         */
+        EnumPeuple getType();
     }
 }

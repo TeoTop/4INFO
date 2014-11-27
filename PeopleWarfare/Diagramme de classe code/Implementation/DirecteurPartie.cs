@@ -23,16 +23,15 @@ namespace PeopleWar
             StrategieCarte c = MonteurPartie.creerCarte(carte);
             int nbUnite = 0;
             int nbTourMax = 0;
-            int posu1 = 0;
-            int posu2 = 0;
             Random rnd = new Random();
+            int posu1 = 0;
+            int posu2 = c.nbCase-1;
 
             switch (carte)
             {
                 case EnumCarte.DEMO:
                     nbUnite = 4;
                     nbTourMax = 5;
-
                     break;
                 case EnumCarte.PETITE:
                     nbUnite = 6;
@@ -43,8 +42,8 @@ namespace PeopleWar
                     nbTourMax = 30;
                     break;
             }
-            JoueurImp j1 = MonteurPartie.creerJoueur(nom1, p1, nbUnite);
-            JoueurImp j2 = MonteurPartie.creerJoueur(nom2, p2, nbUnite);
+            JoueurImp j1 = MonteurPartie.creerJoueur(nom1, p1, nbUnite, posu1);
+            JoueurImp j2 = MonteurPartie.creerJoueur(nom2, p2, nbUnite, posu2);
             return new PartieImp(c, j1, j2, nbTourMax);
         }
 

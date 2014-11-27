@@ -17,7 +17,7 @@ namespace PeopleWar
             throw new System.NotImplementedException();
         }
 
-        public override JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite)
+        public override JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite, int posu)
         {
             throw new System.NotImplementedException();
         }

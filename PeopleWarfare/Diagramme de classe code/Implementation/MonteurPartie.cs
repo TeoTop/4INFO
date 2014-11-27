@@ -10,6 +10,6 @@ namespace PeopleWar
 
         public abstract StrategieCarte creerCarte(EnumCarte carte);
 
-        public abstract JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite);
+        public abstract JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite, int posu);
     }
 }

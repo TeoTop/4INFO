@@ -7,5 +7,10 @@ namespace PeopleWar
 {
     public interface Case
     {
+        /**
+         * Return the type of the box
+         * return EnumCase
+         */
+        EnumCase getType();
     }
 }

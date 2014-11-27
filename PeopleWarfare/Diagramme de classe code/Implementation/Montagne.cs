@@ -14,5 +14,10 @@ namespace PeopleWar
         {
             return "Montagne";
         }
+
+        public override EnumCase getType()
+        {
+            return EnumCase.MONTAGNE;
+        }
     }
 }

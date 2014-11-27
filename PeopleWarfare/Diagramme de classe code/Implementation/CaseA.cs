@@ -7,5 +7,6 @@ namespace PeopleWar
 {
     public abstract class CaseA : Case
     {
+        public abstract EnumCase getType();
     }
 }

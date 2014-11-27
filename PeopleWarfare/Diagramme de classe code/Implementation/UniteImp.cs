@@ -7,8 +7,7 @@ namespace PeopleWar
 {
     public class UniteImp : Unite
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public int c { get; set; }
 
         public int attaque { get; set; }
 
@@ -20,7 +19,7 @@ namespace PeopleWar
 
         public int point { get; set; }
 
-        public UniteImp()
+        public UniteImp(int posu)
         {
             //les statistiques de base sont définie par le jeu
             attaque = 2;
@@ -28,6 +27,7 @@ namespace PeopleWar
             vie = 5;
             pm = 1;
             point = 1;
+            c = posu;
         }
 
         public string afficherCaracteristique()
@@ -46,10 +46,9 @@ namespace PeopleWar
             return defense * vie / 5;
         }
 
-        public bool seDeplacer(int x, int y)
+        public bool seDeplacer(int c)
         {
-            this.x = x;
-            this.y = y;
+            this.c = c;
 
             return true;
         }
@@ -59,13 +58,49 @@ namespace PeopleWar
             return 1;
         }
 
-        public bool verifierDeplacement(int x, int y)
+        public bool verifierDeplacement(int cInit, int c, int taille, EnumPeuple type, Carte carte, Peuple adv)
         {
-            if (Math.Abs(this.x - x) < 2 && Math.Abs(this.y - y) < 2) return true;
+            if (pm == 0) return false;
+
+            if (type == EnumPeuple.ELF && carte.getCase(c).getType() == EnumCase.DESERT) return false;
+
+            if ( ((type == EnumPeuple.ELF && carte.getCase(c).getType() != EnumCase.FORET) ||
+                (type == EnumPeuple.ORC && carte.getCase(c).getType() != EnumCase.PLAINE)) && pm < 1)
+            {
+                return false;
+            }
+
+            List<int> casesDispo = new List<int>();
+
+            casesDispo.Add(c - taille);
+            casesDispo.Add(c + taille);
+            casesDispo.Add(c - 1);
+            casesDispo.Add(c + 1);             
+
+            if (c % 2 == 0)
+            {
+                casesDispo.Add(c - (taille - 1));
+                casesDispo.Add(c - (taille + 1));
+            }
+            else
+            {
+                casesDispo.Add(c + (taille - 1));
+                casesDispo.Add(c + (taille + 1));
+            }
+
+            // move on Montagne box for a Nain.
+            if (type == EnumPeuple.NAIN && carte.getCase(cInit).getType() == EnumCase.MONTAGNE && 
+                carte.getCase(c).getType() == EnumCase.MONTAGNE && !adv.verifierUnite(c).Any())
+            {
+                return true;
+            }
+
+            if (casesDispo.Contains(c))
+            {
+                return true;
+            }
 
             return false;
-
-                // !!!!!!!!! vérifier bonus;
         }
     }
 }

@@ -28,13 +28,13 @@ namespace PeopleWar
 
         public abstract string getInformation();
 
-        public List<Unite> verifierUnite(int x, int y)
+        public List<Unite> verifierUnite(int c)
         {
-            List<Unite> u = null;
+            List<Unite> u = new List<Unite>();
 
             foreach (UniteImp unite in unites)
             {
-                if (unite.x == x && unite.y == y) u.Add(unite);
+                if (unite.c == c) u.Add(unite);
             }
 
             return u;
@@ -45,7 +45,7 @@ namespace PeopleWar
             return unites.Count;
         }
 
-        public void creerUnites(int nbUnite)
+        public void creerUnites(int nbUnite, int posu)
         {
             //on instancie la liste d'unités
             unites = new List<UniteImp>();
@@ -53,8 +53,10 @@ namespace PeopleWar
             //on boucle dur le nombre d'unité pour les instancier et les ajouter à la liste
             for (int i = 0; i < nbUnite; i++)
             {
-                unites.Add(new UniteImp());
+                unites.Add(new UniteImp(posu));
             }
         }
+
+        public abstract EnumPeuple getType();
     }
 }

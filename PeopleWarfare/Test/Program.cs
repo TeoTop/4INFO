@@ -10,14 +10,14 @@ class Test
     {
         DirecteurPartie dp = new DirecteurPartie();
         dp.definirMonteur(new MonteurNvllePartie());
-        PartieImp partie = dp.creerPartie("Theo", "Hassan", EnumCarte.PETITE, EnumPeuple.NAIN, EnumPeuple.ELF);
+        PartieImp partie = dp.creerPartie("Theo", "Hassan", EnumCarte.PETITE, EnumPeuple.ORC, EnumPeuple.ELF);
 
         Console.WriteLine("Test");
         Console.WriteLine(partie.getJoueur(0).ToString());
         Console.WriteLine(partie.getJoueur(1).ToString());
 
-        partie.getJoueur(0).calculerNbPoint();
-        partie.getJoueur(0).calculerNbPoint();
+        partie.getJoueur(0).calculerNbPoint(partie.carte);
+        partie.getJoueur(0).calculerNbPoint(partie.carte);
 
         Console.WriteLine(partie.getJoueur(0).ToString());
 

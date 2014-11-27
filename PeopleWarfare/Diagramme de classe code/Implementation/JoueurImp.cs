@@ -20,22 +20,17 @@ namespace PeopleWar
             peuple = (PeupleA)p;
         }
 
-        public int calculerNbPoint()
+        public int calculerNbPoint(Carte carte)
         {
-            /*if (peuple.GetType().in)
-            {
-
-            }*/
-
             // adds 1 point for each unit still alive
             foreach (UniteImp u in peuple.unites)
             {
-                nbPoints += u.point;
+                if(!(peuple.getType() == EnumPeuple.ORC && carte.getCase(u.c).getType() == EnumCase.FORET) ||
+                    !(peuple.getType() == EnumPeuple.NAIN && carte.getCase(u.c).getType() == EnumCase.PLAINE))
+                    nbPoints += u.point;
             }
 
             return nbPoints;
-
-            // !!!!!!!!!  vérifier les bonus
         }
 
         public bool verifierDefaite()

@@ -13,6 +13,11 @@ namespace PeopleWar
         {
             return "Desert";
         }
+
+        public override EnumCase getType()
+        {
+            return EnumCase.DESERT;
+        }
     }
 
 }

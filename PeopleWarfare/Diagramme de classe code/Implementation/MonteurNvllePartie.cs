@@ -44,10 +44,10 @@ namespace PeopleWar
          * @param int nbUnite
          * @return Carte
          */
-        public override JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite)
+        public override JoueurImp creerJoueur(string nom, EnumPeuple p, int nbUnite, int posu)
         {
             //On crée le peuple qui sera ensuite associé au joueur. La race est définie par l'énumération p.
-            PeupleA peuple = FabriquePeuple.INSTANCE.creerPeuple(p, nbUnite);
+            PeupleA peuple = FabriquePeuple.INSTANCE.creerPeuple(p, nbUnite, posu);
 
             //on crée le joueur en lui associant un nom et son peuple
             JoueurImp joueur = new JoueurImp(nom, peuple);
