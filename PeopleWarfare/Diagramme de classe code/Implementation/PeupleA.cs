@@ -9,7 +9,7 @@ namespace PeopleWar
     {
         public int uniteActuel { get; set; }
 
-        public List<PeopleWar.UniteImp> unites { get; set; }
+        public List<UniteImp> unites { get; set; }
 
         public Unite getUniteActuel()
         {

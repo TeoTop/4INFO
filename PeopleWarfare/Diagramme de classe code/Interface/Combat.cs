@@ -15,5 +15,7 @@ namespace PeopleWar
         int effectuerCombat();
 
         Unite choisirUniteDef(List<Unite> UnitesDef);
+
+        public bool successAtt();
     }
 }

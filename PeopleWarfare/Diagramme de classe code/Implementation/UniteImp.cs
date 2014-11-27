@@ -102,5 +102,10 @@ namespace PeopleWar
 
             return false;
         }
+
+        public void destroy()
+        {
+
+        }
     }
 }

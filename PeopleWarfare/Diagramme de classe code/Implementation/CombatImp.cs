@@ -56,17 +56,60 @@ namespace PeopleWar
         {
             float att = 0,
                   def = 0,
-                  taux = ((att = uniteAtt.getAttEff()) > (def = uniteDef.getDefEff())) ? def / att : att / def;
-            return 50 * (1 + taux);
+                  taux = ((att = uniteAtt.getAttEff()) > (def = uniteDef.getDefEff())) ? (def / 2 * att) : (1 - att / 2 * def);
+            return (1 - taux);
         }
 
         /**
          * Launch a battle
+         * Return 0 if it's a draw, 1 if it's a victory, -1 a loss
          * @return int
          */
         public int effectuerCombat()
         {
-            throw new NotImplementedException();
+            int nbCombat = calculerNbCombat();
+            while (nbCombat > 0)
+            {
+                if (successAtt())
+                {
+                    uniteDef.vie -= 1;
+                    if (uniteDef.vie <= 0)
+                    {
+                        // check if there's no other unit in the box so as to move on
+                        return 1;
+                    }
+                }
+                else
+                {
+                    uniteAtt.vie -= 1;
+                    if (uniteAtt.vie <= 0)
+                    {
+                        return -1;
+                    }
+                }
+            }
+            return 0;
+        }
+
+        public bool successAtt()
+        {
+            Random rnd = new Random();
+            float rand = rnd.Next(0, 1);
+            float reussite = calculerReussiteAtt();
+            float[] probability = new float[2] { reussite, 1 - reussite };
+            Boolean[] success = new Boolean[2] { true, false };
+            float cumul = 0;
+            Boolean s = false;
+            for (int i = 0; i < 2; i++)
+            {
+                cumul += probability[i];
+                if (rand < cumul)
+                {
+                    s = success[i];
+                    break;
+                }
+            }
+            return s;
         }
 
         /**

@@ -60,7 +60,7 @@ namespace PeopleWar
          */
         public bool isValidCbt(int key)
         {
-            return (key > 0 && key < getNbCbt());
+            return (key >= 0 && key < getNbCbt());
         }
     }
 }

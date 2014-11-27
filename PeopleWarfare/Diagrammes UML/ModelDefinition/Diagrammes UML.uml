@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="c0c12d01-c8e1-4881-a649-582c6ecde5dc"
   name="Diagrammes UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -5863,7 +5863,7 @@ Les cases désert, montagne, plaine et forêt doivent être égales en nombre</b
           </decisionNode>
           <opaqueAction
             Id="de0dca49-3c17-4691-a8c2-6a00eb6cedf3"
-            name="Calculer la défense1"
+            name="Calculer la défense"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -5909,7 +5909,7 @@ Les cases désert, montagne, plaine et forêt doivent être égales en nombre</b
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="de0dca49-3c17-4691-a8c2-6a00eb6cedf3"
-                  LastKnownName="Calculer la défense1"
+                  LastKnownName="Calculer la défense"
                   LastKnownLocation="Diagrammes UML.uml" />
               </controlFlow>
             </flowNodeTargets>

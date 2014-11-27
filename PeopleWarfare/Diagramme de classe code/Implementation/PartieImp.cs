@@ -127,7 +127,7 @@ namespace PeopleWar
          */
         public Boolean isValidTour(int key)
         {
-            return (key > 0 && key < getNbTour());
+            return (key >= 0 && key < getNbTour());
         }
     }
 }
