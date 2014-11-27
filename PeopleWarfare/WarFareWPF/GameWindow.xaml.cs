@@ -10,32 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WarFareWPF
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour GameWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWindow : Window
     {
-        public MainWindow()
+        public GameWindow()
         {
             InitializeComponent();
         }
-
-        private void NewGame(object sender, RoutedEventArgs e)
-        {
-            Window1 w = new Window1();
-            w.Show();
-            this.Close();
-        }
-
-        private void ChGame(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("ChGame");
-        }
-
     }
 }

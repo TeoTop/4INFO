@@ -8,6 +8,7 @@
 *.so
 *.suo
 *.pdb
+*.csprojResolveAssemblyReference.cache
  
 # Packages #
 ############

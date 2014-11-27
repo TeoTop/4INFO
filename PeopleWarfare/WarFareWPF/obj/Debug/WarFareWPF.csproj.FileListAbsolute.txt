@@ -14,3 +14,7 @@ C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
 H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
 H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
 H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\Window1.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\Window1.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.g.cs
