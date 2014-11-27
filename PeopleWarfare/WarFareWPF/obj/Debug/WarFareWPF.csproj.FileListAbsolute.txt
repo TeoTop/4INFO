@@ -1,0 +1,16 @@
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\App.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.g.resources
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.Properties.Resources.resources
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csproj.GenerateResource.Cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
