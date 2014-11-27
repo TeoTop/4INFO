@@ -106,7 +106,7 @@ namespace PeopleWar
          */
         public Boolean isValidkey(int key)
         {
-            return (key > 0 && key < nbCase);
+            return (key >= 0 && key < nbCase);
         }
 
         /**

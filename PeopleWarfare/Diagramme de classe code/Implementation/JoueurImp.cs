@@ -25,7 +25,7 @@ namespace PeopleWar
             // adds 1 point for each unit still alive
             foreach (UniteImp u in peuple.unites)
             {
-                if(!(peuple.getType() == EnumPeuple.ORC && carte.getCase(u.c).getType() == EnumCase.FORET) ||
+                if(!(peuple.getType() == EnumPeuple.ORC && carte.getCase(u.c).getType() == EnumCase.FORET) &&
                     !(peuple.getType() == EnumPeuple.NAIN && carte.getCase(u.c).getType() == EnumCase.PLAINE))
                     nbPoints += u.point;
             }
