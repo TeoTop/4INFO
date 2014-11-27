@@ -43,8 +43,12 @@ namespace PeopleWar
         /**
          * Shows whether the unit can reach the box c.
          * True if it's possible
-         * @param int x
-         * @param int y
+         * @param int cInit
+         * @param int c
+         * @param int taille
+         * @param EnumPeuple
+         * @param Carte carte
+         * @param Peuple adv
          * @return bool
          */
         bool verifierDeplacement(int cInit, int c, int taille, EnumPeuple type, Carte carte, Peuple adv);
