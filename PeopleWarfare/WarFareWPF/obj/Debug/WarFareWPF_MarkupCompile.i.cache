@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\
 WarFareWPF
 none
 false
 DEBUG;TRACE
-D:\INSA\4INFO\PeopleWarfare\WarFareWPF\App.xaml
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\App.xaml
 4-1185084404
 
-12232127598
-15-1576387926
+15536427952
+16-1273529112
 GameWindow.xaml;MainWindow.xaml;NewGame.xaml;NewGame_Carte.xaml;
 
-False
+True
 

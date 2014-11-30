@@ -21,6 +21,7 @@ namespace WarFareWPF
     public partial class GameWindow : Window
     {
         public PartieImp partie { get; set; }
+        public MapView map { get; set; }
 
         public int nbUnitesj1 { 
             get { return partie.j1.peuple.getNbUnite(); }
@@ -34,7 +35,8 @@ namespace WarFareWPF
         {
             DirecteurPartie dp = new DirecteurPartie();
             dp.definirMonteur(new MonteurNvllePartie());
-            this.partie = dp.creerPartie("theo", "hassan", EnumCarte.DEMO, EnumPeuple.ORC, EnumPeuple.ELF);
+            this.partie = dp.creerPartie("Theo", "Hassan", EnumCarte.DEMO, EnumPeuple.ORC, EnumPeuple.ELF);
+            this.map = new MapView(partie.carte);
             InitializeComponent();
         }
 
