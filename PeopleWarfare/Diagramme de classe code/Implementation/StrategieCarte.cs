@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Wrapper;
 
 namespace PeopleWar
 {
@@ -17,9 +18,9 @@ namespace PeopleWar
         /**
          * Creates a map which contains the same number of each box
          */
-        public void creerCarte()
+        unsafe public void creerCarte()
         {
-            Random rnd = new Random();
+            /*Random rnd = new Random();
             
             int[] nb = new int[4] {0,0,0,0};
 
@@ -37,6 +38,12 @@ namespace PeopleWar
                     }
                 }
                 cases.Add((CaseA)FabriqueCase.INSTANCE.getCase((EnumCase)typeCase));
+            }*/
+            WrapperAlgos w = new WrapperAlgos();
+            int* cases_wrapper = w.generer_carte(nbCase, Enum.GetNames(typeof(EnumCase)).Length);
+            for (int i = 0; i < nbCase; i++)
+            {
+                cases.Add((CaseA)FabriqueCase.INSTANCE.getCase((EnumCase)cases_wrapper[i]));
             }
         }
 

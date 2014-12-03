@@ -77,15 +77,15 @@ namespace PeopleWar
             casesDispo.Add(c - 1);
             casesDispo.Add(c + 1);             
 
-            if (c % 2 == 0)
+            if (carte.getX(c) % 2 == 1)
             {
                 casesDispo.Add(c - (taille - 1));
-                casesDispo.Add(c - (taille + 1));
+                casesDispo.Add(c + (taille + 1));
             }
             else
             {
                 casesDispo.Add(c + (taille - 1));
-                casesDispo.Add(c + (taille + 1));
+                casesDispo.Add(c - (taille + 1));
             }
 
             // move on Montagne box for a Nain.

@@ -36,9 +36,6 @@ namespace WarFareWPF
             this.partie = partie;
             this.map = new MapView(partie.carte);
             InitializeComponent();
-            //debug
-            MessageBox.Show(partie.ToString());
-            //fdebug
         }
 
         public string nomJoueur()
