@@ -14,11 +14,3 @@ D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Test.exe
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Test.pdb
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.dll
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.pdb
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\bin\Debug\Test.exe.config
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\bin\Debug\Test.exe
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\bin\Debug\Test.pdb
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.dll
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.pdb
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\obj\Debug\Test.exe
-C:\Users\sizo0\Documents\4info\PeopleWarfare\Test\obj\Debug\Test.pdb
