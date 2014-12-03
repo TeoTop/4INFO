@@ -13,11 +13,11 @@ namespace PeopleWar
 
         public String nom { get; set; }
 
-        public JoueurImp(String n, Peuple p)
+        public JoueurImp(String n, PeupleA p)
         {
             nom = n;
             nbPoints = 0;
-            peuple = (PeupleA)p;
+            peuple = p;
         }
 
         public int calculerNbPoint(Carte carte)

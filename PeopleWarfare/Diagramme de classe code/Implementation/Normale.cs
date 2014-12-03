@@ -10,7 +10,7 @@ namespace PeopleWar
         public Normale()
         {
             cases = new List<CaseA>();
-            nbCase = 100;
+            nbCase = 196;
             type = EnumCarte.PETITE;
         }
 

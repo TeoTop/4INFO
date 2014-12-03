@@ -26,10 +26,10 @@ namespace PeopleWar
                     c = new Demo();
                     break;
                 case EnumCarte.PETITE:
-                    c = new Normale();
+                    c = new Petite();
                     break;
                 case EnumCarte.NORMALE:
-                    c = new Petite();
+                    c = new Normale();
                     break;
             }
             ConcepteurCarte.INSTANCE.definirCarte(c);

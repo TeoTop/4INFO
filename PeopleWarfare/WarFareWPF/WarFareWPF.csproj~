@@ -59,6 +59,8 @@
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoxView.cs" />
+    <Compile Include="MapView.cs" />
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
     </Compile>
@@ -87,14 +89,15 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewGame_Carte.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewGame_Carte.xaml.cs">
       <DependentUpon>NewGame_Carte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Notifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,6 +125,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Converters\Converters.csproj">
+      <Project>{bd14830e-2bdc-4c51-bc07-a2d5169ed43f}</Project>
+      <Name>Converters</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Diagramme de classe code\Diagramme de classe code.csproj">
       <Project>{7a251431-5751-4b60-8b83-cbd541809a9e}</Project>
       <Name>Diagramme de classe code</Name>
@@ -132,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\prec.png" />
+    <Resource Include="res\desert.png" />
+    <Resource Include="res\foret.png" />
+    <Resource Include="res\ocean.png" />
+    <Resource Include="res\plaine.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

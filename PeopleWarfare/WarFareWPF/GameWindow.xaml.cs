@@ -21,13 +21,29 @@ namespace WarFareWPF
     public partial class GameWindow : Window
     {
         public PartieImp partie { get; set; }
+        public MapView map { get; set; }
+
+        public int nbUnitesj1 { 
+            get { return partie.j1.peuple.getNbUnite(); }
+        }
+
+        public int nbUnitesj2 { 
+            get { return partie.j2.peuple.getNbUnite(); } 
+        }
+
         public GameWindow(PartieImp partie)
         {
             this.partie = partie;
+            this.map = new MapView(partie.carte);
             InitializeComponent();
             //debug
             MessageBox.Show(partie.ToString());
             //fdebug
+        }
+
+        public string nomJoueur()
+        {
+            return partie.j1.nom;
         }
     }
 }

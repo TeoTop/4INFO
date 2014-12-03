@@ -9,6 +9,9 @@
 *.suo
 *.pdb
 *.csprojResolveAssemblyReference.cache
+*.csproj.FileListAbsolute.txt
+*.sln
+*.csproj
  
 # Packages #
 ############
