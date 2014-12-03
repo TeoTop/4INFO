@@ -34,6 +34,19 @@ namespace WarFareWPF
                 RaisePropertyChanged("SelectedBox");
             }
         }
+        public int _zoom;
+        public int Zoom
+        {
+            get
+            {
+                return _zoom;
+            }
+            set
+            {
+                _zoom = (int)((value < 200) ? (value > 0) ? value : 100 : 100);
+                RaisePropertyChanged("Zoom");
+            }
+        }
         public MapView(StrategieCarte map)
         {
             carte = map;
@@ -44,6 +57,7 @@ namespace WarFareWPF
                 _cases.Add(boxview);
                 i++;
             }
+            Zoom = 100;
         }
 
         public override string ToString()

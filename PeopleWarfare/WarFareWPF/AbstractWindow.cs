@@ -33,5 +33,17 @@ namespace WarFareWPF
                 _p2 = value;
             }
         }
+        private static EnumCarte _carte = EnumCarte.DEMO;
+        public static EnumCarte carte
+        {
+            get
+            {
+                return _carte;
+            }
+            set
+            {
+                _carte = value;
+            }
+        }
     }
 }

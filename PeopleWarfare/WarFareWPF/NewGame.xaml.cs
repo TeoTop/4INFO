@@ -27,6 +27,33 @@ namespace WarFareWPF
         public bool errorNameJ1 { get; set; }
         public bool errorNameJ2 { get; set; }
         public bool errorPeuple { get; set; }
+        private EnumCarte _carte_enum;
+        public EnumCarte carte
+        {
+            get
+            {
+                return _carte_enum;
+            }
+            set
+            {
+                _carte_enum = value;
+                OnPropertyChanged("carte");
+            }
+        }
+
+        private String _carte;
+        public String Carte
+        {
+            get
+            {
+                return _carte;
+            }
+            set
+            {
+                _carte = value;
+                OnPropertyChanged("Carte");
+            }
+        }
         public bool error {
             get
             {
@@ -73,6 +100,18 @@ namespace WarFareWPF
             {
                 this.p2.SelectedIndex = (int)AbstractWindow.p2;
             }
+            switch (AbstractWindow.carte)
+            {
+                case EnumCarte.DEMO:
+                    this.carte = EnumCarte.DEMO;
+                    break;
+                case EnumCarte.PETITE:
+                    this.carte = EnumCarte.PETITE;
+                    break;
+                case EnumCarte.NORMALE:
+                    this.carte = EnumCarte.NORMALE;
+                    break;
+            }
         }
 
 
@@ -86,12 +125,16 @@ namespace WarFareWPF
             }
         }
 
-        private void Next(object sender, RoutedEventArgs e)
+        private void CreateGame(object sender, RoutedEventArgs e)
         {
-            NewGame_Carte nc = new NewGame_Carte(this.j1.Text, this.j2.Text, this.p1.SelectedIndex, this.p2.SelectedIndex);
-            nc.Show();
+            DirecteurPartie dp = new DirecteurPartie();
+            dp.definirMonteur(new MonteurNvllePartie());
+            PartieImp partie = dp.creerPartie(this.j1.Text, this.j2.Text, this.carte, (EnumPeuple)this.p1.SelectedIndex, (EnumPeuple)this.p2.SelectedIndex);
+            GameWindow gw = new GameWindow(partie);
+            gw.Show();
             this.Close();
         }
+
         private static void TextBoxBaseGotFocus(object sender, RoutedEventArgs e)
         {
             // Get the TextBoxBase
@@ -156,6 +199,13 @@ namespace WarFareWPF
             AbstractWindow.j2 = this.j2.Text;
             AbstractWindow.p1 = (EnumPeuple)this.p1.SelectedIndex;
             AbstractWindow.p2 = (EnumPeuple)this.p2.SelectedIndex;
+            AbstractWindow.carte = this.carte;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton r = sender as RadioButton;
+            this.Carte = r.Content.ToString();
         }
     }
 }
