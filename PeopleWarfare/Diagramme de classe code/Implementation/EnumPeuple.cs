@@ -7,6 +7,7 @@ namespace PeopleWar
 {
     public enum EnumPeuple
     {
+        NULL = -1,
         ORC,
         ELF,
         NAIN,

@@ -1,11 +1,3 @@
-C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.exe.config
-C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.exe
-C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.pdb
-C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.dll
-C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.pdb
-C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.exe
-C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.pdb
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Test.exe.config
 D:\INSA\4INFO\PeopleWarfare\Test\obj\Debug\Test.exe
 D:\INSA\4INFO\PeopleWarfare\Test\obj\Debug\Test.pdb
@@ -14,3 +6,11 @@ D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Test.exe
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Test.pdb
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.dll
 D:\INSA\4INFO\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.exe.config
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.exe
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Test.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.dll
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.exe
+C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.pdb

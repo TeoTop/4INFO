@@ -1,0 +1,3 @@
+precedente
+button_click enter key
+add resource template

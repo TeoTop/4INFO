@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PeopleWar;
 
 namespace WarFareWPF
 {
@@ -19,9 +20,14 @@ namespace WarFareWPF
     /// </summary>
     public partial class GameWindow : Window
     {
-        public GameWindow()
+        public PartieImp partie { get; set; }
+        public GameWindow(PartieImp partie)
         {
+            this.partie = partie;
             InitializeComponent();
+            //debug
+            MessageBox.Show(partie.ToString());
+            //fdebug
         }
     }
 }

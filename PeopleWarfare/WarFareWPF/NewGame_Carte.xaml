@@ -1,8 +1,20 @@
 ﻿<Window x:Class="WarFareWPF.NewGame_Carte"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="NewGame_Carte" Height="350" Width="700">
+        Title="NewGame_Carte" Height="350" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button VerticalAlignment="Top" Width="32" Height="32" HorizontalAlignment="Left" Click="Prec" IsTabStop="False" Template="{StaticResource ResourceKey=buttonPrecTemplate}"/>
+        <Label Content="Choix de la carte" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="0,30,0,0" Grid.Column="1"/>
+
+        <Button Content="Démo" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Click="Demo" Grid.Column="0" IsDefault="True"/>
+        <Button Content="Petite" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Click="Petite" Grid.Column="1"/>
+        <Button Content="Normale" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Click="Normale" Grid.Column="2"/>
+
     </Grid>
 </Window>

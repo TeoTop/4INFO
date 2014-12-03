@@ -129,5 +129,10 @@ namespace PeopleWar
         {
             return (key >= 0 && key < getNbTour());
         }
+
+        public override string ToString()
+        {
+            return carte.ToString() + "\n" + j1.ToString() + "\nvs\n" + j2.ToString();
+        }
     }
 }
