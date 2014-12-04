@@ -8,6 +8,10 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <l:RatioToPointsConverter x:Key="RatioToPointsConverter"/>
+        <l:RatioToHeightConverter x:Key="RatioToHeightConverter"/>
+        <l:RatioToMarginConverter x:Key="RatioToMarginConverter"/>
+        <l:RatioToCoordConverter x:Key="RatioToCoordConverter"/>
+        
         <!--<converters:MultiBooleanToVisibilityConverter x:Key="MConverter" />-->
     </Window.Resources>
     <Border BorderThickness="2" BorderBrush="Black" Margin="5">
@@ -27,7 +31,7 @@
                     <ListBox DataContext="{Binding map, ElementName=_this}" SelectedItem="{Binding SelectedBox, Mode=TwoWay}" ItemsSource="{Binding cases}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid Columns="{Binding Columns}" Margin="5 15 45 15"/>
+                                <UniformGrid Columns="{Binding Columns}" Margin="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToMarginConverter}, ConverterParameter=5 15 45 15}" VerticalAlignment="Center"/>
                             </ItemsPanelTemplate>
                         </ListBox.ItemsPanel>
                         <ListBox.ItemContainerStyle>
@@ -35,7 +39,7 @@
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                                            <ContentPresenter Margin="0 -10"/>
+                                            <ContentPresenter Margin="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToMarginConverter}, ConverterParameter=0 -10 0 -10}"/>
                                         </ControlTemplate>
                                     </Setter.Value>
                                 </Setter>
@@ -43,21 +47,21 @@
                         </ListBox.ItemContainerStyle>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
-                                    <Grid Height="80" Visibility="{Binding RowPair, Converter={StaticResource BoolToVis}}">
+                                <Grid VerticalAlignment="Center">
+                                    <Grid Height="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToHeightConverter}}" Visibility="{Binding RowPair, Converter={StaticResource BoolToVis}}">
                                         <Polygon Points="{Binding map.Zoom, ElementName=_this, Mode=TwoWay, Converter={StaticResource RatioToPointsConverter}}" Stroke="Black">
                                             <Polygon.RenderTransform>
-                                                <TranslateTransform Y="60"/>
+                                                <TranslateTransform Y="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=60}"/>
                                             </Polygon.RenderTransform>
                                             <Polygon.Fill>
                                                 <ImageBrush ImageSource="{Binding Src}"/>
                                             </Polygon.Fill>
                                         </Polygon>
                                     </Grid>
-                                    <Grid Height="80" Visibility="{Binding RowPairReverse, Converter={StaticResource BoolToVis}}"> <!--Add a converter for height-->
+                                    <Grid Height="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToHeightConverter}}" Visibility="{Binding RowPairReverse, Converter={StaticResource BoolToVis}}"> <!--Add a converter for height-->
                                         <Polygon Points="{Binding map.Zoom, ElementName=_this, Mode=TwoWay, Converter={StaticResource RatioToPointsConverter}}" Stroke="Black">
                                             <Polygon.RenderTransform>
-                                                <TranslateTransform Y="60" X="40"/>
+                                                <TranslateTransform Y="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=60}" X="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=40}"/>
                                             </Polygon.RenderTransform>
                                             <Polygon.Fill>
                                                 <ImageBrush ImageSource="{Binding Src}"/>
@@ -66,17 +70,17 @@
                                     </Grid>
 
 
-                                    <Grid Height="80" Visibility="{Binding RowPair, Converter={StaticResource BoolToVis}}">
-                                        <Polygon Points="-1,-1 39,19 79,-1 79,-41 39,-61 -1,-41" Stroke="Red" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVis}}" StrokeThickness="2" Panel.ZIndex="2">
+                                    <Grid Height="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToHeightConverter}}" Visibility="{Binding RowPair, Converter={StaticResource BoolToVis}}">
+                                        <Polygon Points="{Binding map.Zoom, ElementName=_this, Mode=TwoWay, Converter={StaticResource RatioToPointsConverter}}" Stroke="Red" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVis}}" StrokeThickness="2" Panel.ZIndex="2">
                                             <Polygon.RenderTransform>
-                                                <TranslateTransform Y="60"/>
+                                                <TranslateTransform Y="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=60}"/>
                                             </Polygon.RenderTransform>
                                         </Polygon>
                                     </Grid>
-                                    <Grid Height="80" Visibility="{Binding RowPairReverse, Converter={StaticResource BoolToVis}}">
-                                        <Polygon Points="-1,-1 39,19 79,-1 79,-41 39,-61 -1,-41" Stroke="Red" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVis}}" StrokeThickness="2" Panel.ZIndex="2">
+                                    <Grid Height="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToHeightConverter}}" Visibility="{Binding RowPairReverse, Converter={StaticResource BoolToVis}}">
+                                        <Polygon Points="{Binding map.Zoom, ElementName=_this, Mode=TwoWay, Converter={StaticResource RatioToPointsConverter}}" Stroke="Red" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVis}}" StrokeThickness="2" Panel.ZIndex="2">
                                             <Polygon.RenderTransform>
-                                                <TranslateTransform Y="60" X="40"/>
+                                                <TranslateTransform Y="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=60}" X="{Binding map.Zoom, ElementName=_this, Converter={StaticResource RatioToCoordConverter}, ConverterParameter=40}"/>
                                             </Polygon.RenderTransform>
                                         </Polygon>
                                     </Grid>

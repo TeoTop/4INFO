@@ -24,11 +24,9 @@ namespace WarFareWPF
             defaut.Add(new Point(0, -40));
             IEnumerable<Point> points = defaut.Select(item => new Point(item.X * zoom / 100, item.Y * zoom / 100));
 
-            //Debug
             String points_string = points.Aggregate("", (acc, item) => acc + " " + item.X.ToString().Replace(",", ".") + "," + item.Y.ToString().Replace(",", "."));
             points_string = points_string.Substring(1, points_string.Length - 1);
-            Console.WriteLine(points_string);
-            //FinDebug
+            //Console.WriteLine(points_string);
 
             return points_string;
         }
