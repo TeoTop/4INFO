@@ -6,11 +6,6 @@
 *.exe
 *.o
 *.so
-*.suo
-*.pdb
-*.csprojResolveAssemblyReference.cache
-*.csproj.FileListAbsolute.txt
-*.csproj
  
 # Packages #
 ############

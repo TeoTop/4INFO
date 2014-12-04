@@ -1,0 +1,77 @@
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.baml
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.baml
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.baml
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\NewGame_Carte.baml
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.g.cs
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.g.cs
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.g.cs
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\NewGame_Carte.g.cs
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\App.g.cs
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.cache
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.g.resources
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.Properties.Resources.resources
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csproj.GenerateResource.Cache
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.pdb
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.dll
+D:\INSA\4INFO\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.pdb
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.pdb
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\Converters.exe
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.dll
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\Converters.pdb
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.pdb
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.baml
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.baml
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\NewGame_Carte.baml
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.g.cs
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.g.cs
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.g.cs
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\NewGame_Carte.g.cs
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\App.g.cs
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.cache
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.lref
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.baml
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.g.resources
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.Properties.Resources.resources
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csproj.GenerateResource.Cache
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+C:\Users\sizo0\Documents\4info\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe.config
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.exe
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\WarFareWPF.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Converters.exe
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.dll
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Converters.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Diagramme de classe code.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\Dictionary.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\App.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\App.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.lref
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.g.resources
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.Properties.Resources.resources
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csproj.GenerateResource.Cache
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
+H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
+C:\Users\helomari\Desktop\bin\WarFareWPF.exe.config
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.dll
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.pdb
