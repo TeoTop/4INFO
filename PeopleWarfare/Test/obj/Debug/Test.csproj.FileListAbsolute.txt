@@ -14,3 +14,5 @@ C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Diagramme de classe code.
 C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.exe
 C:\Users\helomari\Desktop\PeopleWarfare\Test\obj\Debug\Test.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Wrapper.dll
+C:\Users\helomari\Desktop\PeopleWarfare\Test\bin\Debug\Wrapper.pdb

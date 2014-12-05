@@ -63,7 +63,6 @@ C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\MainWindow.g.cs
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\NewGame.g.cs
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\App.g.cs
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.cache
-C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.lref
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GameWindow.baml
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.g.resources
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.Properties.Resources.resources
@@ -72,6 +71,5 @@ C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.exe
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.pdb
 H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemblyReference.cache
 C:\Users\helomari\Desktop\bin\WarFareWPF.exe.config
-C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.dll
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.pdb

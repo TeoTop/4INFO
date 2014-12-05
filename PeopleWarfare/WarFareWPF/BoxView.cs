@@ -8,9 +8,17 @@ namespace WarFareWPF
     public class BoxView : Notifier
     {
         private CaseA box;
-        private int nbUnite;
-        private int joueur;
-        public BoxView(int row, int column, CaseA box)
+        public PlayerView J1
+        {
+            get;
+            set;
+        }
+        public PlayerView J2
+        {
+            get;
+            set;
+        }
+        public BoxView(int row, int column, CaseA box, JoueurImp j1, JoueurImp j2)
         {
             this.box = box;
             switch (box.getType())
@@ -22,11 +30,8 @@ namespace WarFareWPF
             }
             this.Row = row;
             this.Column = column;
-            /*this.nbUnite = 0;
-            if (row == 0 && column == 0) {
-                this.nbUnite = 
-            }
-            this.jo*/
+            J1 = new PlayerView(j1);
+            J2 = new PlayerView(j2);
         }
 
         public string Src { get; set; }

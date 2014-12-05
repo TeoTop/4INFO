@@ -57,6 +57,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EnumCarteToIsCheckedConverter.cs" />
+    <Compile Include="RatioToCoordConverter.cs" />
+    <Compile Include="RatioToHeightConverter.cs" />
+    <Compile Include="RatioToMarginConverter.cs" />
+    <Compile Include="RatioToPointsConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MultiBooleanToVisibilityConverter.cs" />
@@ -85,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diagramme de classe code\Diagramme de classe code.csproj">
+      <Project>{7a251431-5751-4b60-8b83-cbd541809a9e}</Project>
+      <Name>Diagramme de classe code</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

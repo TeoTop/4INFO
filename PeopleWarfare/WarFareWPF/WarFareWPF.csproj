@@ -57,7 +57,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BoxView.cs" />
-    <Compile Include="EnumCarteToIsCheckedConverter.cs" />
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
@@ -65,10 +64,9 @@
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RatioToCoordConverter.cs" />
-    <Compile Include="RatioToHeightConverter.cs" />
-    <Compile Include="RatioToMarginConverter.cs" />
-    <Compile Include="RatioToPointsConverter.cs" />
+    <Compile Include="PeopleView.cs" />
+    <Compile Include="PlayerView.cs" />
+    <Compile Include="UnitView.cs" />
     <Page Include="GameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

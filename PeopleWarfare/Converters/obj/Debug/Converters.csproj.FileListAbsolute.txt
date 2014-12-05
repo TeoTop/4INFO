@@ -17,3 +17,8 @@ H:\4INFO\4INFO\PeopleWarfare\Converters\obj\Debug\Converters.Properties.Resource
 H:\4INFO\4INFO\PeopleWarfare\Converters\obj\Debug\Converters.csproj.GenerateResource.Cache
 H:\4INFO\4INFO\PeopleWarfare\Converters\obj\Debug\Converters.exe
 H:\4INFO\4INFO\PeopleWarfare\Converters\obj\Debug\Converters.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Converters\bin\Debug\Diagramme de classe code.dll
+C:\Users\helomari\Desktop\PeopleWarfare\Converters\bin\Debug\Wrapper.dll
+C:\Users\helomari\Desktop\PeopleWarfare\Converters\bin\Debug\Diagramme de classe code.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Converters\bin\Debug\Wrapper.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\Converters\obj\Debug\Converters.csprojResolveAssemblyReference.cache

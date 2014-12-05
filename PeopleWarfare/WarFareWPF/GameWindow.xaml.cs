@@ -34,7 +34,7 @@ namespace WarFareWPF
         public GameWindow(PartieImp partie)
         {
             this.partie = partie;
-            this.map = new MapView(partie.carte);
+            this.map = new MapView(partie.carte, partie.j1, partie.j2);
             InitializeComponent();
         }
 
