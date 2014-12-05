@@ -1,3 +1,9 @@
 precedente
 button_click enter key
 add resource template
+
+*.suo
+*.pdb
+*.csprojResolveAssemblyReference.cache
+*.csproj.FileListAbsolute.txt
+*.csproj
