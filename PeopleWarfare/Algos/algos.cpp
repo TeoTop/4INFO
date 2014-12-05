@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "algos.h"
 #include <math.h>
+
 int* Algos::generer_carte(int nbCase, int nbTypeCase) {
 	srand(time(NULL));
 	int* nb = (int*)malloc(nbTypeCase * sizeof(int));
@@ -34,63 +35,82 @@ int** Algos::suggestion_cases(int* cases, int* posEnnemi, int posActuelle, int t
 }
 
 
-/*
-if (type == EnumPeuple.ELF && carte.getCase(c).getType() == EnumCase.DESERT) return false;
 
-if ( ((type == EnumPeuple.ELF && carte.getCase(c).getType() != EnumCase.FORET) ||
-(type == EnumPeuple.ORC && carte.getCase(c).getType() != EnumCase.PLAINE)) && pm < 1)
-{
-return false;
+int** Algos::cases_atteignable(int* cases, int nbCase int* posEnnemi, int posActuelle, int typeUnite, int pm){
+	int taille_dispo = 1;
+	int cases_possible[6];
+	int(*case_dispo)[2];
+
+	if (pm == 0){
+		case_dispo = malloc(1 * sizeof(*case_dispo)); // case_dispo = null;
+		return case_dispo;
+	}
+	
+	cases_possible[0] = posActuelle - sqrt((double)nbCase);
+	cases_possible[1] = posActuelle + sqrt((double)nbCase);
+	cases_possible[2] = posActuelle + 1;
+	cases_possible[3] = posActuelle - 1;
+
+	if ((posActuelle/nbCase) % 2 == 1)
+	{
+		cases_possible[4] = posActuelle - (sqrt((double)nbCase) - 1));
+		cases_possible[5] = posActuelle + (sqrt((double)nbCase) + 1));
+	}
+	else
+	{
+		cases_possible[4] = posActuelle + (sqrt((double)nbCase) - 1));
+		cases_possible[5] = posActuelle - (sqrt((double)nbCase) + 1));
+	}
+
+	switch (typeUnite)
+	{
+		case 0:
+			if (pm != 1)
+			{
+				for (int i = 0; i < 6; i++){
+					if (cases[i] != 2){
+						cases_possible[i] = -1;
+					}
+				}
+			}
+			break;
+		case 1:
+			for (int i = 0; i < 6; i++){
+				if ((pm != 1 && cases[i] != 1) || cases[i] == 3){
+					cases_possible[i] = -1;
+				}
+			}
+			break;
+		case 2:
+			if (cases[posActuelle] == 3){
+				for (int i = 0; i < nbCase; ++i){
+					if (cases[i] == 3){
+						for (int j = 0; j < sizeof(posEnnemi) / sizeof(int); j++){
+							if (i == posEnnemi[j]){
+								cases_possible[i] = -1;
+							}
+						}
+					}
+				}
+			}
+			break;
+	}
+	
+	for (int i = 0; i < 6; i++){
+		if (cases_possible[i] >= 0){
+			case_dispo = realloc(case_dispo, taille_dispo * sizeof(*case_dispo)); // case_dispo = null;
+			case_dispo[taille_dispo - 1][0] = cases_possible[i];
+			case_dispo[taille_dispo - 1][1] = 0;
+			for (int j = 0; j < sizeof(posEnnemi) / sizeof(int); j++){
+				if (cases_possible[i] == posEnnemi[j]){
+					case_dispo[taille_dispo - 1][1] = 1;
+				}
+			}
+		}
+	}
+
+	return case_dispo;
 }
-
-List<int> casesDispo = new List<int>();
-
-casesDispo.Add(c - taille);
-casesDispo.Add(c + taille);
-casesDispo.Add(c - 1);
-casesDispo.Add(c + 1);
-
-if (carte.getX(c) % 2 == 1)
-{
-casesDispo.Add(c - (taille - 1));
-casesDispo.Add(c + (taille + 1));
-}
-else
-{
-casesDispo.Add(c + (taille - 1));
-casesDispo.Add(c - (taille + 1));
-}
-
-// move on Montagne box for a Nain.
-if (type == EnumPeuple.NAIN && carte.getCase(cInit).getType() == EnumCase.MONTAGNE &&
-carte.getCase(c).getType() == EnumCase.MONTAGNE && !adv.verifierUnite(c).Any())
-{
-return true;
-}
-
-if (casesDispo.Contains(c))
-{
-return true;
-}
-
-return false;*/
-
-/*
-cases = tableau de la carte : [id] -> type de cases ; id correspond au numéro de la case
-posEnnemi = tableau des positions ennemies : [id] -> position ; id = n° unité
-posActuelle = n° case de l'unité à déplacer
-type unite = 0 Orc, 1 Elf, 2 Nain
-*/
-/*
-int** Algos::cases_atteignable(int* cases, int nbCase int* posEnnemi, int posActuelle, int typeUnite){
-	int nbCase = 1;
-	int* cases_dispo = (int*)malloc(sizeof(int) * 6);
-
-	cases_dispo[0] = posActuelle - sqrt((double)nbCase)
-
-	int* cases_dispo = (int*)realloc(cases_dispo, ++nbCase * sizeof(int));
-
-}*/
 
 
 int* Algos::placer_joueurs(int nbCase) {
