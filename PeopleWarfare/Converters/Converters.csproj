@@ -58,6 +58,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="EnumCarteToIsCheckedConverter.cs" />
+    <Compile Include="PositionToVisibilityConverter.cs" />
     <Compile Include="RatioToCoordConverter.cs" />
     <Compile Include="RatioToHeightConverter.cs" />
     <Compile Include="RatioToMarginConverter.cs" />

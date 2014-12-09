@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using PeopleWar;
 using System.ComponentModel;
+using System.Windows;
 namespace WarFareWPF
 {
     public class MapView : Notifier
     {
         public StrategieCarte carte { get; set; }
-        public int Width
-        {
-            get { return (int)Columns * 69; }
-        }
         public double Columns
         {
             get { return Math.Sqrt(carte.nbCase); }
@@ -22,6 +19,7 @@ namespace WarFareWPF
         {
             get { return _cases; }
         }
+        public BoxView SelectedBoxForUnit { get; set; }
         private BoxView selectedBox;
         public BoxView SelectedBox
         {
@@ -43,17 +41,17 @@ namespace WarFareWPF
             }
             set
             {
-                _zoom = (int)((value < 200) ? (value > 0) ? value : 100 : 100);
+                _zoom = (int)((value <= 400) ? (value >= 0) ? value : _zoom : _zoom);
                 RaisePropertyChanged("Zoom");
             }
         }
-        public MapView(StrategieCarte map, JoueurImp j1, JoueurImp j2)
+        public MapView(StrategieCarte map)
         {
             carte = map;
             int i = 0;
             foreach (var box in carte.cases)
             {
-                BoxView boxview = new BoxView(carte.getX(i), carte.getY(i), box, j1 ,j2);
+                BoxView boxview = new BoxView(carte.getX(i), carte.getY(i), i, box);
                 _cases.Add(boxview);
                 i++;
             }

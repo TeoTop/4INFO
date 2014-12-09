@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PeopleWar;
+using System.Windows;
 
 namespace WarFareWPF
 {
@@ -14,12 +15,25 @@ namespace WarFareWPF
             get;
             set;
         }
+        private Point initialPosition;
+        public Point InitialPosition {
+            get
+            {
+                return initialPosition;
+            }
+            set
+            {
+                initialPosition = value;
+                RaisePropertyChanged("InitialPosition");
+            }
+        }
 
         public JoueurImp joueur { get; set; }
-        public PlayerView(JoueurImp joueur)
+        public PlayerView(JoueurImp joueur, Point initialPosition)
         {
             this.joueur = joueur;
             peuple = new PeopleView(joueur.peuple);
+            InitialPosition = initialPosition;
         }
     }
 }

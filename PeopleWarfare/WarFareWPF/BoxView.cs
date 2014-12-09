@@ -3,22 +3,81 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PeopleWar;
+using System.Windows;
+using System.Windows.Input;
 namespace WarFareWPF
 {
     public class BoxView : Notifier
     {
-        private CaseA box;
-        public PlayerView J1
+        private CaseA box { set;  get; }
+        public List<UnitView> unitsJ1;
+        public List<UnitView> unitsJ2;
+        public UnitView SelectedUnit { get; set; }
+        public int NbUniteJ1
         {
-            get;
-            set;
+            get
+            {
+                return unitsJ1.Count;
+            }
+            set
+            {
+                //_nbUniteJ1 = value;
+                RaisePropertyChanged("NbUniteJ1");
+                RaisePropertyChanged("HasUnitJ1");
+            }
         }
-        public PlayerView J2
+        public int NbUniteJ2
         {
-            get;
-            set;
+            get
+            {
+                return unitsJ2.Count;
+            }
+            set
+            {
+                //_nbUniteJ2 = value;
+                RaisePropertyChanged("NbUniteJ2");
+                RaisePropertyChanged("HasUnitJ2");
+            }
         }
-        public BoxView(int row, int column, CaseA box, JoueurImp j1, JoueurImp j2)
+
+        public void addUnit(UnitView unit, int player)
+        {
+            if (player == 0)
+            {
+                unitsJ1.Add(unit);
+                RaisePropertyChanged("NbUniteJ1");
+                RaisePropertyChanged("HasUnitJ1");}
+            else
+            {
+                unitsJ2.Add(unit);
+                RaisePropertyChanged("NbUniteJ2");
+                RaisePropertyChanged("HasUnitJ2");
+            }
+        }
+
+        public void removeUnit(UnitView unit, int player)
+        {
+            if (player == 0)
+            {
+                unitsJ1.Remove(unit);
+                RaisePropertyChanged("NbUniteJ1");
+                RaisePropertyChanged("HasUnitJ1");
+            }
+            else
+            {
+                unitsJ2.Remove(unit);
+                RaisePropertyChanged("NbUniteJ2");
+                RaisePropertyChanged("HasUnitJ2");
+            }
+        }
+
+        public List<UnitView> getUnits(int player)
+        {
+            return (player == 0) ? unitsJ1 : unitsJ2;
+        }
+        public int Uid { get; set; }
+
+        public BoxView(int row, int column, int i, CaseA box)
         {
             this.box = box;
             switch (box.getType())
@@ -30,23 +89,22 @@ namespace WarFareWPF
             }
             this.Row = row;
             this.Column = column;
-            J1 = new PlayerView(j1);
-            J2 = new PlayerView(j2);
+            this.Uid = i;
+            unitsJ1 = new List<UnitView>();
+            unitsJ2 = new List<UnitView>();
         }
 
         public string Src { get; set; }
         public String Type { get; set; }
         public int Row { get; set; }
         public int Column { get; set; }
-        private bool hasUnit;
-        public bool HasUnit
+        public bool HasUnitJ1
         {
-            get { return hasUnit; }
-            set
-            {
-                hasUnit = value;
-                RaisePropertyChanged("HasUnit");
-            }
+            get { return NbUniteJ1 > 0; }
+        }
+        public bool HasUnitJ2
+        {
+            get { return NbUniteJ2 > 0; }
         }
         private bool isSelected;
         public bool IsSelected
@@ -76,6 +134,5 @@ namespace WarFareWPF
         {
             return "(" + Row + ", " + Column + ")" + ", Type : " + Type;
         }
-
     }
 }

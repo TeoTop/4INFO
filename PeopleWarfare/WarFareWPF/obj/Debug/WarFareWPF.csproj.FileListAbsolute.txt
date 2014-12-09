@@ -73,3 +73,6 @@ H:\4INFO\4INFO\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF.csprojResolveAssemb
 C:\Users\helomari\Desktop\bin\WarFareWPF.exe.config
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.dll
 C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\bin\Debug\Wrapper.pdb
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\SelectUnit.baml
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\SelectUnit.g.cs
+C:\Users\helomari\Desktop\PeopleWarfare\WarFareWPF\obj\Debug\WarFareWPF_MarkupCompile.lref

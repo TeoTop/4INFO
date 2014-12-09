@@ -1,0 +1,304 @@
+<html><head><title>/home-reseau/helomari/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl</title>
+	    <link type="text/css" rel="stylesheet" href="style.css"> </head><body><h1>File: /home-reseau/helomari/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl
+</h1><HR>
+<pre><span class="comment">% dana likes cody
+% bess does not like dana
+% cody does not like abby
+% nobody likes someone who does not like her
+% abby likes everyone who likes bess
+% dana likes everyone bess likes
+% everybody likes somebody
+/*
+["~/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl"].
+*/
+</span><a name="people-1"></a><span class="head">people</span>([<span class="atom">abby</span>, <span class="atom">bess</span>, <span class="atom">cody</span>, <span class="atom">dana</span>, <span class="atom">peter</span>])<span class="coverage"> 401 </span>.<span class="comment">
+
+</span><a name="likes-2"></a><span class="head">likes</span>(<span class="head">dana</span>, <span class="head">cody</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">likes</span>(<span class="head">bess</span>, <span class="head">cody</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">likes</span>(<span class="head">bess</span>, <span class="head">abby</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">likes</span>(<span class="head">abby</span>, <span class="head">bess</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">likes</span>(<span class="head">abby</span>, <span class="head">cody</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+
+%----------- Question 1 ------------
+% Retourne toutes les pairs d'élèment du tableau possibles 
+</span><a name="make_all_pairs-2"></a><span class="head">make_all_pairs</span>(<span class="head">[]</span>, <span class="head">[]</span>)<span class="coverage"> 1 </span>.<span class="comment">
+</span><span class="head">make_all_pairs</span>([<span class="variable">X</span>|<span class="variable">L</span>], [<span class="functor">likes</span>(<span class="variable">X</span>, <span class="variable">X</span>)|<span class="variable">Res</span>]) <span class="control">:-</span>
+        <span class="coverage"> 5 </span><a class="call" href="#combin-3">combin</a>(<span class="variable">X</span>, <span class="variable">L</span>, <span class="variable">R1</span>),
+        <span class="coverage"> 5 </span><a class="call" href="#make_all_pairs-2">make_all_pairs</a>(<span class="variable">L</span>, <span class="variable">Res1</span>),
+        <span class="coverage"> 5 </span><span class="builtin">append</span>(<span class="variable">R1</span>, <span class="variable">Res1</span>, <span class="variable">Res</span>)<span class="coverage"> 5 </span>.<span class="comment">
+</span><a name="combin-3"></a><span class="head">combin</span>(<span class="variable">_6256</span>, <span class="head">[]</span>, <span class="head">[]</span>)<span class="coverage"> 5 </span>.<span class="comment">
+</span><span class="head">combin</span>(<span class="variable">X</span>, [<span class="variable">Y</span>|<span class="variable">L</span>], [<span class="functor">likes</span>(<span class="variable">X</span>, <span class="variable">Y</span>), <span class="functor">likes</span>(<span class="variable">Y</span>, <span class="variable">X</span>)|<span class="variable">R</span>]) <span class="control">:-</span>
+        <span class="coverage"> 10 </span><a class="call" href="#combin-3">combin</a>(<span class="variable">X</span>, <span class="variable">L</span>, <span class="variable">R</span>)<span class="coverage"> 10 </span>.<span class="comment">
+
+%----------- Question 2 ------------
+% Retourne une par une les sous tableau possible
+/*sub_list(L, L). 
+sub_list([X|_], [X]).
+sub_list([_|L], Res):- sub_list(L, Res).*/
+</span><a name="sub_list-2"></a><span class="head">sub_list</span>(<span class="head">[]</span>, <span class="head">[]</span>)<span class="coverage"> 33554432 </span>.<span class="comment">
+</span><span class="head">sub_list</span>([<span class="variable">X</span>|<span class="variable">L</span>], [<span class="variable">X</span>|<span class="variable">L2</span>]) <span class="control">:-</span>
+        <span class="coverage"> 33554431 </span><a class="call" href="#sub_list-2">sub_list</a>(<span class="variable">L</span>, <span class="variable">L2</span>)<span class="coverage"> 419430400 </span>.<span class="comment">
+</span><span class="head">sub_list</span>([<span class="variable">_9032</span>|<span class="variable">L</span>], <span class="variable">L2</span>) <span class="control">:-</span>
+        <span class="coverage"> 33554431 </span><a class="call" href="#sub_list-2">sub_list</a>(<span class="variable">L</span>, <span class="variable">L2</span>)<span class="coverage"> 419430400 </span>.<span class="comment"> 
+
+%----------- Question 3 ------------
+%Ecrire les 7 prédicats représentant les 7 propositions
+%aux
+</span><a name="find-3"></a><span class="head">find</span>(<span class="variable">X</span>, [<span class="variable">X</span>|<span class="variable">L</span>], <span class="variable">L</span>)<span class="coverage"> 16766096 </span>.<span class="comment">
+</span><span class="head">find</span>(<span class="variable">X</span>, [<span class="variable">Y</span>|<span class="variable">L</span>], [<span class="variable">Y</span>|<span class="variable">L1</span>]) <span class="control">:-</span>
+        <span class="coverage"> 334424824 </span><span class="variable">X</span> <span class="builtin">\==</span> <span class="variable">Y</span>,
+        <span class="coverage"> 334424824 </span><a class="call" href="#find-3">find</a>(<span class="variable">X</span>, <span class="variable">L</span>, <span class="variable">L1</span>)<span class="coverage"> 16464 </span>.<span class="comment">
+
+</span><a name="include-2"></a><span class="head">include</span>(<span class="head">[]</span>, <span class="variable">_11064</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">include</span>([<span class="variable">X</span>|<span class="variable">L1</span>], <span class="variable">L2</span>) <span class="control">:-</span>
+        <span class="nocoverage"> 0 </span><a class="call" href="#find-3">find</a>(<span class="variable">X</span>, <span class="variable">L2</span>, <span class="variable">LRes</span>),
+        <span class="nocoverage"> 0 </span><a class="call" href="#include-2">include</a>(<span class="variable">L1</span>, <span class="variable">LRes</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+
+% dana likes cody
+</span><a name="proposition1-1"></a><span class="head">proposition1</span>([<span class="functor">likes</span>(<span class="atom">dana</span>, <span class="atom">cody</span>)|<span class="variable">_12129</span>]) <span class="control">:-</span>
+        <span class="coverage"> 1680 </span><span class="warning">!</span><span class="coverage"> 1680 </span>.<span class="comment">
+</span><span class="head">proposition1</span>([<span class="variable">_12635</span>|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 24984 </span><a class="call" href="#proposition1-1">proposition1</a>(<span class="variable">L</span>)<span class="coverage"> 14088 </span>.<span class="comment">
+
+% bess does not like dana
+</span><a name="proposition2-1"></a><span class="head">proposition2</span>(<span class="head">[]</span>)<span class="coverage"> 400 </span>.<span class="comment">
+</span><span class="head">proposition2</span>([<span class="variable">X</span>|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 4792 </span><span class="variable">X</span> <span class="builtin">\==</span> <span class="functor">likes</span>(<span class="atom">bess</span>, <span class="atom">dana</span>),
+        <span class="coverage"> 4632 </span><a class="call" href="#proposition2-1">proposition2</a>(<span class="variable">L</span>)<span class="coverage"> 3800 </span>.<span class="comment">
+
+% cody does not like abby
+</span><a name="proposition3-1"></a><span class="head">proposition3</span>(<span class="head">[]</span>)<span class="coverage"> 560 </span>.<span class="comment">
+</span><span class="head">proposition3</span>([<span class="variable">X</span>|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 9608 </span><span class="variable">X</span> <span class="builtin">\==</span> <span class="functor">likes</span>(<span class="atom">cody</span>, <span class="atom">abby</span>),
+        <span class="coverage"> 8488 </span><a class="call" href="#proposition3-1">proposition3</a>(<span class="variable">L</span>)<span class="coverage"> 6008 </span>.<span class="comment">
+
+% nobody likes someone who does not like her
+</span><a name="proposition4-1"></a><span class="head">proposition4</span>(<span class="head">[]</span>)<span class="coverage"> 32768 </span>.<span class="comment">
+</span><span class="head">proposition4</span>([<span class="functor">likes</span>(<span class="variable">X</span>, <span class="variable">Y</span>)|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 68288512 </span><span class="variable">X</span> <span class="builtin">\==</span> <span class="variable">Y</span>,
+        <span class="coverage"> 50282496 </span><a class="call" href="#find-3">find</a>(<span class="functor">likes</span>(<span class="variable">Y</span>, <span class="variable">X</span>), <span class="variable">L</span>, <span class="variable">L1</span>),
+        <span class="coverage"> 16760832 </span><span class="warning">!</span>,
+        <span class="coverage"> 16760832 </span><a class="call" href="#proposition4-1">proposition4</a>(<span class="variable">L1</span>)<span class="coverage"> 163840 </span>.<span class="comment">
+</span><span class="head">proposition4</span>([<span class="functor">likes</span>(<span class="variable">X</span>, <span class="variable">X</span>)|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 18006016 </span><a class="call" href="#proposition4-1">proposition4</a>(<span class="variable">L</span>)<span class="coverage"> 81920 </span>.<span class="comment">
+</span><span class="head">proposition4</span>([<span class="functor">likes</span>(<span class="variable">_17447</span>, <span class="variable">_17448</span>)|<span class="variable">_17441</span>]) <span class="control">:-</span>
+        <span class="coverage"> 51527680 </span><span class="builtin">fail</span><span class="nocoverage"> 0 </span>.<span class="comment">
+
+
+% abby likes everyone who likes bess
+/*proposition5([]).
+proposition5([likes(X, bess)|L]):- \==(X, abby), find(likes(abby, X), L, _), !, proposition5(L).
+proposition5([likes(_, bess)|_]):- fail.
+proposition5([likes(abby, bess)|L]):- proposition5(L).
+proposition5([likes(_, Y)|L]):- \==(Y, bess), proposition5(L).*/
+
+</span><a name="proposition5-1"></a><span class="head">proposition5</span>(<span class="variable">L</span>) <span class="control">:-</span>
+        <span class="coverage"> 32768 </span><a class="call" href="#proposition5a-2">proposition5a</a>(<span class="variable">L</span>, <span class="variable">L</span>)<span class="coverage"> 6912 </span>.<span class="comment">
+</span><a name="proposition5a-2"></a><span class="head">proposition5a</span>(<span class="head">[]</span>, <span class="variable">_20057</span>)<span class="coverage"> 6912 </span>.<span class="comment">
+</span><span class="head">proposition5a</span>([<span class="functor">likes</span>(<span class="variable">X</span>, <span class="atom">bess</span>)|<span class="variable">L</span>], <span class="variable">La</span>) <span class="control">:-</span>
+        <span class="coverage"> 47616 </span><span class="builtin">member</span>(<span class="functor">likes</span>(<span class="atom">abby</span>, <span class="variable">X</span>), <span class="variable">La</span>),
+        <span class="coverage"> 21760 </span><a class="call" href="#proposition5a-2">proposition5a</a>(<span class="variable">L</span>, <span class="variable">La</span>)<span class="coverage"> 12096 </span>.<span class="comment">
+</span><span class="head">proposition5a</span>([<span class="functor">likes</span>(<span class="variable">_21207</span>, <span class="variable">Y</span>)|<span class="variable">L</span>], <span class="variable">La</span>) <span class="control">:-</span>
+        <span class="coverage"> 195968 </span><span class="variable">Y</span> <span class="builtin">\==</span> <span class="atom">bess</span>,
+        <span class="coverage"> 148352 </span><a class="call" href="#proposition5a-2">proposition5a</a>(<span class="variable">L</span>, <span class="variable">La</span>)<span class="coverage"> 74304 </span>.<span class="comment">
+% dana likes everyone bess likes
+</span><a name="proposition6-1"></a><span class="head">proposition6</span>(<span class="head">[]</span>)<span class="coverage"> 2800 </span>.<span class="comment">
+</span><span class="head">proposition6</span>([<span class="functor">likes</span>(<span class="atom">bess</span>, <span class="variable">X</span>)|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 9376 </span><a class="call" href="#find-3">find</a>(<span class="functor">likes</span>(<span class="atom">dana</span>, <span class="variable">X</span>), <span class="variable">L</span>, <span class="variable">_22447</span>),
+        <span class="coverage"> 5264 </span><span class="warning">!</span>,
+        <span class="coverage"> 5264 </span><a class="call" href="#proposition6-1">proposition6</a>(<span class="variable">L</span>)<span class="coverage"> 2920 </span>.<span class="comment">
+</span><span class="head">proposition6</span>([<span class="functor">likes</span>(<span class="atom">bess</span>, <span class="variable">_23282</span>)|<span class="variable">_23275</span>]) <span class="control">:-</span>
+        <span class="coverage"> 4112 </span><span class="builtin">fail</span><span class="nocoverage"> 0 </span>.<span class="comment">
+</span><span class="head">proposition6</span>([<span class="functor">likes</span>(<span class="variable">Y</span>, <span class="variable">_23683</span>)|<span class="variable">L</span>]) <span class="control">:-</span>
+        <span class="coverage"> 53832 </span><span class="variable">Y</span> <span class="builtin">\==</span> <span class="atom">bess</span>,
+        <span class="coverage"> 49720 </span><a class="call" href="#proposition6-1">proposition6</a>(<span class="variable">L</span>)<span class="coverage"> 29360 </span>.<span class="comment">
+
+% everybody likes somebody
+/*proposition7(L):- proposition7_bis(L, People), people(People1), include(People1, People), !.
+proposition7_bis([], []).
+proposition7_bis([likes(X, Y)|L], [X|People]):- \==(X, Y), proposition7_bis(L, People).*/
+
+
+</span><a name="proposition7-1"></a><span class="head">proposition7</span>(<span class="variable">L</span>) <span class="control">:-</span>
+        <span class="coverage"> 400 </span><a class="call" href="#people-1">people</a>(<span class="variable">Lp</span>),
+        <span class="coverage"> 400 </span><a class="call" href="#proposition7a-2">proposition7a</a>(<span class="variable">Lp</span>, <span class="variable">L</span>)<span class="coverage"> 140 </span>.<span class="comment">
+</span><a name="proposition7a-2"></a><span class="head">proposition7a</span>(<span class="head">[]</span>, <span class="variable">_26317</span>)<span class="coverage"> 140 </span>.<span class="comment">
+</span><span class="head">proposition7a</span>([<span class="variable">X</span>|<span class="variable">L</span>], <span class="variable">La</span>) <span class="control">:-</span>
+        <span class="coverage"> 1431 </span><span class="builtin">member</span>(<span class="functor">likes</span>(<span class="variable">X</span>, <span class="variable">_26702</span>), <span class="variable">La</span>),
+        <span class="coverage"> 1171 </span><a class="call" href="#proposition7a-2">proposition7a</a>(<span class="variable">L</span>, <span class="variable">La</span>),
+        <span class="coverage"> 700 </span><span class="warning">!</span><span class="coverage"> 700 </span>.<span class="comment">
+
+%----------- Question 4 ------------
+% Réussi autant de fois qu'il existe de monde possible selon les propositions
+</span><a name="possible_worlds-1"></a><span class="head">possible_worlds</span>(<span class="variable">W</span>) <span class="control">:-</span>
+        <span class="coverage"> 1 </span><a class="call" href="#people-1">people</a>(<span class="variable">People</span>),
+        <span class="coverage"> 1 </span><a class="call" href="#make_all_pairs-2">make_all_pairs</a>(<span class="variable">People</span>, <span class="variable">W1</span>),
+        <span class="coverage"> 1 </span><a class="call" href="#sub_list-2">sub_list</a>(<span class="variable">W1</span>, <span class="variable">W</span>),
+        <span class="coverage"> 33554432 </span><a class="call" href="#proposition4-1">proposition4</a>(<span class="variable">W</span>),
+        <span class="coverage"> 32768 </span><a class="call" href="#proposition5-1">proposition5</a>(<span class="variable">W</span>),
+        <span class="coverage"> 6912 </span><a class="call" href="#proposition6-1">proposition6</a>(<span class="variable">W</span>),
+        <span class="coverage"> 2800 </span><a class="call" href="#proposition1-1">proposition1</a>(<span class="variable">W</span>),
+        <span class="coverage"> 1680 </span><a class="call" href="#proposition3-1">proposition3</a>(<span class="variable">W</span>),
+        <span class="coverage"> 560 </span><a class="call" href="#proposition2-1">proposition2</a>(<span class="variable">W</span>),
+        <span class="coverage"> 400 </span><a class="call" href="#proposition7-1">proposition7</a>(<span class="variable">W</span>)<span class="coverage"> 140 </span>.<span class="comment">
+		
+%----------- Question 5 ------------
+</span><a name="test_possible_worlds-0"></a><span class="head">test_possible_worlds</span> <span class="control">:-</span>
+        <span class="coverage"> 1 </span><a class="call" href="#possible_worlds-1">possible_worlds</a>(<span class="variable">World</span>),
+        <span class="coverage"> 140 </span><span class="builtin">writeln</span>(<span class="variable">World</span>),
+        <span class="coverage"> 140 </span><span class="builtin">fail</span><span class="nocoverage"> 0 </span>.<span class="comment">		
+
+%----------- Question 6 ------------
+
+</span><a name="N-2"></a><span class="head">coverage</span> <span class="head">:</span> <span class="head">ccompile</span>(<span class="string">"~/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl"</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+</span><a name="test_possible_worlds-0"></a><span class="head">test_possible_worlds</span><span class="nocoverage"> 0 </span>.<span class="comment">
+</span><a name="N-2"></a><span class="head">coverage</span> <span class="head">:</span> <span class="head">result</span>(<span class="string">"~/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan"</span>)<span class="nocoverage"> 0 </span>.<span class="comment">
+
+
+/*------------- Test ---------------
+
+-------------Question 1 --------------
+make_all_pairs([1,2], Res).
+	Res = [likes(1, 1), likes(1, 2), likes(2, 1), likes(2, 2)]
+	Yes (0.00s cpu)
+
+-------------Question 2 --------------
+sub_list([1,2], Res).
+        Res = [1, 2]
+        Yes
+        Res = [1]
+        Yes
+        Res = [2]
+        Yes
+        Res = []
+        Yes (0.00s cpu, solution 4)
+
+-------------Question 3 --------------
+
+%dana aime cody
+proposition1([likes(cody,dana), likes(dana,dana)]).
+        No (0.00s cpu)
+
+proposition1([likes(cody,dana), likes(dana,cody)]).
+        Yes (0.00s cpu) 
+
+
+%bess n'aime pas dana
+proposition2([likes(bess,dana), likes(dana,cody)]).
+        No (0.00s cpu)
+proposition2([likes(bess,cody), likes(dana,cody)]).
+        Yes (0.00s cpu)
+
+
+%cody n'aime pas abby
+proposition3([likes(cody,abby), likes(dana,cody)]).
+        No (0.00s cpu)
+proposition3([likes(cody,dana), likes(dana,cody)]).
+        Yes (0.00s cpu)
+
+
+%Personne n'aime quelqu'un qui ne l'aime pas (a modifier si member marche)
+proposition4([likes(cody,dana), likes(dana,cody), likes(abby,bess)]).
+        No (0.00s cpu)
+proposition4([likes(cody,dana), likes(dana,cody), likes(abby,bess), likes(bess,abby)]).
+        Yes (0.00s cpu, solution 1, maybe more) ? ;
+        No (0.00s cpu)
+
+
+%Abby aime tous ceux qui aime Bess
+proposition5([likes(cody,bess), likes(dana,bess), likes(abby,cody), likes(abby,dana)]).
+        Yes (0.00s cpu)
+
+proposition5([likes(cody,bess), likes(dana,bess), likes(abby,cody), likes(abby,bess)]).
+        No (0.00s cpu)
+
+proposition5([likes(cody,bess), likes(dana,bess), likes(abby,cody)]).
+        No (0.00s cpu)
+
+
+%Dana aime tous ceux que Bess aime
+proposition6([likes(bess,cody), likes(dana,cody), likes(bess,abby), likes(dana,abby)]).
+        Yes (0.00s cpu)
+
+proposition6([likes(bess,cody), likes(dana,cody), likes(bess,abby)]).
+        No (0.00s cpu)
+
+proposition6([likes(bess,cody), likes(dana,cody), likes(bess,abby), likes(dana,bess)]).
+        No (0.00s cpu)
+
+
+%Tout le monde aime quelqu'un
+proposition7([likes(bess,cody), likes(dana,cody), likes(cody,abby), likes(abby,dana)]).
+Yes (0.00s cpu)
+
+proposition7([likes(bess,cody), likes(dana,cody), likes(cody,abby), likes(cody,dana)]).
+        No (0.00s cpu)
+
+proposition7([]).
+        No (0.00s cpu)
+
+
+-------------Question 4 --------------
+
+possible_worlds(Monde).
+
+        Monde = [likes(abby, abby), likes(abby, bess), likes(abby, dana), likes(bess, abby), likes(cody, cody), likes(cody, dana), likes(dana, abby), likes(dana, cody), likes(dana, dana)]
+        Yes (0.02s cpu, solution 1, maybe more) ? ;
+
+        Monde = [likes(abby, abby), likes(abby, bess), likes(abby, dana), likes(bess, abby), likes(cody, cody), likes(cody, dana), likes(dana, abby), likes(dana, cody)]
+        Yes (0.02s cpu, solution 2, maybe more) ? ;
+
+        Monde = [likes(abby, abby), likes(abby, bess), likes(abby, dana), likes(bess, abby), likes(cody, dana), likes(dana, abby), likes(dana, cody), likes(dana, dana)]
+        Yes (0.02s cpu, solution 3, maybe more) ? ;
+
+        Monde = [likes(abby, abby), likes(abby, bess), likes(abby, dana), likes(bess, abby), likes(cody, dana), likes(dana, abby), likes(dana, cody)]
+        Yes (0.02s cpu, solution 4, maybe more) ? ;
+
+        No (0.06s cpu)
+-------------Question 5 --------------
+test_possible_worlds.
+[likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, cody), likes(cody, dana), likes(dana, cody), likes(dana, dana)]
+[likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, cody), likes(cody, dana), likes(dana, cody)]
+[likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, dana), likes(dana, cody), likes(dana, dana)]
+[likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, dana), likes(dana, cody)]
+
+No (0.21s cpu)
+-------------Question 6 --------------
+
+coverage:ccompile("~/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl").
+        WARNING: module 'coverage' does not exist, loading library...
+        source_processor.eco loaded in 0.00 seconds
+        module_options.eco loaded in 0.00 seconds
+        hash.eco   loaded in 0.00 seconds
+        document.eco loaded in 0.01 seconds
+        pretty_printer.eco loaded in 0.01 seconds
+        coverage.eco loaded in 0.01 seconds
+        compiler_common.eco loaded in 0.00 seconds
+        compiler_normalise.eco loaded in 0.01 seconds
+        compiler_map.eco loaded in 0.00 seconds
+        compiler_analysis.eco loaded in 0.00 seconds
+        compiler_peephole.eco loaded in 0.00 seconds
+        compiler_codegen.eco loaded in 0.01 seconds
+        compiler_varclass.eco loaded in 0.00 seconds
+        compiler_indexing.eco loaded in 0.00 seconds
+        compiler_regassign.eco loaded in 0.01 seconds
+        asm.eco    loaded in 0.00 seconds
+        ecl_compiler.eco loaded in 0.03 seconds
+        coverage: inserted 91 coverage counters into module eclipse
+        4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan.pl compiled 1917712 bytes in 0.04 seconds
+
+        Yes (0.05s cpu)
+test_possible_worlds.
+        [likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, cody), likes(cody, dana), likes(dana, cody), likes(dana, dana)]
+        [likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, cody), likes(cody, dana), likes(dana, cody)]
+        [likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, dana), likes(dana, cody), likes(dana, dana)]
+        [likes(abby, abby), likes(abby, bess), likes(bess, abby), likes(abby, dana), likes(dana, abby), likes(cody, dana), likes(dana, cody)]
+        No (0.21s cpu)
+
+coverage:result("~/4INFO/4INFO/Prolog/tp10/tp10_possible_worlds_students_hassan").
+        Writing /home-reseau/helomari/4INFO/4INFO/Prolog/tp10/coverage/tp10_possible_worlds_students_hassan.html
+        Yes (0.01s cpu)
+
+
+*/</span></pre><HR>
+</body></html>

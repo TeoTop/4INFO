@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="PeopleView.cs" />
     <Compile Include="PlayerView.cs" />
+    <Compile Include="SelectUnit.xaml.cs">
+      <DependentUpon>SelectUnit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UnitView.cs" />
     <Page Include="GameWindow.xaml">
       <SubType>Designer</SubType>
@@ -89,6 +92,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NewGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectUnit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

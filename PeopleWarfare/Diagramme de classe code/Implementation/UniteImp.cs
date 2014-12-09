@@ -95,7 +95,7 @@ namespace PeopleWar
                 return true;
             }
 
-            if (casesDispo.Contains(c))
+            if (casesDispo.Contains(cInit))
             {
                 return true;
             }
