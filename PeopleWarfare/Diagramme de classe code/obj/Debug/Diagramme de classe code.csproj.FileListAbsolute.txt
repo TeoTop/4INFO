@@ -1,7 +1,0 @@
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\bin\Debug\Diagramme de classe code.dll
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\bin\Debug\Diagramme de classe code.pdb
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\bin\Debug\Wrapper.dll
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\bin\Debug\Wrapper.pdb
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\obj\Debug\Diagramme de classe code.csprojResolveAssemblyReference.cache
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\obj\Debug\Diagramme de classe code.dll
-C:\Users\helomari\Desktop\PeopleWarfare\Diagramme de classe code\obj\Debug\Diagramme de classe code.pdb
