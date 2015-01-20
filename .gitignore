@@ -6,7 +6,12 @@
 *.exe
 *.o
 *.so
-
+*.suo
+*.pdb
+*.csprojResolveAssemblyReference.cache
+*.csproj.FileListAbsolute.txt
+*.csproj
+*.sln
  
 # Packages #
 ############
@@ -23,6 +28,7 @@
  
 # Logs and databases #
 ######################
+*.tlog
 *.log
 *.sql
 *.sqlite
